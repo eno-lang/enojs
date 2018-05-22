@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Section copy operators Deep section is correctly merged 1`] = `
+Object {
+  "deep": Array [
+    Object {
+      "a": Array [
+        Object {
+          "value_1": "default",
+        },
+      ],
+    },
+    Object {
+      "b": Array [
+        Object {
+          "value_2": "default",
+        },
+        Object {
+          "value_1": "deep",
+        },
+      ],
+    },
+  ],
+}
+`;
+
+exports[`Section copy operators Default section is correctly initialized 1`] = `
+Object {
+  "default": Array [
+    Object {
+      "a": Array [
+        Object {
+          "value_1": "default",
+        },
+      ],
+    },
+    Object {
+      "b": Array [
+        Object {
+          "value_1": "default",
+        },
+        Object {
+          "value_2": "default",
+        },
+      ],
+    },
+  ],
+}
+`;
+
+exports[`Section copy operators Shallow section is correctly merged 1`] = `
+Object {
+  "shallow": Array [
+    Object {
+      "a": Array [
+        Object {
+          "value_1": "default",
+        },
+      ],
+    },
+    Object {
+      "b": Array [
+        Object {
+          "value_1": "shallow",
+        },
+      ],
+    },
+  ],
+}
+`;

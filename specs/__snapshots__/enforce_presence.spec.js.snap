@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Presence of elements enforced when requested 1`] = `
+"Der Eintrag \\"missing\\" fehlt - falls er angegeben wurde eventuell nach Tippfehlern Ausschau halten und auch die Gross/Kleinschreibung beachten.
+
+  Zeile | Inhalt
+      1 | 
+      2 | dictionary:
+ >    3 | present = yes
+      4 | 
+      5 | # section
+   ...
+"
+`;
+
+exports[`Presence of elements enforced when requested 2`] = `
+"Das Feld \\"missing\\" fehlt.
+
+  Zeile | Inhalt
+ >    1 | 
+ >    2 | dictionary:
+      3 | present = yes
+ >    4 | 
+ >    5 | # section
+      6 | 
+      7 | dictionary in section:
+   ...
+"
+`;
+
+exports[`Presence of elements enforced when requested 3`] = `
+"Der Eintrag \\"missing\\" fehlt - falls er angegeben wurde eventuell nach Tippfehlern Ausschau halten und auch die Gross/Kleinschreibung beachten.
+
+  Zeile | Inhalt
+   ...
+      6 | 
+      7 | dictionary in section:
+ >    8 | present = yes
+      9 | 
+"
+`;
+
+exports[`Presence of elements enforced when requested 4`] = `
+"Das Feld \\"missing\\" fehlt.
+
+  Zeile | Inhalt
+   ...
+      4 | 
+      5 | # section
+ >    6 | 
+ >    7 | dictionary in section:
+      8 | present = yes
+ >    9 | 
+"
+`;

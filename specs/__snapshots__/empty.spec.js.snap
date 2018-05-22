@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Empty elements correctly parsed 1`] = `
+Array [
+  Object {
+    "empty": null,
+  },
+  Object {
+    "leer": Array [
+      null,
+      null,
+      null,
+    ],
+  },
+  Object {
+    "nichts": null,
+  },
+  Object {
+    "nada": null,
+  },
+  Object {
+    "nothing": Array [
+      Object {
+        "none": Array [
+          Object {
+            "void": null,
+          },
+          Object {
+            "emptyness": null,
+          },
+          Object {
+            "leere": null,
+          },
+        ],
+      },
+    ],
+  },
+  Object {
+    "ningun": Array [
+      Object {
+        "absence": Array [
+          null,
+          null,
+          null,
+        ],
+      },
+      Object {
+        "non": null,
+      },
+      Object {
+        "end": null,
+      },
+    ],
+  },
+]
+`;

@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tlateloco sample parses correctly 1`] = `
+Array [
+  Object {
+    "Titel": "Tlatelolco: Wohnblocks, Ruinen und Massaker",
+  },
+  Object {
+    "Untertitel": "»Tlatelolco«, ein Film von Lotte Schreiber",
+  },
+  Object {
+    "Bild": null,
+  },
+  Object {
+    "Autoren": Array [
+      "Georg Oswald",
+    ],
+  },
+  Object {
+    "Datum": "2013-01-01",
+  },
+  Object {
+    "Sprache": "DE",
+  },
+  Object {
+    "Kategorien": Array [
+      "Besprechung",
+      "Film",
+    ],
+  },
+  Object {
+    "Tags": Array [
+      "Mexiko",
+      "Tlatelolco",
+      "Olympische Spiele",
+      "Architektur",
+      "Mexico City",
+      "Polizeigewalt",
+    ],
+  },
+  Object {
+    "Permalink": "tlatelolco-wohnblocks-ruinen-und-massaker",
+  },
+  Object {
+    "Buchbesprechungen": null,
+  },
+  Object {
+    "Lesbar": "Ja",
+  },
+  Object {
+    "Urbanize": null,
+  },
+  Object {
+    "Abstract": null,
+  },
+  Object {
+    "Text": "Der Stadtteil Tlatelolco ist ein Ort, ...
+...Österreich, Mexiko, 75 min",
+  },
+  Object {
+    "Literaturverzeichnis": null,
+  },
+]
+`;

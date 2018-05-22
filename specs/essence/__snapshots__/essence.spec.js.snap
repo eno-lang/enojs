@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The essence testrun succeeds 1`] = `
+Array [
+  Object {
+    "Date": "1st of November in the year 2017",
+  },
+  Object {
+    "Book Description": "Lacks a certain ...
+something",
+  },
+  Object {
+    "Shopping List": Array [
+      "Apples",
+      "Oranges",
+    ],
+  },
+  Object {
+    "Telephone Numbers": Object {
+      "Ben": "+49 1943 24724784",
+      "Rachel": "+59 3459 35935593",
+    },
+  },
+  Object {
+    "Body": Array [
+      Object {
+        "Limbs": Array [
+          Object {
+            "Left Arm": Array [],
+          },
+          Object {
+            "Right Arm": Array [
+              Object {
+                "--format pretty": "Pretty formatting option",
+              },
+              Object {
+                "> Friends <": Array [
+                  "Jack the Ripper",
+                  "Frankenstein",
+                ],
+              },
+              Object {
+                "Use \`\${arg}\` style options": Object {
+                  "'--filters disabled'": "Enable/disable filters",
+                  "'--output dir'": "Specify a different output directory",
+                },
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+]
+`;

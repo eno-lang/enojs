@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Copying a block succeeds 1`] = `
+Array [
+  Object {
+    "Block": "Veni
+Vidi
+Vici",
+  },
+  Object {
+    "Copied Block": "Veni
+Vidi
+Vici",
+  },
+  Object {
+    "Copied & Modified Block": "Veni
+Vidi
+Vici
+That is latin I think.",
+  },
+]
+`;

@@ -1,0 +1,22 @@
+{
+  "author": "Simon Repp",
+  "devDependencies": {
+    "jest": "^22.4.3"
+  },
+  "name": "enojs",
+  "description": "JavaScript implementation of the eno library specification",
+  "main": "eno.js",
+  "keywords": [
+    "eno",
+    "data",
+    "notation",
+    "parser",
+    "plaintext",
+    "structured",
+    "text"
+  ],
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "version": "0.1.0"
+}
