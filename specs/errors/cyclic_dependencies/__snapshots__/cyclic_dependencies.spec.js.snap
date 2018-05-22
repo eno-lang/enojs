@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Cyclic dependencies Scenario A throws 1`] = `
-"In Zeile 6 wird \\"a\\" in sich selbst kopiert.
+"In line 6 'a' is copied into itself.
 
-  Zeile | Inhalt
+   Line | Content
       1 | 
  *    2 |     a < b
       3 |     - 1
@@ -17,9 +17,9 @@ exports[`Cyclic dependencies Scenario A throws 1`] = `
 `;
 
 exports[`Cyclic dependencies Scenario B throws 1`] = `
-"In Zeile 8 wird \\"one\\" in sich selbst kopiert.
+"In line 8 'one' is copied into itself.
 
-  Zeile | Inhalt
+   Line | Content
    ...
       3 |     | all
       4 | 
@@ -33,9 +33,9 @@ exports[`Cyclic dependencies Scenario B throws 1`] = `
 `;
 
 exports[`Cyclic dependencies Scenario C throws 1`] = `
-"In Zeile 5 wird \\"either\\" in sich selbst kopiert.
+"In line 5 'either' is copied into itself.
 
-  Zeile | Inhalt
+   Line | Content
       1 | 
  *    2 |     either < or
       3 |     either = or
@@ -47,9 +47,9 @@ exports[`Cyclic dependencies Scenario C throws 1`] = `
 `;
 
 exports[`Cyclic dependencies Scenario D throws 1`] = `
-"In Zeile 11 wird \\"one\\" in sich selbst kopiert.
+"In line 11 'one' is copied into itself.
 
-  Zeile | Inhalt
+   Line | Content
       1 | 
  *    2 |     # one < two
       3 |     1: one
@@ -67,9 +67,9 @@ exports[`Cyclic dependencies Scenario D throws 1`] = `
 `;
 
 exports[`Cyclic dependencies Scenario E throws 1`] = `
-"In Zeile 3 wird \\"foo\\" in sich selbst kopiert.
+"In line 3 'foo' is copied into itself.
 
-  Zeile | Inhalt
+   Line | Content
       1 | 
  *    2 |     # foo
  >    3 |     ## bar < foo
@@ -79,9 +79,9 @@ exports[`Cyclic dependencies Scenario E throws 1`] = `
 `;
 
 exports[`Cyclic dependencies Scenario F throws 1`] = `
-"In Zeile 4 wird \\"a\\" in sich selbst kopiert.
+"In line 4 'a' is copied into itself.
 
-  Zeile | Inhalt
+   Line | Content
       1 | 
  *    2 |     # a
  *    3 |     ## b

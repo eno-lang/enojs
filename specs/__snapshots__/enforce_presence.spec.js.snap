@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Presence of elements enforced when requested 1`] = `
-"Der Eintrag \\"missing\\" fehlt - falls er angegeben wurde eventuell nach Tippfehlern Ausschau halten und auch die Gross/Kleinschreibung beachten.
+"The dictionary entry 'missing' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
-  Zeile | Inhalt
+   Line | Content
       1 | 
       2 | dictionary:
  >    3 | present = yes
@@ -14,9 +14,9 @@ exports[`Presence of elements enforced when requested 1`] = `
 `;
 
 exports[`Presence of elements enforced when requested 2`] = `
-"Das Feld \\"missing\\" fehlt.
+"The field 'missing' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
-  Zeile | Inhalt
+   Line | Content
  >    1 | 
  >    2 | dictionary:
       3 | present = yes
@@ -29,9 +29,9 @@ exports[`Presence of elements enforced when requested 2`] = `
 `;
 
 exports[`Presence of elements enforced when requested 3`] = `
-"Der Eintrag \\"missing\\" fehlt - falls er angegeben wurde eventuell nach Tippfehlern Ausschau halten und auch die Gross/Kleinschreibung beachten.
+"The dictionary entry 'missing' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
-  Zeile | Inhalt
+   Line | Content
    ...
       6 | 
       7 | dictionary in section:
@@ -41,9 +41,9 @@ exports[`Presence of elements enforced when requested 3`] = `
 `;
 
 exports[`Presence of elements enforced when requested 4`] = `
-"Das Feld \\"missing\\" fehlt.
+"The field 'missing' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
-  Zeile | Inhalt
+   Line | Content
    ...
       4 | 
       5 | # section

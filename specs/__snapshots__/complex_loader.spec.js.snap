@@ -3,7 +3,7 @@
 exports[`Complex loader throws with bad input 1`] = `
 "bad coordinates should have a lat and a lng!
 
-  Zeile | Inhalt
+   Line | Content
       1 | 
  >    2 | bad coordinates: Mickey Mouse
       3 | good coordinates: 48.211180, 16.371514

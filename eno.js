@@ -1,8 +1,9 @@
 // const EnoBuilder = require('./lib/builder.js');
 const EnoParser = require('./lib/parser.js');
 const { EnoParseError, EnoValidationError } = require('./lib/errors.js');
+const messages = require('./lib/messages.js');
 
-const locales = ['de', 'en', 'es']; // TODO: Programmatically get locales
+const locales = Object.keys(messages);
 
 // TODO: Parser and Builder (no generic dumper concept exists in eno)
 // TODO: - Pass default loaders to parse(..), which are always run when getting any values from the resulting document (e.g. ERB default loader to interpolate things)
@@ -21,8 +22,7 @@ const build = object => {
 //   const builder = new EnoDumper(input, locale);
 };
 
-// TODO: Make en the default locale again as things stabilize and we tackle final translations
-const parse = (input, locale = 'de', reporter = 'text') => {
+const parse = (input, locale = 'en', reporter = 'text') => {
 
   if(typeof input !== 'string') {
     throw new TypeError(
@@ -38,7 +38,7 @@ const parse = (input, locale = 'de', reporter = 'text') => {
     );
   }
 
-  const parser = new EnoParser(input, locale, reporter);
+  const parser = new EnoParser(input, messages[locale], reporter);
 
   return parser.run();
 };
