@@ -176,7 +176,7 @@ const SCENARIOS = {
   EMPTY_LINE_SCENARIOS: [
     {
       captures: {
-        [matcher.EMPTY_INDEX]: ''
+        [matcher.EMPTY_LINE_INDEX]: ''
       },
       syntax: '',
       variants: space('')
