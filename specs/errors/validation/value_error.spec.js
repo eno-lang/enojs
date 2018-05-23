@@ -1,4 +1,4 @@
-const eno = require('../../eno.js');
+const eno = require('../../../eno.js');
 
 describe('validation.valueError', () => {
   const document = eno.parse('language: yaml');

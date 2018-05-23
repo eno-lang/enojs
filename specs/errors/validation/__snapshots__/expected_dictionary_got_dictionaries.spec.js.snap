@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validation.expectedDictionaryGotDictionaries provides correct message 1`] = `
+"Instead of the expected single dictionary 'languages' several dictionaries with this name were found.
+
+   Line | Content
+      1 | 
+ >    2 |     languages:
+ *    3 |     eno = eno notation
+      4 | 
+ >    5 |     languages:
+ *    6 |     json = JavaScript Object Notation
+      7 | 
+ >    8 |     languages:
+ *    9 |     yaml = YAML Ain't Markup Language
+     10 |   
+"
+`;
