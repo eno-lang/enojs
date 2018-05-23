@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validation.valueError provides correct message 1`] = `
+"'language' must be 'eno', not 'yaml'.
+
+   Line | Content
+ >    1 | language: yaml
+"
+`;
