@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Unsupported locale throws 1`] = `"The requested locale 'abcdef' is not supported. Translation contributions are very welcome and an easy thing to do - only a few easy messages need to be translated!"`;

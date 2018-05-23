@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Parser options Non-object options throws an error 1`] = `"Parser options can only be an object, got: de"`;
+
+exports[`Parser options Non-string input throws an error 1`] = `"The parser accepts only strings as input, input was: [object Object]"`;
+
+exports[`Parser options Unsupported locale throws an error 1`] = `"The requested locale 'abcdef' is not available. Translation contributions are greatly appreciated, visit https://github.com/eno-lang/eno-locales if you wish to contribute."`;
+
+exports[`Parser options Unsupported option throws an error 1`] = `"Unknown option 'wishful' supplied. Available ones are: locale, reporter, sourceLabel"`;
+
+exports[`Parser options Unsupported reporter throws an error 1`] = `"The requested reporter 'television' does not exist."`;
+
+exports[`Parser options sourceLabel is printed in html reports if provided 1`] = `
+"Line 1 does not follow any specified pattern.
+
+<pre class=\\"eno-report\\"><div>/some/dubious-file.eno</div><div class=\\"eno-report-line \\"><div class=\\"eno-report-gutter\\">      Line</div><div class=\\"eno-report-content\\">Content</div></div><div class=\\"eno-report-line eno-report-line-emphasized\\"><div class=\\"eno-report-gutter\\">         1</div><div class=\\"eno-report-content\\">boom!</div></div></pre>"
+`;
+
+exports[`Parser options sourceLabel is printed in terminal reports if provided 1`] = `
+"Line 1 does not follow any specified pattern.
+
+[1m/some/dubious-file.eno[0m
+[1m   Line | Content[0m
+[41m >    1 | boom![0m
+"
+`;
+
+exports[`Parser options sourceLabel is printed in text reports if provided 1`] = `
+"Line 1 does not follow any specified pattern.
+
+/some/dubious-file.eno
+   Line | Content
+ >    1 | boom!
+"
+`;

@@ -9,7 +9,6 @@ const reporters = ['html', 'terminal', 'text']
 // TODO: Parser and Builder (no generic dumper concept exists in eno)
 // TODO: - Pass default loaders to parse(..), which are always run when getting any values from the resulting document (e.g. ERB default loader to interpolate things)
 //       - Generally enable possiblity to run multiple loaders in order (then you can also pass multiple loaders to the individual getters e.g.)
-// TODO: Possibility to pass file label to parser context, which is then used to enrich error messages with file name :) Use this in early usecases then
 
 const build = object => {
 
@@ -22,7 +21,12 @@ const build = object => {
 //   const builder = new EnoDumper(input, locale);
 };
 
-const parse = (input, locale = 'en', reporter = 'text') => {
+const parse = (input, ...optional) => {
+  let options = {
+    locale: 'en',
+    reporter: 'text',
+    sourceLabel: null
+  };
 
   if(typeof input !== 'string') {
     throw new TypeError(
@@ -30,19 +34,40 @@ const parse = (input, locale = 'en', reporter = 'text') => {
     );
   }
 
-  if(!locales.includes(locale)) {
+  for(let argument of optional) {
+    if(typeof argument === 'object') {
+      for(let option of Object.keys(argument)) {
+        const available = Object.keys(options);
+
+        if(!available.includes(option)) {
+          throw new RangeError(
+            `Unknown option '${option}' supplied. Available ones are: ${available.join(', ')}`
+          );
+        }
+      }
+
+      Object.assign(options, argument);
+    } else {
+      throw new TypeError(
+        `Parser options can only be an object, got: ${argument}`
+      );
+    }
+  }
+
+  if(!locales.includes(options.locale)) {
     throw new RangeError(
-      `The requested locale '${locale}' is not supported. Translation contributions are ` +
-      'very welcome and an easy thing to do - only a few easy messages need ' +
-      'to be translated!'
+      `The requested locale '${options.locale}' is not available. Translation contributions are ` +
+      'greatly appreciated, visit https://github.com/eno-lang/eno-locales if you wish to contribute.'
     );
   }
 
-  if(!reporters.includes(reporter)) {
-    throw new RangeError(`The requested reporter '${reporter}' does not exist.`);
+  options.messages = messages[options.locale];
+
+  if(!reporters.includes(options.reporter)) {
+    throw new RangeError(`The requested reporter '${options.reporter}' does not exist.`);
   }
 
-  const parser = new EnoParser(input, messages[locale], reporter);
+  const parser = new EnoParser(input, options);
 
   return parser.run();
 };
