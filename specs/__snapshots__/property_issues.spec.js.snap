@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Property issues EnoSection fetching a missing dictionary named toString does not have any side effects 1`] = `
+"The dictionary 'toString' is missing - in case it has been specified look for typos and also check for correct capitalization.
+
+   Line | Content
+ >    1 | 
+"
+`;
+
+exports[`Property issues EnoSection fetching a missing section named toString does not have any side effects 1`] = `
+"The section 'toString' is missing - in case it has been specified look for typos and also check for correct capitalization.
+
+   Line | Content
+ >    1 | 
+"
+`;
+
+exports[`Property issues EnoSection toString as missing template does not have any side effects 1`] = `
+"In line 1 the element 'toString' should be copied, but it was not found.
+
+   Line | Content
+ >    1 | check < toString
+"
+`;
+
+exports[`Property issues EnoSection toString as name in a complex merge does not have any side effects 1`] = `
+Array [
+  Object {
+    "a": Array [
+      Object {
+        "toString": Array [
+          Object {
+            "toString": Object {
+              "toString": "check",
+            },
+          },
+        ],
+      },
+    ],
+  },
+  Object {
+    "b": Array [
+      Object {
+        "toString": Array [
+          Object {
+            "toString": "ok",
+          },
+        ],
+      },
+    ],
+  },
+  Object {
+    "c": Array [
+      Object {
+        "toString": Array [
+          Object {
+            "toString": Object {
+              "check": "ok",
+              "toString": "check",
+            },
+          },
+        ],
+      },
+    ],
+  },
+]
+`;
