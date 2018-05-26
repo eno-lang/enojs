@@ -5,6 +5,7 @@
   },
   "name": "enojs",
   "description": "JavaScript implementation of the eno library specification",
+  "license": "MIT",
   "main": "eno.js",
   "keywords": [
     "eno",
