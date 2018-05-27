@@ -1,10 +1,12 @@
 {
-  "author": "Simon Repp",
+  "author": "Simon Repp <simon@fdpl.io>",
+  "bugs": "https://github.com/eno-lang/enojs/issues/",
   "devDependencies": {
     "jest": "^22.4.3"
   },
   "name": "enojs",
   "description": "JavaScript implementation of the eno library specification",
+  "homepage": "https://eno-lang.org/js/",
   "license": "MIT",
   "main": "eno.js",
   "keywords": [
@@ -14,8 +16,13 @@
     "parser",
     "plaintext",
     "structured",
-    "text"
+    "text",
+    "validation"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eno-lang/enojs.git"
+  },
   "scripts": {
     "test": "jest --watch"
   },
