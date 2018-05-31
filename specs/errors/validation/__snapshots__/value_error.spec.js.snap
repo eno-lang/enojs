@@ -1,5 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`validation.valueError calling getError on a field provides correct message 1`] = `
+"There is a problem with the value of the element 'language'.
+
+   Line | Content
+ >    1 | language: yaml
+"
+`;
+
+exports[`validation.valueError calling getError on a field providing a custom message provides correct message 1`] = `
+" a highly custom error
+
+   Line | Content
+ >    1 | language: yaml
+"
+`;
+
+exports[`validation.valueError calling getError on a field providing an error function provides correct message 1`] = `
+"language can not be yaml
+
+   Line | Content
+ >    1 | language: yaml
+"
+`;
+
+exports[`validation.valueError calling getError on an empty element provides correct message 1`] = `
+"There is a problem with the value of the element 'language'.
+
+   Line | Content
+ >    1 | language:
+"
+`;
+
+exports[`validation.valueError calling getError on an empty element providing a custom message provides correct message 1`] = `
+"a highly custom error
+
+   Line | Content
+ >    1 | language:
+"
+`;
+
+exports[`validation.valueError calling getError on an empty element providing an error function provides correct message 1`] = `
+"language can not be null
+
+   Line | Content
+ >    1 | language:
+"
+`;
+
 exports[`validation.valueError provides correct message 1`] = `
 "'language' must be 'eno', not 'yaml'.
 
