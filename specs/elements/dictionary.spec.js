@@ -1,76 +1,71 @@
 const EnoDictionary = require('../../lib/elements/dictionary.js');
 
-const fabricate = () => {
-  const context = {};
-  const instruction = {
-    name: 'languages',
-    subinstructions: [{
-      name: 'eno',
-      type: 'DICTIONARY_ENTRY',
-      value: 'eno notation'
-    }, {
-      name: 'json',
-      type: 'DICTIONARY_ENTRY',
-      value: 'JavaScript Object Notation'
-    }, {
-      name: 'yaml',
-      type: 'DICTIONARY_ENTRY',
-      value: "YAML Ain't Markup Language"
-    }]
-  };
-
-  return new EnoDictionary(context, instruction);
-}
+const context = {};
+const instruction = {
+  name: 'languages',
+  subinstructions: [{
+    name: 'eno',
+    type: 'DICTIONARY_ENTRY',
+    value: 'eno notation'
+  }, {
+    name: 'json',
+    type: 'DICTIONARY_ENTRY',
+    value: 'JavaScript Object Notation'
+  }, {
+    name: 'yaml',
+    type: 'DICTIONARY_ENTRY',
+    value: "YAML Ain't Markup Language"
+  }]
+};
+const parent = {};
 
 describe('EnoDictionary', () => {
 
-  test('is untouched after initialization', () => {
-    const enoDictionary = fabricate();
-    expect(enoDictionary.touched).toBe(false);
+  let dictionary;
+
+  beforeEach(() => {
+    dictionary = new EnoDictionary(context, instruction, parent);
   });
 
-  test('has only untouched entries after initialization', () => {
-    const enoDictionary = fabricate();
-    expect(Object.values(enoDictionary.entries).map(entry => entry.touched)).toEqual([false, false, false]);
+  it('is untouched after initialization', () => {
+    expect(dictionary.touched).toBe(false);
+  });
+
+  it('has only untouched entries after initialization', () => {
+    expect(Object.values(dictionary.entries).map(entry => entry.touched)).toEqual([false, false, false]);
   });
 
   describe('entry()', () => {
 
-    test('returns a value', () => {
-      const enoDictionary = fabricate();
-      expect(enoDictionary.entry('eno')).toEqual('eno notation');
+    it('returns a value', () => {
+      expect(dictionary.entry('eno')).toEqual('eno notation');
     });
 
-    test('touches the dictionary', () => {
-      const enoDictionary = fabricate();
-      const _ = enoDictionary.entry('eno');
-      expect(enoDictionary.touched).toBe(true);
+    it('touches the dictionary', () => {
+      const _ = dictionary.entry('eno');
+      expect(dictionary.touched).toBe(true);
     });
 
-    test('touches the entry', () => {
-      const enoDictionary = fabricate();
-      const _ = enoDictionary.entry('eno');
-      expect(enoDictionary.entries['eno'].touched).toBe(true);
+    it('touches the entry', () => {
+      const _ = dictionary.entry('eno');
+      expect(dictionary.entries['eno'].touched).toBe(true);
     });
 
     describe('with loader function', () => {
 
-      test('applies the loader', () => {
-        const enoDictionary = fabricate();
-        const result = enoDictionary.entry('eno', ({ value }) => value.toUpperCase());
+      it('applies the loader', () => {
+        const result = dictionary.entry('eno', ({ value }) => value.toUpperCase());
         expect(result).toEqual('ENO NOTATION');
       });
 
-      test('touches the element', () => {
-        const enoDictionary = fabricate();
-        const _ = enoDictionary.entry('eno', ({ value }) => value.toUpperCase());
-        expect(enoDictionary.touched).toBe(true);
+      it('touches the element', () => {
+        const _ = dictionary.entry('eno', ({ value }) => value.toUpperCase());
+        expect(dictionary.touched).toBe(true);
       });
 
-      test('touches the entry', () => {
-        const enoDictionary = fabricate();
-        const _ = enoDictionary.entry('eno', ({ value }) => value.toUpperCase());
-        expect(enoDictionary.entries['eno'].touched).toBe(true);
+      it('touches the entry', () => {
+        const _ = dictionary.entry('eno', ({ value }) => value.toUpperCase());
+        expect(dictionary.entries['eno'].touched).toBe(true);
       });
 
     });
@@ -78,9 +73,8 @@ describe('EnoDictionary', () => {
 
   describe('raw()', () => {
 
-    test('returns the primitive object representation', () => {
-      const enoDictionary = fabricate();
-      expect(enoDictionary.raw()).toEqual({
+    it('returns the primitive object representation', () => {
+      expect(dictionary.raw()).toEqual({
         'languages': {
           'eno': 'eno notation',
           'json': 'JavaScript Object Notation',
@@ -93,28 +87,25 @@ describe('EnoDictionary', () => {
 
   describe('toString()', () => {
 
-    test('returns a debug abstraction', () => {
-      const enoDictionary = fabricate();
-      expect(enoDictionary.toString()).toEqual('[object EnoDictionary name="languages" length="3"]');
+    it('returns a debug abstraction', () => {
+      expect(dictionary.toString()).toEqual('[object EnoDictionary name="languages" length="3"]');
     });
 
   });
 
   describe('toStringTag symbol', () => {
 
-    test('returns a custom tag', () => {
-      const enoDictionary = fabricate();
-      expect(Object.prototype.toString.call(enoDictionary)).toEqual('[object EnoDictionary]');
+    it('returns a custom tag', () => {
+      expect(Object.prototype.toString.call(dictionary)).toEqual('[object EnoDictionary]');
     });
 
   });
 
   describe('touch()', () => {
 
-    test('touches the dictionary', () => {
-      const enoDictionary = fabricate();
-      enoDictionary.touch();
-      expect(enoDictionary.touched).toBe(true);
+    it('touches the dictionary', () => {
+      dictionary.touch();
+      expect(dictionary.touched).toBe(true);
     });
 
   });
