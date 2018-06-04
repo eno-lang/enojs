@@ -95,7 +95,7 @@ describe('EnoDictionary', () => {
 
     test('returns a debug abstraction', () => {
       const enoDictionary = fabricate();
-      expect(enoDictionary.toString()).toEqual('[Object EnoDictionary name="languages" length="3"]');
+      expect(enoDictionary.toString()).toEqual('[object EnoDictionary name="languages" length="3"]');
     });
 
   });

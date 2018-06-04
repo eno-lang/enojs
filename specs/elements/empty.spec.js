@@ -27,7 +27,7 @@ describe('EnoEmpty', () => {
 
     test('returns a debug abstraction', () => {
       const empty = fabricate();
-      expect(empty.toString()).toEqual('[Object EnoEmpty name="language"]');
+      expect(empty.toString()).toEqual('[object EnoEmpty name="language"]');
     });
 
   });

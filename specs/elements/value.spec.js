@@ -22,28 +22,28 @@ describe('EnoValue', () => {
   describe('toString()', () => {
     describe('with a name and a value', () => {
       it('returns a debug abstraction', () => {
-        expect(value.toString()).toEqual('[Object EnoValue name="language" value="eno"]');
+        expect(value.toString()).toEqual('[object EnoValue name="language" value="eno"]');
       });
     });
 
     describe('with a name and no value', () => {
       it('returns a debug abstraction', () => {
         const namedEmptyValue = new EnoValue(context, instructionNamedEmpty, parent);
-        expect(namedEmptyValue.toString()).toEqual('[Object EnoValue name="language" value=null]');
+        expect(namedEmptyValue.toString()).toEqual('[object EnoValue name="language" value=null]');
       });
     });
 
     describe('with an unnamed value', () => {
       it('returns a debug abstraction', () => {
         const unnamedValue = new EnoValue(context, instructionUnnamedValue, parent);
-        expect(unnamedValue.toString()).toEqual('[Object EnoValue value="eno"]');
+        expect(unnamedValue.toString()).toEqual('[object EnoValue value="eno"]');
       });
     });
 
     describe('with no name and value', () => {
       it('returns a debug abstraction', () => {
         const voidValue = new EnoValue(context, instructionVoid, parent);
-        expect(voidValue.toString()).toEqual('[Object EnoValue value=null]');
+        expect(voidValue.toString()).toEqual('[object EnoValue value=null]');
       });
     });
   });
