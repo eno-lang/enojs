@@ -35,6 +35,10 @@ describe('EnoDictionary', () => {
     expect(Object.values(dictionary.entries).map(entry => entry.touched)).toEqual([false, false, false]);
   });
 
+  it('has enforcePresence disabled by default', () => {
+    expect(dictionary.enforcePresenceDefault).toBe(false);
+  });
+
   describe('entry()', () => {
 
     it('returns a value', () => {
