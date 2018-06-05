@@ -29,6 +29,25 @@ for(let _class of [EnoError, EnoParseError, EnoValidationError]) {
     it('returns the expected cursor location', () => {
       expect(error.cursor).toEqual(cursor);
     });
+
+    if(_class !== EnoError) {
+      it('is generically catchable as an EnoError when thrown', () => {
+        const throwAndCatch = () => {
+          try {
+            throw error;
+          } catch(err) {
+            if(err instanceof EnoError) {
+              // Expected to land here
+            } else {
+              throw err;
+            }
+          }
+        };
+
+        expect(throwAndCatch).not.toThrow();
+      });
+    }
+
   });
 
 }
