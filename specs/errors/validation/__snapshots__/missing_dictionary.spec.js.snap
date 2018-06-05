@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`validation.missingDictionary provides correct message 1`] = `
+exports[`validation.missingDictionary provides a correct message 1`] = `
 "The dictionary 'presence' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
    Line | Content
       1 | 
-      2 |     # emptyness
- >    3 |   
+ >    2 |     # emptyness
+ *    3 |   
 "
 `;

@@ -12,12 +12,11 @@ describe('validation.missingDictionary', () => {
     error = err;
   }
 
-  test(`provides correct message`, () => {
+  it('provides a correct message', () => {
     expect(error.message).toMatchSnapshot();
   });
 
-  test.skip(`provides correct selection metadata`, () => {
-    // TODO: Currently observed metadata seems wrong, investigate
-    expect(error.selection).toEqual([[2, 0], [10, 2]]);
+  it('provides correct selection metadata', () => {
+    expect(error.selection).toEqual([[2, 15], [2, 15]]);
   });
 });

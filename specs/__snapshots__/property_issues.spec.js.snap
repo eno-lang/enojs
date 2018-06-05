@@ -4,7 +4,7 @@ exports[`Property issues EnoSection fetching a missing dictionary named toString
 "The dictionary 'toString' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
    Line | Content
- >    1 | 
+ *    1 | 
 "
 `;
 
@@ -12,7 +12,7 @@ exports[`Property issues EnoSection fetching a missing section named toString do
 "The section 'toString' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
    Line | Content
- >    1 | 
+ *    1 | 
 "
 `;
 

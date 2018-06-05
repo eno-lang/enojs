@@ -5,8 +5,8 @@ exports[`Presence of elements enforced when requested 1`] = `
 
    Line | Content
       1 | 
-      2 | dictionary:
- >    3 | present = yes
+ >    2 | dictionary:
+ *    3 | present = yes
       4 | 
       5 | # section
    ...
@@ -17,14 +17,15 @@ exports[`Presence of elements enforced when requested 2`] = `
 "The field 'missing' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
    Line | Content
- >    1 | 
- >    2 | dictionary:
-      3 | present = yes
- >    4 | 
- >    5 | # section
-      6 | 
-      7 | dictionary in section:
-   ...
+ *    1 | 
+ *    2 | dictionary:
+ *    3 | present = yes
+ *    4 | 
+ *    5 | # section
+ *    6 | 
+ *    7 | dictionary in section:
+ *    8 | present = yes
+ *    9 | 
 "
 `;
 
@@ -33,9 +34,10 @@ exports[`Presence of elements enforced when requested 3`] = `
 
    Line | Content
    ...
+      5 | # section
       6 | 
-      7 | dictionary in section:
- >    8 | present = yes
+ >    7 | dictionary in section:
+ *    8 | present = yes
       9 | 
 "
 `;
@@ -45,11 +47,12 @@ exports[`Presence of elements enforced when requested 4`] = `
 
    Line | Content
    ...
+      3 | present = yes
       4 | 
-      5 | # section
- >    6 | 
- >    7 | dictionary in section:
-      8 | present = yes
- >    9 | 
+ >    5 | # section
+ *    6 | 
+ *    7 | dictionary in section:
+ *    8 | present = yes
+ *    9 | 
 "
 `;
