@@ -1,6 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`validation.valueError calling getError on a field provides correct message 1`] = `
+exports[`validation.valueError calling getError on a block provides a correct message 1`] = `
+"There is a problem with the value of the element 'language'.
+
+   Line | Content
+      1 | 
+      2 |       -- language
+ >    3 |       eno
+      4 |       -- language
+      5 |     
+"
+`;
+
+exports[`validation.valueError calling getError on a block providing a custom message provides a correct message 1`] = `
+"a highly custom error
+
+   Line | Content
+      1 | 
+      2 |       -- language
+ >    3 |       eno
+      4 |       -- language
+      5 |     
+"
+`;
+
+exports[`validation.valueError calling getError on a block providing an error function provides a correct message 1`] = `
+"language can not be eno
+
+   Line | Content
+      1 | 
+      2 |       -- language
+ >    3 |       eno
+      4 |       -- language
+      5 |     
+"
+`;
+
+exports[`validation.valueError calling getError on a field provides a correct message 1`] = `
 "There is a problem with the value of the element 'language'.
 
    Line | Content
@@ -8,7 +44,7 @@ exports[`validation.valueError calling getError on a field provides correct mess
 "
 `;
 
-exports[`validation.valueError calling getError on a field providing a custom message provides correct message 1`] = `
+exports[`validation.valueError calling getError on a field providing a custom message provides a correct message 1`] = `
 " a highly custom error
 
    Line | Content
@@ -16,7 +52,7 @@ exports[`validation.valueError calling getError on a field providing a custom me
 "
 `;
 
-exports[`validation.valueError calling getError on a field providing an error function provides correct message 1`] = `
+exports[`validation.valueError calling getError on a field providing an error function provides a correct message 1`] = `
 "language can not be yaml
 
    Line | Content
@@ -24,7 +60,40 @@ exports[`validation.valueError calling getError on a field providing an error fu
 "
 `;
 
-exports[`validation.valueError calling getError on an empty element provides correct message 1`] = `
+exports[`validation.valueError calling getError on an empty block provides a correct message 1`] = `
+"There is a problem with the value of the element 'language'.
+
+   Line | Content
+      1 | 
+ >    2 |       -- language
+ >    3 |       -- language
+      4 |     
+"
+`;
+
+exports[`validation.valueError calling getError on an empty block providing a custom message provides a correct message 1`] = `
+"a highly custom error
+
+   Line | Content
+      1 | 
+ >    2 |       -- language
+ >    3 |       -- language
+      4 |     
+"
+`;
+
+exports[`validation.valueError calling getError on an empty block providing an error function provides a correct message 1`] = `
+"language can not be null
+
+   Line | Content
+      1 | 
+ >    2 |       -- language
+ >    3 |       -- language
+      4 |     
+"
+`;
+
+exports[`validation.valueError calling getError on an empty element provides a correct message 1`] = `
 "There is a problem with the value of the element 'language'.
 
    Line | Content
@@ -32,7 +101,7 @@ exports[`validation.valueError calling getError on an empty element provides cor
 "
 `;
 
-exports[`validation.valueError calling getError on an empty element providing a custom message provides correct message 1`] = `
+exports[`validation.valueError calling getError on an empty element providing a custom message provides a correct message 1`] = `
 "a highly custom error
 
    Line | Content
@@ -40,7 +109,7 @@ exports[`validation.valueError calling getError on an empty element providing a 
 "
 `;
 
-exports[`validation.valueError calling getError on an empty element providing an error function provides correct message 1`] = `
+exports[`validation.valueError calling getError on an empty element providing an error function provides a correct message 1`] = `
 "language can not be null
 
    Line | Content
@@ -48,7 +117,7 @@ exports[`validation.valueError calling getError on an empty element providing an
 "
 `;
 
-exports[`validation.valueError provides correct message 1`] = `
+exports[`validation.valueError provides a correct message 1`] = `
 "'language' must be 'eno', not 'yaml'.
 
    Line | Content

@@ -16,54 +16,48 @@ describe('validation.valueError', () => {
     error = err;
   }
 
-  test(`provides correct message`, () => {
+  it(`provides a correct message`, () => {
     expect(error.message).toMatchSnapshot();
   });
 
-  test(`provides correct selection metadata`, () => {
+  it(`provides correct selection metadata`, () => {
     expect(error.selection).toEqual([[1, 10], [1, 14]]);
   });
 
   describe('calling getError on a field', () => {
     const document = eno.parse('language: yaml');
-
     const field = document.sequential()[0];
+
     const error = field.getError();
 
-    test(`provides correct message`, () => {
+    it(`provides a correct message`, () => {
       expect(error.message).toMatchSnapshot();
     });
 
-    test(`provides correct selection metadata`, () => {
+    it(`provides correct selection metadata`, () => {
       expect(error.selection).toEqual([[1, 10], [1, 14]]);
     });
 
     describe('providing a custom message', () => {
-      const document = eno.parse('language: yaml');
-
-      const field = document.sequential()[0];
       const error = field.getError(' a highly custom error');
 
-      test(`provides correct message`, () => {
+      it(`provides a correct message`, () => {
         expect(error.message).toMatchSnapshot();
       });
 
-      test(`provides correct selection metadata`, () => {
+      it(`provides correct selection metadata`, () => {
         expect(error.selection).toEqual([[1, 10], [1, 14]]);
       });
     });
 
     describe('providing an error function', () => {
-      const document = eno.parse('language: yaml');
-
-      const field = document.sequential()[0];
       const error = field.getError(({ name, value }) => `${name} can not be ${value}`);
 
-      test(`provides correct message`, () => {
+      it(`provides a correct message`, () => {
         expect(error.message).toMatchSnapshot();
       });
 
-      test(`provides correct selection metadata`, () => {
+      it(`provides correct selection metadata`, () => {
         expect(error.selection).toEqual([[1, 10], [1, 14]]);
       });
     });
@@ -71,46 +65,128 @@ describe('validation.valueError', () => {
 
   describe('calling getError on an empty element', () => {
     const document = eno.parse('language:');
-
     const empty = document.sequential()[0];
+
     const error = empty.getError();
 
-    test(`provides correct message`, () => {
+    it(`provides a correct message`, () => {
       expect(error.message).toMatchSnapshot();
     });
 
-    test(`provides correct selection metadata`, () => {
+    it(`provides correct selection metadata`, () => {
       expect(error.selection).toEqual([[1, 9], [1, 9]]);
     });
 
     describe('providing a custom message', () => {
-      const document = eno.parse('language:');
-
-      const empty = document.sequential()[0];
       const error = empty.getError('a highly custom error');
 
-      test(`provides correct message`, () => {
+      it(`provides a correct message`, () => {
         expect(error.message).toMatchSnapshot();
       });
 
-      test(`provides correct selection metadata`, () => {
+      it(`provides correct selection metadata`, () => {
         expect(error.selection).toEqual([[1, 9], [1, 9]]);
       });
     });
 
     describe('providing an error function', () => {
-      const document = eno.parse('language:');
-
-      const empty = document.sequential()[0];
       const error = empty.getError(({ name, value }) => `${name} can not be ${value}`);
 
-      test(`provides correct message`, () => {
+      it(`provides a correct message`, () => {
         expect(error.message).toMatchSnapshot();
       });
 
-      test(`provides correct selection metadata`, () => {
+      it(`provides correct selection metadata`, () => {
         expect(error.selection).toEqual([[1, 9], [1, 9]]);
       });
     });
   });
+
+  describe('calling getError on a block', () => {
+    const document = eno.parse(`
+      -- language
+      eno
+      -- language
+    `);
+
+    const block = document.sequential()[0];
+    const error = block.getError();
+
+    it(`provides a correct message`, () => {
+      expect(error.message).toMatchSnapshot();
+    });
+
+    it(`provides correct selection metadata`, () => {
+      expect(error.selection).toEqual([[3, 0], [3, 9]]);
+    });
+
+    describe('providing a custom message', () => {
+      const error = block.getError('a highly custom error');
+
+      it(`provides a correct message`, () => {
+        expect(error.message).toMatchSnapshot();
+      });
+
+      it(`provides correct selection metadata`, () => {
+        expect(error.selection).toEqual([[3, 0], [3, 9]]);
+      });
+    });
+
+    describe('providing an error function', () => {
+      const error = block.getError(({ name, value }) => `${name} can not be ${value}`);
+
+      it(`provides a correct message`, () => {
+        expect(error.message).toMatchSnapshot();
+      });
+
+      it(`provides correct selection metadata`, () => {
+        expect(error.selection).toEqual([[3, 0], [3, 9]]);
+      });
+    });
+  });
+
+  describe('calling getError on an empty block', () => {
+    const document = eno.parse(`
+      -- language
+      -- language
+    `);
+
+    const block = document.sequential()[0];
+    const error = block.getError();
+
+    it(`provides a correct message`, () => {
+      expect(error.message).toMatchSnapshot();
+    });
+
+    it(`provides correct selection metadata`, () => {
+      expect(error.selection).toEqual([[2, 17], [2, 17]]);
+    });
+
+    describe('providing a custom message', () => {
+      const error = block.getError('a highly custom error');
+
+      it(`provides a correct message`, () => {
+        expect(error.message).toMatchSnapshot();
+      });
+
+      it(`provides correct selection metadata`, () => {
+        expect(error.selection).toEqual([[2, 17], [2, 17]]);
+      });
+    });
+
+    describe('providing an error function', () => {
+      const error = block.getError(({ name, value }) => `${name} can not be ${value}`);
+
+      it(`provides a correct message`, () => {
+        expect(error.message).toMatchSnapshot();
+      });
+
+      it(`provides correct selection metadata`, () => {
+        expect(error.selection).toEqual([[2, 17], [2, 17]]);
+      });
+    });
+  });
+
+  // TODO: Specs for valueErrors on fields that were constructed with multiple appendices
+  //       (In order to evaluate and probably increase their quality)
 });
