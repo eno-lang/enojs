@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`analysis.missingNameForFieldAppend provides the correct message 1`] = `
+"Line 1 contains an appendix to a field without a name for a field being specified before.
+
+   Line | Content
+ >    1 | | eno
+"
+`;

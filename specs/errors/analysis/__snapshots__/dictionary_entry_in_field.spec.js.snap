@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`analysis.dictionaryEntryInField provides the correct message 1`] = `
+"Line 3 contains a dictionary entry inside a field.
+
+   Line | Content
+ *    1 | language:
+ *    2 | | eno
+ >    3 | json = JavaScript Object Notation
+"
+`;

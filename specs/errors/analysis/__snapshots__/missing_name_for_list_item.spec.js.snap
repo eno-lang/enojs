@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`analysis.missingNameForListItem provides the correct message 1`] = `
+"Line 1 contains a list item without a name for a list being specified before.
+
+   Line | Content
+ >    1 | - eno
+"
+`;
