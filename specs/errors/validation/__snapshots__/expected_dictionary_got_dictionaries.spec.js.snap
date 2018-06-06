@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`validation.expectedDictionaryGotDictionaries provides correct message 1`] = `
+exports[`validation.expectedDictionaryGotDictionaries provides a correct message 1`] = `
 "Instead of the expected single dictionary 'languages' several dictionaries with this name were found.
 
    Line | Content

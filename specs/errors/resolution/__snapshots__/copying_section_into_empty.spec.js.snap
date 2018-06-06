@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolution.copyingSectionIntoEmpty provides the correct message 1`] = `
+"In line 5 a section is copied into an empty element.
+
+   Line | Content
+   ...
+      3 | # other
+      4 | 
+ >    5 | copy < original
+"
+`;

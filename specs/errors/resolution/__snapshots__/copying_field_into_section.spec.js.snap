@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolution.copyingFieldIntoSection provides the correct message 1`] = `
+"In line 3 a field is copied into a section.
+
+   Line | Content
+      1 | original: value
+      2 | 
+ >    3 | # copy < original
+"
+`;

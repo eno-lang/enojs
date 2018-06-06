@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolution.copyingDictionaryIntoList provides the correct message 1`] = `
+"In line 4 a dictionary is copied into a list.
+
+   Line | Content
+   ...
+      2 | entry = value
+      3 | 
+ >    4 | copy < original
+      5 | - item
+"
+`;

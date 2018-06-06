@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolution.templateNotFound provides the correct message 1`] = `
+"In line 1 the element 'original' should be copied, but it was not found.
+
+   Line | Content
+ >    1 | copy < original
+"
+`;

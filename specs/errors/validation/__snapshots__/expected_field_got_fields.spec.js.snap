@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`validation.expectedFieldGotFields provides correct message 1`] = `
+exports[`validation.expectedFieldGotFields provides a correct message 1`] = `
 "Instead of the expected single field 'eno' several fields with this name were found.
 
    Line | Content

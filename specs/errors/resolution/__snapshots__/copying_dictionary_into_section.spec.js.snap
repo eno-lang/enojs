@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolution.copyingDictionaryIntoSection provides the correct message 1`] = `
+"In line 4 a dictionary is copied into a section.
+
+   Line | Content
+   ...
+      2 | entry = value
+      3 | 
+ >    4 | # copy < original
+"
+`;

@@ -13,11 +13,11 @@ describe('validation.expectedFieldGotFields', () => {
     error = err;
   }
 
-  test(`provides correct message`, () => {
+  it(`provides a correct message`, () => {
     expect(error.message).toMatchSnapshot();
   });
 
-  test(`provides correct selection metadata`, () => {
+  it(`provides correct selection metadata`, () => {
     expect(error.selection).toEqual([[2, 0], [3, 30]]);
   });
 });

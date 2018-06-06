@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validation.cyclicDependency in scenario A returns the correct message 1`] = `
+"In line 5 'a' is copied into itself.
+
+   Line | Content
+ *    1 | a < b
+      2 | - 1
+      3 | - 2
+      4 | 
+ >    5 | b < a
+      6 | - 1
+      7 | - 2
+"
+`;
+
+exports[`validation.cyclicDependency in scenario B returns the correct message 1`] = `
+"In line 7 'one' is copied into itself.
+
+   Line | Content
+   ...
+      2 | | all
+      3 | 
+ *    4 | one < two
+      5 | | one
+      6 | 
+ >    7 | two < one
+      8 | | two
+"
+`;
+
+exports[`validation.cyclicDependency in scenario C returns the correct message 1`] = `
+"In line 4 'either' is copied into itself.
+
+   Line | Content
+ *    1 | either < or
+      2 | either = or
+      3 | 
+ >    4 | or < either
+      5 | or = either
+"
+`;
+
+exports[`validation.cyclicDependency in scenario D returns the correct message 1`] = `
+"In line 10 'one' is copied into itself.
+
+   Line | Content
+ *    1 | # one < two
+      2 | 1: one
+      3 | 
+ *    4 | ## three < four
+      5 | 3: three
+      6 | 
+   ...
+      8 | 2: two
+      9 | 
+ >   10 | ## four < one
+     11 | 4: four
+"
+`;
+
+exports[`validation.cyclicDependency in scenario E returns the correct message 1`] = `
+"In line 2 'foo' is copied into itself.
+
+   Line | Content
+ *    1 | # foo
+ >    2 | ## bar < foo
+      3 | # baz < foo
+"
+`;
+
+exports[`validation.cyclicDependency in scenario F returns the correct message 1`] = `
+"In line 3 'a' is copied into itself.
+
+   Line | Content
+ *    1 | # a
+ *    2 | ## b
+ >    3 | ### c < a
+"
+`;

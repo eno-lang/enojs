@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`validation.expectedSectionGotSections provides correct message 1`] = `
+exports[`validation.expectedSectionGotSections provides a correct message 1`] = `
 "Instead of the expected single section 'languages' several sections with this name were found.
 
    Line | Content
