@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tokenization.unterminatedBlock provides a correct message 1`] = `
+"The block 'languages' starting in line 2 is not terminated until the end of the document.
+
+   Line | Content
+      1 | 
+ >    2 |     -- languages
+ *    3 |     eno
+ *    4 |     json
+ *    5 |     yaml
+ *    6 |     - languages
+ *    7 |   
+"
+`;

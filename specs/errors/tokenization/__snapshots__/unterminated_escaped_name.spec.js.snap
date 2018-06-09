@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tokenization.unterminatedEscapedName provides a correct message 1`] = `
+"In line 2 the name of an element is escaped, but the escape sequence is not terminated until the end of the line.
+
+   Line | Content
+      1 | 
+ >    2 |     \`language: eno
+      3 |   
+"
+`;

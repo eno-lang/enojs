@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tokenization.invalidLine provides a correct message 1`] = `
+"Line 5 does not follow any specified pattern.
+
+   Line | Content
+   ...
+      3 |     - eno
+      4 |     - json
+ >    5 |     yaml
+      6 |   
+"
+`;
