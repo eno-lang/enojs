@@ -86,7 +86,7 @@ describe('EnoList', () => {
 
     test('returns a debug abstraction', () => {
       const enoList = fabricate();
-      expect(enoList.toString()).toEqual('[object EnoList name="languages" length="3"]');
+      expect(enoList.toString()).toEqual('[object EnoList name="languages" items=3]');
     });
 
   });

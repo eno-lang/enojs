@@ -92,7 +92,7 @@ describe('EnoDictionary', () => {
   describe('toString()', () => {
 
     it('returns a debug abstraction', () => {
-      expect(dictionary.toString()).toEqual('[object EnoDictionary name="languages" length="3"]');
+      expect(dictionary.toString()).toEqual('[object EnoDictionary name="languages" entries=3]');
     });
 
   });

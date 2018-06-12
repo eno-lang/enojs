@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`validation.cyclicDependency in scenario A returns the correct message 1`] = `
+exports[`resolution.cyclicDependency in scenario A returns the correct message 1`] = `
 "In line 5 'a' is copied into itself.
 
    Line | Content
@@ -14,7 +14,7 @@ exports[`validation.cyclicDependency in scenario A returns the correct message 1
 "
 `;
 
-exports[`validation.cyclicDependency in scenario B returns the correct message 1`] = `
+exports[`resolution.cyclicDependency in scenario B returns the correct message 1`] = `
 "In line 7 'one' is copied into itself.
 
    Line | Content
@@ -29,7 +29,7 @@ exports[`validation.cyclicDependency in scenario B returns the correct message 1
 "
 `;
 
-exports[`validation.cyclicDependency in scenario C returns the correct message 1`] = `
+exports[`resolution.cyclicDependency in scenario C returns the correct message 1`] = `
 "In line 4 'either' is copied into itself.
 
    Line | Content
@@ -41,7 +41,7 @@ exports[`validation.cyclicDependency in scenario C returns the correct message 1
 "
 `;
 
-exports[`validation.cyclicDependency in scenario D returns the correct message 1`] = `
+exports[`resolution.cyclicDependency in scenario D returns the correct message 1`] = `
 "In line 10 'one' is copied into itself.
 
    Line | Content
@@ -59,7 +59,7 @@ exports[`validation.cyclicDependency in scenario D returns the correct message 1
 "
 `;
 
-exports[`validation.cyclicDependency in scenario E returns the correct message 1`] = `
+exports[`resolution.cyclicDependency in scenario E returns the correct message 1`] = `
 "In line 2 'foo' is copied into itself.
 
    Line | Content
@@ -69,7 +69,7 @@ exports[`validation.cyclicDependency in scenario E returns the correct message 1
 "
 `;
 
-exports[`validation.cyclicDependency in scenario F returns the correct message 1`] = `
+exports[`resolution.cyclicDependency in scenario F returns the correct message 1`] = `
 "In line 3 'a' is copied into itself.
 
    Line | Content
