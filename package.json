@@ -6,7 +6,7 @@
   },
   "name": "enojs",
   "description": "JavaScript implementation of the eno library specification",
-  "homepage": "https://eno-lang.org/js/",
+  "homepage": "https://eno-lang.org/javascript/",
   "license": "MIT",
   "main": "eno.js",
   "keywords": [

@@ -10,15 +10,24 @@ npm install enojs
 
 ## Getting started
 
+Create an eno document, for instance `intro.eno`:
+
+```eno
+Greeting: Hello World!
+```
+
+A minimal example to read this file with `enojs`:
+
 ```js
 const eno = require('enojs');
 const fs = require('fs');
 
-const input = fs.readFileSync('[your-file].eno');
+const input = fs.readFileSync('intro.eno');
 
 const document = eno.parse(input);
 
-console.log( document.field('[your-field]') );  // prints '[your-value]'
+console.log( document.field('Greeting') );  // prints 'Hello World!'
 ```
+## Complete documentation and API reference
 
-The complete library documentation is at https://eno-lang.org/js/
+See [eno-lang.org/javascript](https://eno-lang.org/javascript/)

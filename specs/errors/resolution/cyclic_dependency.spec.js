@@ -76,7 +76,7 @@ or = either
   }
 };
 
-describe('validation.cyclicDependency', () => {
+describe('resolution.cyclicDependency', () => {
   for(let [label, scenario] of Object.entries(scenarios)) {
     describe(`in scenario ${label}`, () => {
 
