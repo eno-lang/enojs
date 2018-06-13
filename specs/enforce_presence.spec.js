@@ -38,7 +38,7 @@ describe('Presence of elements', () => {
   test('enforced when requested', () => {
     const doc = parse(sample);
 
-    doc.enforcePresence(true);
+    doc.enforceElements(true);
 
     const section = doc.section('section');
 

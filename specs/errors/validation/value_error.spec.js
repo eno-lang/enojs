@@ -24,11 +24,11 @@ describe('validation.valueError', () => {
     expect(error.selection).toEqual([[1, 10], [1, 14]]);
   });
 
-  describe('calling getError on a field', () => {
+  describe('calling error on a field', () => {
     const document = eno.parse('language: yaml');
     const field = document.sequential()[0];
 
-    const error = field.getError();
+    const error = field.error();
 
     it(`provides a correct message`, () => {
       expect(error.message).toMatchSnapshot();
@@ -39,7 +39,7 @@ describe('validation.valueError', () => {
     });
 
     describe('providing a custom message', () => {
-      const error = field.getError(' a highly custom error');
+      const error = field.error(' a highly custom error');
 
       it(`provides a correct message`, () => {
         expect(error.message).toMatchSnapshot();
@@ -51,7 +51,7 @@ describe('validation.valueError', () => {
     });
 
     describe('providing an error function', () => {
-      const error = field.getError(({ name, value }) => `${name} can not be ${value}`);
+      const error = field.error(({ name, value }) => `${name} can not be ${value}`);
 
       it(`provides a correct message`, () => {
         expect(error.message).toMatchSnapshot();
@@ -63,11 +63,11 @@ describe('validation.valueError', () => {
     });
   });
 
-  describe('calling getError on an empty element', () => {
+  describe('calling error on an empty element', () => {
     const document = eno.parse('language:');
     const empty = document.sequential()[0];
 
-    const error = empty.getError();
+    const error = empty.error();
 
     it(`provides a correct message`, () => {
       expect(error.message).toMatchSnapshot();
@@ -78,7 +78,7 @@ describe('validation.valueError', () => {
     });
 
     describe('providing a custom message', () => {
-      const error = empty.getError('a highly custom error');
+      const error = empty.error('a highly custom error');
 
       it(`provides a correct message`, () => {
         expect(error.message).toMatchSnapshot();
@@ -90,7 +90,7 @@ describe('validation.valueError', () => {
     });
 
     describe('providing an error function', () => {
-      const error = empty.getError(({ name, value }) => `${name} can not be ${value}`);
+      const error = empty.error(({ name, value }) => `${name} can not be ${value}`);
 
       it(`provides a correct message`, () => {
         expect(error.message).toMatchSnapshot();
@@ -102,7 +102,7 @@ describe('validation.valueError', () => {
     });
   });
 
-  describe('calling getError on a block', () => {
+  describe('calling error on a block', () => {
     const document = eno.parse(`
       -- language
       eno
@@ -110,7 +110,7 @@ describe('validation.valueError', () => {
     `);
 
     const block = document.sequential()[0];
-    const error = block.getError();
+    const error = block.error();
 
     it(`provides a correct message`, () => {
       expect(error.message).toMatchSnapshot();
@@ -121,7 +121,7 @@ describe('validation.valueError', () => {
     });
 
     describe('providing a custom message', () => {
-      const error = block.getError('a highly custom error');
+      const error = block.error('a highly custom error');
 
       it(`provides a correct message`, () => {
         expect(error.message).toMatchSnapshot();
@@ -133,7 +133,7 @@ describe('validation.valueError', () => {
     });
 
     describe('providing an error function', () => {
-      const error = block.getError(({ name, value }) => `${name} can not be ${value}`);
+      const error = block.error(({ name, value }) => `${name} can not be ${value}`);
 
       it(`provides a correct message`, () => {
         expect(error.message).toMatchSnapshot();
@@ -145,14 +145,14 @@ describe('validation.valueError', () => {
     });
   });
 
-  describe('calling getError on an empty block', () => {
+  describe('calling error on an empty block', () => {
     const document = eno.parse(`
       -- language
       -- language
     `);
 
     const block = document.sequential()[0];
-    const error = block.getError();
+    const error = block.error();
 
     it(`provides a correct message`, () => {
       expect(error.message).toMatchSnapshot();
@@ -163,7 +163,7 @@ describe('validation.valueError', () => {
     });
 
     describe('providing a custom message', () => {
-      const error = block.getError('a highly custom error');
+      const error = block.error('a highly custom error');
 
       it(`provides a correct message`, () => {
         expect(error.message).toMatchSnapshot();
@@ -175,7 +175,7 @@ describe('validation.valueError', () => {
     });
 
     describe('providing an error function', () => {
-      const error = block.getError(({ name, value }) => `${name} can not be ${value}`);
+      const error = block.error(({ name, value }) => `${name} can not be ${value}`);
 
       it(`provides a correct message`, () => {
         expect(error.message).toMatchSnapshot();
