@@ -27,7 +27,7 @@ describe('Field append behaviour', () => {
     expect(document.field('field')).toEqual('foo bar');
   });
 
-  test('newslines copied from blocks are not trimmed away', () => {
+  test('newlines copied from blocks are not trimmed away', () => {
     const document = eno.parse(`
       -- block
 
@@ -41,7 +41,7 @@ describe('Field append behaviour', () => {
     expect(document.field('field')).toMatchSnapshot();
   });
 
-  test('newslines copied from blocks with appendices are handled correctly', () => {
+  test('newlines copied from blocks with appendices are handled correctly', () => {
     const document = eno.parse(`
       -- block
 
