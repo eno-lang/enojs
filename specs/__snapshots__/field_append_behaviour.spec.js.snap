@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field append behaviour newslines copied from blocks are not trimmed away 1`] = `
+"
+      inbetween whitespace
+"
+`;
+
+exports[`Field append behaviour newslines copied from blocks with appendices are handled correctly 1`] = `
+"
+      inbetween block newlines
+
+
+inbetween appended newlines"
+`;

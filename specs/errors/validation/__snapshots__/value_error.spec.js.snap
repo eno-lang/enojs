@@ -25,7 +25,7 @@ exports[`validation.valueError calling getError on a block providing a custom me
 `;
 
 exports[`validation.valueError calling getError on a block providing an error function provides a correct message 1`] = `
-"language can not be eno
+"language can not be       eno
 
    Line | Content
       1 | 
