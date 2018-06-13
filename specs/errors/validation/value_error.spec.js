@@ -26,7 +26,7 @@ describe('validation.valueError', () => {
 
   describe('calling error on a field', () => {
     const document = eno.parse('language: yaml');
-    const field = document.sequential()[0];
+    const field = document.elements()[0];
 
     const error = field.error();
 
@@ -65,7 +65,7 @@ describe('validation.valueError', () => {
 
   describe('calling error on an empty element', () => {
     const document = eno.parse('language:');
-    const empty = document.sequential()[0];
+    const empty = document.elements()[0];
 
     const error = empty.error();
 
@@ -109,7 +109,7 @@ describe('validation.valueError', () => {
       -- language
     `);
 
-    const block = document.sequential()[0];
+    const block = document.elements()[0];
     const error = block.error();
 
     it(`provides a correct message`, () => {
@@ -151,7 +151,7 @@ describe('validation.valueError', () => {
       -- language
     `);
 
-    const block = document.sequential()[0];
+    const block = document.elements()[0];
     const error = block.error();
 
     it(`provides a correct message`, () => {
