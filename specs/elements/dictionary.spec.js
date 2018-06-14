@@ -41,50 +41,71 @@ describe('EnoDictionary', () => {
   });
 
   describe('entry()', () => {
+    describe('without a loader', () => {
+      let result;
 
-    it('returns a value', () => {
-      expect(dictionary.entry('eno')).toEqual('eno notation');
-    });
-
-    it('touches the dictionary', () => {
-      const _ = dictionary.entry('eno');
-      expect(dictionary.touched).toBe(true);
-    });
-
-    it('touches the entry', () => {
-      const _ = dictionary.entry('eno');
-      expect(dictionary.entries['eno'].touched).toBe(true);
-    });
-
-    describe('with loader function', () => {
-
-      it('applies the loader', () => {
-        const result = dictionary.entry('eno', ({ value }) => value.toUpperCase());
-        expect(result).toEqual('ENO NOTATION');
+      beforeEach(() => {
+        result = dictionary.entry('eno');
       });
 
-      it('touches the element', () => {
-        const _ = dictionary.entry('eno', ({ value }) => value.toUpperCase());
+      it('returns a value', () => {
+        expect(result).toEqual('eno notation');
+      });
+
+      it('touches the dictionary', () => {
         expect(dictionary.touched).toBe(true);
       });
 
       it('touches the entry', () => {
-        const _ = dictionary.entry('eno', ({ value }) => value.toUpperCase());
-        expect(dictionary.entries['eno'].touched).toBe(true);
+        expect(dictionary.entries_associative['eno'].touched).toBe(true);
       });
 
+      it('does not touch the other entries', () => {
+        for(let entry of dictionary.entries()) {
+          if(entry.name !== 'eno') {
+            expect(entry.touched).toBe(false);
+          }
+        }
+      });
+    });
+
+    describe('with loader', () => {
+      let result;
+
+      beforeEach(() => {
+        result =  dictionary.entry('eno', ({ value }) => value.toUpperCase());
+      });
+
+      it('applies the loader', () => {
+        expect(result).toEqual('ENO NOTATION');
+      });
+
+      it('touches the element', () => {
+        expect(dictionary.touched).toBe(true);
+      });
+
+      it('touches the entry', () => {
+        expect(dictionary.entries_associative['eno'].touched).toBe(true);
+      });
+
+      it('does not touch the other entries', () => {
+        for(let entry of dictionary.entries()) {
+          if(entry.name !== 'eno') {
+            expect(entry.touched).toBe(false);
+          }
+        }
+      });
     });
   });
 
   describe('raw()', () => {
-
-    it('returns the primitive object representation', () => {
+    it('returns a native object representation', () => {
       expect(dictionary.raw()).toEqual({
-        'languages': {
-          'eno': 'eno notation',
-          'json': 'JavaScript Object Notation',
-          'yaml': "YAML Ain't Markup Language",
-        }
+        'languages': [
+          { 'eno': 'eno notation' },
+          { 'json': 'JavaScript Object Notation' },
+          { 'yaml': "YAML Ain't Markup Language" }
+        ]
       });
     });
   });

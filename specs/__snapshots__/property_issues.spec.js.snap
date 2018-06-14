@@ -31,9 +31,11 @@ Array [
       Object {
         "toString": Array [
           Object {
-            "toString": Object {
-              "toString": "check",
-            },
+            "toString": Array [
+              Object {
+                "toString": "check",
+              },
+            ],
           },
         ],
       },
@@ -55,10 +57,14 @@ Array [
       Object {
         "toString": Array [
           Object {
-            "toString": Object {
-              "check": "ok",
-              "toString": "check",
-            },
+            "toString": Array [
+              Object {
+                "toString": "check",
+              },
+              Object {
+                "check": "ok",
+              },
+            ],
           },
         ],
       },

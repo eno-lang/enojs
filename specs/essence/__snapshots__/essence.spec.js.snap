@@ -16,10 +16,14 @@ something",
     ],
   },
   Object {
-    "Telephone Numbers": Object {
-      "Ben": "+49 1943 24724784",
-      "Rachel": "+59 3459 35935593",
-    },
+    "Telephone Numbers": Array [
+      Object {
+        "Ben": "+49 1943 24724784",
+      },
+      Object {
+        "Rachel": "+59 3459 35935593",
+      },
+    ],
   },
   Object {
     "Body": Array [
@@ -40,10 +44,14 @@ something",
                 ],
               },
               Object {
-                "Use \`\${arg}\` style options": Object {
-                  "'--filters disabled'": "Enable/disable filters",
-                  "'--output dir'": "Specify a different output directory",
-                },
+                "Use \`\${arg}\` style options": Array [
+                  Object {
+                    "'--output dir'": "Specify a different output directory",
+                  },
+                  Object {
+                    "'--filters disabled'": "Enable/disable filters",
+                  },
+                ],
               },
             ],
           },

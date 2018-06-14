@@ -17,7 +17,7 @@ describe('Property issues', () => {
           check = ok
         `);
 
-        expect(document.raw()).toEqual([{ toString: { check: 'ok' } }]);
+        expect(document.raw()).toEqual([{ toString: [{ check: 'ok' }] }]);
       });
     });
 
@@ -28,7 +28,7 @@ describe('Property issues', () => {
           toString = ok
         `);
 
-        expect(document.raw()).toEqual([{ check: { toString: 'ok' } }]);
+        expect(document.raw()).toEqual([{ check: [{ toString: 'ok' }] }]);
       });
     });
 
