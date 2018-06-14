@@ -20,7 +20,6 @@ const instruction = {
 const parent = {};
 
 describe('EnoDictionary', () => {
-
   let dictionary;
 
   beforeEach(() => {
@@ -32,7 +31,9 @@ describe('EnoDictionary', () => {
   });
 
   it('has only untouched entries after initialization', () => {
-    expect(Object.values(dictionary.entries).map(entry => entry.touched)).toEqual([false, false, false]);
+    for(let entry of dictionary.entries()) {
+      expect(entry.touched).toBe(false);
+    }
   });
 
   it('has globallyEnforceElements disabled by default', () => {
@@ -86,31 +87,32 @@ describe('EnoDictionary', () => {
         }
       });
     });
-
   });
 
   describe('toString()', () => {
-
     it('returns a debug abstraction', () => {
       expect(dictionary.toString()).toEqual('[object EnoDictionary name="languages" entries=3]');
     });
-
   });
 
   describe('toStringTag symbol', () => {
-
     it('returns a custom tag', () => {
       expect(Object.prototype.toString.call(dictionary)).toEqual('[object EnoDictionary]');
     });
-
   });
 
   describe('touch()', () => {
-
     it('touches the dictionary', () => {
       dictionary.touch();
       expect(dictionary.touched).toBe(true);
     });
 
+    it('does not touch the entries', () => {
+      for(let entry of dictionary.entries()) {
+        if(entry.name !== 'eno') {
+          expect(entry.touched).toBe(false);
+        }
+      }
+    });
   });
 });

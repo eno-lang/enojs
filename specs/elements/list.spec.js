@@ -1,105 +1,137 @@
 const EnoList = require('../../lib/elements/list.js');
 
-const fabricate = () => {
-  const context = {};
-  const instruction = {
-    name: 'languages',
-    subinstructions: [{
-      type: 'LIST_ITEM',
-      value: 'eno'
-    }, {
-      type: 'LIST_ITEM',
-      value: 'json'
-    }, {
-      type: 'LIST_ITEM',
-      value: 'yaml'
-    }]
-  };
-
-  return new EnoList(context, instruction);
-}
+const context = {};
+const instruction = {
+  name: 'languages',
+  subinstructions: [{
+    type: 'LIST_ITEM',
+    value: 'eno'
+  }, {
+    type: 'LIST_ITEM',
+    value: 'json'
+  }, {
+    type: 'LIST_ITEM',
+    value: 'yaml'
+  }]
+};
+const parent = {};
 
 describe('EnoList', () => {
+  let list;
+
+  beforeEach(() => {
+    list = new EnoList(context, instruction, parent);
+  });
+
   it('is untouched after initialization', () => {
-    const enoList = fabricate();
-    expect(enoList.touched).toBe(false);
+    expect(list.touched).toBe(false);
   });
 
   it('has only untouched items after initialization', () => {
-    const enoList = fabricate();
-    expect(enoList._items.map(item => item.touched)).toEqual([false, false, false]);
+    for(let item of list.elements()) {
+      expect(item.touched).toBe(false);
+    }
   });
 
-  describe('items()', () => {
-    it('returns the values', () => {
-      const enoList = fabricate();
-      expect(enoList.items()).toEqual(['eno', 'json', 'yaml']);
+  describe('elements()', () => {
+    let result;
+
+    beforeEach(() => {
+      result = list.elements();
     });
 
     it('touches the list itself', () => {
-      const enoList = fabricate();
-      const _ = enoList.items();
-      expect(enoList.touched).toBe(true);
+      expect(list.touched).toBe(true);
     });
 
-    it('touches all list items', () => {
-      const enoList = fabricate();
-      const _ = enoList.items();
-      expect(enoList._items.map(item => item.touched)).toEqual([true, true, true]);
+    it('does not touch the list items', () => {
+      for(let item of list.items({ elements: true })) {
+        expect(item.touched).toBe(false);
+      }
+    });
+  });
+
+  describe('items()', () => {
+    let result;
+
+    describe('without a loader', () => {
+      beforeEach(() => {
+        result = list.items();
+      });
+
+      it('returns the values', () => {
+        expect(result).toEqual(['eno', 'json', 'yaml']);
+      });
+
+      it('touches the list itself', () => {
+        expect(list.touched).toBe(true);
+      });
+
+      it('touches all list items', () => {
+        for(let item of list.elements()) {
+          expect(item.touched).toBe(true);
+        }
+      });
     });
 
-    describe('with loader function', () => {
+    describe('with a loader', () => {
+      beforeEach(() => {
+        result = list.items(({ value }) => value.toUpperCase());
+      });
+
       it('applies the loader', () => {
-        const enoList = fabricate();
-        const result = enoList.items(({ value }) => value.toUpperCase());
         expect(result).toEqual(['ENO', 'JSON', 'YAML']);
       });
 
       it('touches the element', () => {
-        const enoList = fabricate();
-        const _ = enoList.items(({ value }) => value.toUpperCase());
-        expect(enoList.touched).toBe(true);
+        expect(list.touched).toBe(true);
       });
 
       it('touches all list items', () => {
-        const enoList = fabricate();
-        const _ = enoList.items(({ value }) => value.toUpperCase());
-        expect(enoList._items.map(item => item.touched)).toEqual([true, true, true]);
+        for(let item of list.elements()) {
+          expect(item.touched).toBe(true);
+        }
       });
     });
   });
 
+  describe('length()', () => {
+    it('returns the number of items', () => {
+      expect(list.length()).toBe(3);
+    });
+  });
+
   describe('raw()', () => {
-    it('returns the primitive object representation', () => {
-      const enoList = fabricate();
-      expect(enoList.raw()).toEqual({ languages: ['eno', 'json', 'yaml'] });
+    it('returns a native object representation', () => {
+      expect(list.raw()).toEqual({ languages: ['eno', 'json', 'yaml'] });
     });
   });
 
   describe('toString()', () => {
     it('returns a debug abstraction', () => {
-      const enoList = fabricate();
-      expect(enoList.toString()).toEqual('[object EnoList name="languages" items=3]');
+      expect(list.toString()).toEqual('[object EnoList name="languages" items=3]');
     });
   });
 
   describe('toStringTag symbol', () => {
     it('returns a custom tag', () => {
-      const enoList = fabricate();
-      expect(Object.prototype.toString.call(enoList)).toEqual('[object EnoList]');
+      expect(Object.prototype.toString.call(list)).toEqual('[object EnoList]');
     });
   });
 
   describe('touch()', () => {
-    const enoList = fabricate();
-    enoList.touch();
-
-    it('touches the list itself', () => {
-      expect(enoList.touched).toBe(true);
+    beforeEach(() => {
+      list.touch();
     });
 
-    it('touches all list items', () => {
-      expect(enoList._items.map(item => item.touched)).toEqual([true, true, true]);
+    it('touches the list itself', () => {
+      expect(list.touched).toBe(true);
+    });
+
+    it('does not touch the list items', () => {
+      for(let item of list.elements()) {
+        expect(item.touched).toBe(false);
+      }
     });
   });
 });
