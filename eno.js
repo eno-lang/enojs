@@ -10,16 +10,16 @@ const reporters = ['html', 'terminal', 'text']
 // TODO: - Pass default loaders to parse(..), which are always run when getting any values from the resulting document (e.g. ERB default loader to interpolate things)
 //       - Generally enable possiblity to run multiple loaders in order (then you can also pass multiple loaders to the individual getters e.g.)
 
-const build = object => {
-
-  if(typeof object !== 'object') {
-    throw new TypeError(
-      `The builder accepts only objects as input, input was: ${object}`
-    );
-  }
-
-//   const builder = new EnoDumper(input, locale);
-};
+// const build = object => {
+//
+//   if(typeof object !== 'object') {
+//     throw new TypeError(
+//       `The builder accepts only objects as input, input was: ${object}`
+//     );
+//   }
+//
+// //   const builder = new EnoDumper(input, locale);
+// };
 
 const parse = (input, ...optional) => {
   let options = {
@@ -73,9 +73,13 @@ const parse = (input, ...optional) => {
 };
 
 module.exports = {
+  EnoDictionary: require('./lib/elements/dictionary.js'),
+  EnoEmpty: require('./lib/elements/empty.js'),
   EnoError,
+  EnoList: require('./lib/elements/list.js'),
   EnoParseError,
+  EnoSection: require('./lib/elements/section.js'),
   EnoValidationError,
-  build,
+  EnoValue: require('./lib/elements/value.js'),
   parse
 };
