@@ -11,16 +11,16 @@ describe('Fetching an empty element through dictionary()', () => {
     expect(dictionary instanceof EnoDictionary).toBe(true);
   });
 
-  it('returns a dictionary with enforceElements disabled', () => {
-    expect(dictionary.globallyEnforceElements).toBe(false);
+  it('returns a dictionary with enforceAllElements disabled', () => {
+    expect(dictionary._enforceAllElements).toBe(false);
   });
 
-  describe('when enforceElements was enabled on the document', () => {
-    document.enforceElements();
+  describe('when enforceAllElements was enabled on the document', () => {
+    document.enforceAllElements();
     const dictionary = document.dictionary('languages');
 
-    it('returns a dictionary with enforceElements enabled', () => {
-      expect(dictionary.globallyEnforceElements).toBe(true);
+    it('returns a dictionary with enforceAllElements enabled', () => {
+      expect(dictionary._enforceAllElements).toBe(true);
     });
   });
 });
@@ -37,16 +37,16 @@ describe('Fetching an empty element through dictionaries()', () => {
     expect(dictionaries[0] instanceof EnoDictionary).toBe(true);
   });
 
-  it('returns a dictionary with enforceElements disabled', () => {
-    expect(dictionaries[0].globallyEnforceElements).toBe(false);
+  it('returns a dictionary with enforceAllElements disabled', () => {
+    expect(dictionaries[0]._enforceAllElements).toBe(false);
   });
 
-  describe('when enforceElements was enabled on the document', () => {
-    document.enforceElements();
+  describe('when enforceAllElements was enabled on the document', () => {
+    document.enforceAllElements();
     const dictionaries = document.dictionaries('languages');
 
-    it('returns a dictionary with enforceElements enabled', () => {
-      expect(dictionaries[0].globallyEnforceElements).toBe(true);
+    it('returns a dictionary with enforceAllElements enabled', () => {
+      expect(dictionaries[0]._enforceAllElements).toBe(true);
     });
   });
 });

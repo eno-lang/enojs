@@ -36,8 +36,8 @@ describe('EnoDictionary', () => {
     }
   });
 
-  it('has globallyEnforceElements disabled by default', () => {
-    expect(dictionary.globallyEnforceElements).toBe(false);
+  it('has enforceAllElements disabled by default', () => {
+    expect(dictionary._enforceAllElements).toBe(false);
   });
 
   describe('entry()', () => {

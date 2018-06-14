@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Presence of elements enforced when requested 1`] = `
+exports[`enforceAllElements is enforced when requested 1`] = `
 "The dictionary entry 'missing' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
    Line | Content
@@ -13,7 +13,7 @@ exports[`Presence of elements enforced when requested 1`] = `
 "
 `;
 
-exports[`Presence of elements enforced when requested 2`] = `
+exports[`enforceAllElements is enforced when requested 2`] = `
 "The field 'missing' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
    Line | Content
@@ -29,7 +29,7 @@ exports[`Presence of elements enforced when requested 2`] = `
 "
 `;
 
-exports[`Presence of elements enforced when requested 3`] = `
+exports[`enforceAllElements is enforced when requested 3`] = `
 "The dictionary entry 'missing' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
    Line | Content
@@ -42,7 +42,7 @@ exports[`Presence of elements enforced when requested 3`] = `
 "
 `;
 
-exports[`Presence of elements enforced when requested 4`] = `
+exports[`enforceAllElements is enforced when requested 4`] = `
 "The field 'missing' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
    Line | Content

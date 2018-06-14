@@ -10,8 +10,8 @@ dictionary in section:
 present = yes
 `;
 
-describe('Presence of elements', () => {
-  test('not enforced by default', () => {
+describe('enforceAllElements', () => {
+  it('is not active by default', () => {
     const doc = parse(sample);
     const section = doc.section('section');
     const result = {
@@ -35,10 +35,10 @@ describe('Presence of elements', () => {
     expect(result).toEqual(expected);
   });
 
-  test('enforced when requested', () => {
+  it('is enforced when requested', () => {
     const doc = parse(sample);
 
-    doc.enforceElements(true);
+    doc.enforceAllElements();
 
     const section = doc.section('section');
 
