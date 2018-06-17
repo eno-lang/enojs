@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`analysis.duplicateDictionaryEntryName provides correct selection metadata 1`] = `
+Array [
+  Array [
+    3,
+    0,
+  ],
+  Array [
+    3,
+    18,
+  ],
+]
+`;
+
 exports[`analysis.duplicateDictionaryEntryName provides the correct message 1`] = `
 "The Dictionary 'languages' contains two entries named 'eno'.
 

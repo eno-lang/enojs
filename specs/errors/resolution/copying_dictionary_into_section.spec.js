@@ -24,6 +24,6 @@ describe('resolution.copyingDictionaryIntoSection', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[4, 0], [4, 17]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });

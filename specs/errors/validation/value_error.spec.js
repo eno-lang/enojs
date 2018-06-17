@@ -21,7 +21,7 @@ describe('validation.valueError', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[1, 10], [1, 14]]);
+    expect(error.selection).toMatchSnapshot();
   });
 
   describe('calling error on a field', () => {
@@ -35,7 +35,7 @@ describe('validation.valueError', () => {
     });
 
     it(`provides correct selection metadata`, () => {
-      expect(error.selection).toEqual([[1, 10], [1, 14]]);
+      expect(error.selection).toMatchSnapshot();
     });
 
     describe('providing a custom message', () => {
@@ -46,7 +46,7 @@ describe('validation.valueError', () => {
       });
 
       it(`provides correct selection metadata`, () => {
-        expect(error.selection).toEqual([[1, 10], [1, 14]]);
+        expect(error.selection).toMatchSnapshot();
       });
     });
 
@@ -58,7 +58,7 @@ describe('validation.valueError', () => {
       });
 
       it(`provides correct selection metadata`, () => {
-        expect(error.selection).toEqual([[1, 10], [1, 14]]);
+        expect(error.selection).toMatchSnapshot();
       });
     });
   });
@@ -74,7 +74,7 @@ describe('validation.valueError', () => {
     });
 
     it(`provides correct selection metadata`, () => {
-      expect(error.selection).toEqual([[1, 9], [1, 9]]);
+      expect(error.selection).toMatchSnapshot();
     });
 
     describe('providing a custom message', () => {
@@ -85,7 +85,7 @@ describe('validation.valueError', () => {
       });
 
       it(`provides correct selection metadata`, () => {
-        expect(error.selection).toEqual([[1, 9], [1, 9]]);
+        expect(error.selection).toMatchSnapshot();
       });
     });
 
@@ -97,7 +97,7 @@ describe('validation.valueError', () => {
       });
 
       it(`provides correct selection metadata`, () => {
-        expect(error.selection).toEqual([[1, 9], [1, 9]]);
+        expect(error.selection).toMatchSnapshot();
       });
     });
   });
@@ -117,7 +117,7 @@ describe('validation.valueError', () => {
     });
 
     it(`provides correct selection metadata`, () => {
-      expect(error.selection).toEqual([[3, 0], [3, 9]]);
+      expect(error.selection).toMatchSnapshot();
     });
 
     describe('providing a custom message', () => {
@@ -128,7 +128,7 @@ describe('validation.valueError', () => {
       });
 
       it(`provides correct selection metadata`, () => {
-        expect(error.selection).toEqual([[3, 0], [3, 9]]);
+        expect(error.selection).toMatchSnapshot();
       });
     });
 
@@ -140,7 +140,7 @@ describe('validation.valueError', () => {
       });
 
       it(`provides correct selection metadata`, () => {
-        expect(error.selection).toEqual([[3, 0], [3, 9]]);
+        expect(error.selection).toMatchSnapshot();
       });
     });
   });
@@ -159,7 +159,7 @@ describe('validation.valueError', () => {
     });
 
     it(`provides correct selection metadata`, () => {
-      expect(error.selection).toEqual([[2, 17], [2, 17]]);
+      expect(error.selection).toMatchSnapshot();
     });
 
     describe('providing a custom message', () => {
@@ -170,7 +170,7 @@ describe('validation.valueError', () => {
       });
 
       it(`provides correct selection metadata`, () => {
-        expect(error.selection).toEqual([[2, 17], [2, 17]]);
+        expect(error.selection).toMatchSnapshot();
       });
     });
 
@@ -182,7 +182,7 @@ describe('validation.valueError', () => {
       });
 
       it(`provides correct selection metadata`, () => {
-        expect(error.selection).toEqual([[2, 17], [2, 17]]);
+        expect(error.selection).toMatchSnapshot();
       });
     });
   });

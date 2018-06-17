@@ -16,3 +16,16 @@ exports[`validation.expectedDictionaryGotDictionaries provides a correct message
      10 |   
 "
 `;
+
+exports[`validation.expectedDictionaryGotDictionaries provides correct selection metadata 1`] = `
+Array [
+  Array [
+    1,
+    0,
+  ],
+  Array [
+    8,
+    37,
+  ],
+]
+`;

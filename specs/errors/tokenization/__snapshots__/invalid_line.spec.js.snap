@@ -11,3 +11,16 @@ exports[`tokenization.invalidLine provides a correct message 1`] = `
       6 |   
 "
 `;
+
+exports[`tokenization.invalidLine provides correct selection metadata 1`] = `
+Array [
+  Array [
+    4,
+    0,
+  ],
+  Array [
+    4,
+    8,
+  ],
+]
+`;

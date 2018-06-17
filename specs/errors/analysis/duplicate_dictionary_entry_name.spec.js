@@ -24,6 +24,6 @@ describe('analysis.duplicateDictionaryEntryName', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[4, 0], [4, 18]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });

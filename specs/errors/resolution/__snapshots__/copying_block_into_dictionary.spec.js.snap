@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`resolution.copyingBlockIntoDictionary provides correct selection metadata 1`] = `
+Array [
+  Array [
+    4,
+    0,
+  ],
+  Array [
+    4,
+    15,
+  ],
+]
+`;
+
 exports[`resolution.copyingBlockIntoDictionary provides the correct message 1`] = `
 "In line 5 a block is copied into a dictionary.
 

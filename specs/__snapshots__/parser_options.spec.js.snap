@@ -6,7 +6,7 @@ exports[`Parser options Non-string input throws an error 1`] = `"The parser acce
 
 exports[`Parser options Unsupported locale throws an error 1`] = `"The requested locale 'abcdef' is not available. Translation contributions are greatly appreciated, visit https://github.com/eno-lang/eno-locales if you wish to contribute."`;
 
-exports[`Parser options Unsupported option throws an error 1`] = `"Unknown option 'wishful' supplied. Available ones are: locale, reporter, sourceLabel"`;
+exports[`Parser options Unsupported option throws an error 1`] = `"Unknown option 'wishful' supplied. Available ones are: locale, reporter, sourceLabel, zeroIndexing"`;
 
 exports[`Parser options Unsupported reporter throws an error 1`] = `"The requested reporter 'television' does not exist."`;
 

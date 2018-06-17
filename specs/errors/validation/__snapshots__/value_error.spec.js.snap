@@ -12,6 +12,19 @@ exports[`validation.valueError calling error on a block provides a correct messa
 "
 `;
 
+exports[`validation.valueError calling error on a block provides correct selection metadata 1`] = `
+Array [
+  Array [
+    2,
+    0,
+  ],
+  Array [
+    2,
+    9,
+  ],
+]
+`;
+
 exports[`validation.valueError calling error on a block providing a custom message provides a correct message 1`] = `
 "a highly custom error
 
@@ -22,6 +35,19 @@ exports[`validation.valueError calling error on a block providing a custom messa
       4 |       -- language
       5 |     
 "
+`;
+
+exports[`validation.valueError calling error on a block providing a custom message provides correct selection metadata 1`] = `
+Array [
+  Array [
+    2,
+    0,
+  ],
+  Array [
+    2,
+    9,
+  ],
+]
 `;
 
 exports[`validation.valueError calling error on a block providing an error function provides a correct message 1`] = `
@@ -36,12 +62,38 @@ exports[`validation.valueError calling error on a block providing an error funct
 "
 `;
 
+exports[`validation.valueError calling error on a block providing an error function provides correct selection metadata 1`] = `
+Array [
+  Array [
+    2,
+    0,
+  ],
+  Array [
+    2,
+    9,
+  ],
+]
+`;
+
 exports[`validation.valueError calling error on a field provides a correct message 1`] = `
 "There is a problem with the value of the element 'language'.
 
    Line | Content
  >    1 | language: yaml
 "
+`;
+
+exports[`validation.valueError calling error on a field provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    10,
+  ],
+  Array [
+    0,
+    14,
+  ],
+]
 `;
 
 exports[`validation.valueError calling error on a field providing a custom message provides a correct message 1`] = `
@@ -52,12 +104,38 @@ exports[`validation.valueError calling error on a field providing a custom messa
 "
 `;
 
+exports[`validation.valueError calling error on a field providing a custom message provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    10,
+  ],
+  Array [
+    0,
+    14,
+  ],
+]
+`;
+
 exports[`validation.valueError calling error on a field providing an error function provides a correct message 1`] = `
 "language can not be yaml
 
    Line | Content
  >    1 | language: yaml
 "
+`;
+
+exports[`validation.valueError calling error on a field providing an error function provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    10,
+  ],
+  Array [
+    0,
+    14,
+  ],
+]
 `;
 
 exports[`validation.valueError calling error on an empty block provides a correct message 1`] = `
@@ -71,6 +149,19 @@ exports[`validation.valueError calling error on an empty block provides a correc
 "
 `;
 
+exports[`validation.valueError calling error on an empty block provides correct selection metadata 1`] = `
+Array [
+  Array [
+    1,
+    17,
+  ],
+  Array [
+    1,
+    17,
+  ],
+]
+`;
+
 exports[`validation.valueError calling error on an empty block providing a custom message provides a correct message 1`] = `
 "a highly custom error
 
@@ -80,6 +171,19 @@ exports[`validation.valueError calling error on an empty block providing a custo
  >    3 |       -- language
       4 |     
 "
+`;
+
+exports[`validation.valueError calling error on an empty block providing a custom message provides correct selection metadata 1`] = `
+Array [
+  Array [
+    1,
+    17,
+  ],
+  Array [
+    1,
+    17,
+  ],
+]
 `;
 
 exports[`validation.valueError calling error on an empty block providing an error function provides a correct message 1`] = `
@@ -93,12 +197,38 @@ exports[`validation.valueError calling error on an empty block providing an erro
 "
 `;
 
+exports[`validation.valueError calling error on an empty block providing an error function provides correct selection metadata 1`] = `
+Array [
+  Array [
+    1,
+    17,
+  ],
+  Array [
+    1,
+    17,
+  ],
+]
+`;
+
 exports[`validation.valueError calling error on an empty element provides a correct message 1`] = `
 "There is a problem with the value of the element 'language'.
 
    Line | Content
  >    1 | language:
 "
+`;
+
+exports[`validation.valueError calling error on an empty element provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    9,
+  ],
+  Array [
+    0,
+    9,
+  ],
+]
 `;
 
 exports[`validation.valueError calling error on an empty element providing a custom message provides a correct message 1`] = `
@@ -109,6 +239,19 @@ exports[`validation.valueError calling error on an empty element providing a cus
 "
 `;
 
+exports[`validation.valueError calling error on an empty element providing a custom message provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    9,
+  ],
+  Array [
+    0,
+    9,
+  ],
+]
+`;
+
 exports[`validation.valueError calling error on an empty element providing an error function provides a correct message 1`] = `
 "language can not be null
 
@@ -117,10 +260,36 @@ exports[`validation.valueError calling error on an empty element providing an er
 "
 `;
 
+exports[`validation.valueError calling error on an empty element providing an error function provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    9,
+  ],
+  Array [
+    0,
+    9,
+  ],
+]
+`;
+
 exports[`validation.valueError provides a correct message 1`] = `
 "'language' must be 'eno', not 'yaml'.
 
    Line | Content
  >    1 | language: yaml
 "
+`;
+
+exports[`validation.valueError provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    10,
+  ],
+  Array [
+    0,
+    14,
+  ],
+]
 `;

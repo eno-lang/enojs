@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`analysis.listItemInField provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    0,
+  ],
+  Array [
+    0,
+    18,
+  ],
+]
+`;
+
 exports[`analysis.listItemInField provides the correct message 1`] = `
 "Line 1 contains a dictionary entry without a name for a dictionary being specified before.
 

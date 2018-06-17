@@ -25,6 +25,6 @@ describe('resolution.copyingBlockIntoSection', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[5, 0], [5, 17]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });

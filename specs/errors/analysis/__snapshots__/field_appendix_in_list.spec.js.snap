@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`analysis.fieldAppendInList provides correct selection metadata 1`] = `
+Array [
+  Array [
+    2,
+    0,
+  ],
+  Array [
+    2,
+    6,
+  ],
+]
+`;
+
 exports[`analysis.fieldAppendInList provides the correct message 1`] = `
 "Line 3 contains an appendix (to a field) inside a list.
 

@@ -18,6 +18,6 @@ describe('validation.expectedFieldGotFields', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[2, 0], [3, 30]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });

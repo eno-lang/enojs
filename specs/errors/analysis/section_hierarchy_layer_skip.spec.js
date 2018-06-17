@@ -22,6 +22,6 @@ describe('analysis.sectionHierarchyLayerSkip', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[2, 0], [2, 14]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });

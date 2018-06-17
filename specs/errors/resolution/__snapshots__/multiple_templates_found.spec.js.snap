@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`resolution.multipleTemplatesFound provides correct selection metadata 1`] = `
+Array [
+  Array [
+    3,
+    0,
+  ],
+  Array [
+    3,
+    15,
+  ],
+]
+`;
+
 exports[`resolution.multipleTemplatesFound provides the correct message 1`] = `
 "In line 4 it is not clear which of the elements named 'original' should be copied.
 

@@ -6,14 +6,53 @@ exports[`EnoError returns the expected message 1`] = `
 My snippet"
 `;
 
+exports[`EnoError returns the expected selection range 1`] = `
+Array [
+  Array [
+    1,
+    2,
+  ],
+  Array [
+    3,
+    4,
+  ],
+]
+`;
+
 exports[`EnoParseError returns the expected message 1`] = `
 "My error
 
 My snippet"
 `;
 
+exports[`EnoParseError returns the expected selection range 1`] = `
+Array [
+  Array [
+    1,
+    2,
+  ],
+  Array [
+    3,
+    4,
+  ],
+]
+`;
+
 exports[`EnoValidationError returns the expected message 1`] = `
 "My error
 
 My snippet"
+`;
+
+exports[`EnoValidationError returns the expected selection range 1`] = `
+Array [
+  Array [
+    1,
+    2,
+  ],
+  Array [
+    3,
+    4,
+  ],
+]
 `;

@@ -20,6 +20,6 @@ describe('tokenization.unterminatedEscapedName', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[2, 5], [2, 18]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });

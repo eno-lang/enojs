@@ -23,6 +23,6 @@ describe('analysis.listItemInDictionary', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[3, 0], [3, 6]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });

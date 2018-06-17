@@ -17,6 +17,6 @@ describe('validation.missingSection', () => {
   });
 
   it('provides correct selection metadata', () => {
-    expect(error.selection).toEqual([[2, 15], [2, 15]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });

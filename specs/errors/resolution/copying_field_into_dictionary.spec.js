@@ -24,6 +24,6 @@ describe('resolution.copyingFieldIntoDictionary', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[3, 0], [3, 15]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });

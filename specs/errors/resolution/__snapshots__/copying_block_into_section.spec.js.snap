@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`resolution.copyingBlockIntoSection provides correct selection metadata 1`] = `
+Array [
+  Array [
+    4,
+    0,
+  ],
+  Array [
+    4,
+    17,
+  ],
+]
+`;
+
 exports[`resolution.copyingBlockIntoSection provides the correct message 1`] = `
 "In line 5 a block is copied into a section.
 

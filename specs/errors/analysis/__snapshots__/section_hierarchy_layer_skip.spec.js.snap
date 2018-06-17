@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`analysis.sectionHierarchyLayerSkip provides correct selection metadata 1`] = `
+Array [
+  Array [
+    1,
+    0,
+  ],
+  Array [
+    1,
+    14,
+  ],
+]
+`;
+
 exports[`analysis.sectionHierarchyLayerSkip provides the correct message 1`] = `
 "Line 2 starts a section that is more than one level deeper than the current one.
 

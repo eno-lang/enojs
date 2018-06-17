@@ -21,6 +21,6 @@ describe('resolution.templateNotFound', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[1, 0], [1, 15]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });

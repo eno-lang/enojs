@@ -23,6 +23,6 @@ describe('tokenization.invalidLine', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[5, 0], [5, 8]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });

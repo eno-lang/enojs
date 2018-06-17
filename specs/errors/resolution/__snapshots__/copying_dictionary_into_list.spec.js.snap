@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`resolution.copyingDictionaryIntoList provides correct selection metadata 1`] = `
+Array [
+  Array [
+    3,
+    0,
+  ],
+  Array [
+    3,
+    15,
+  ],
+]
+`;
+
 exports[`resolution.copyingDictionaryIntoList provides the correct message 1`] = `
 "In line 4 a dictionary is copied into a list.
 

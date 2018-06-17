@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`resolution.copyingFieldIntoDictionary provides correct selection metadata 1`] = `
+Array [
+  Array [
+    2,
+    0,
+  ],
+  Array [
+    2,
+    15,
+  ],
+]
+`;
+
 exports[`resolution.copyingFieldIntoDictionary provides the correct message 1`] = `
 "In line 3 a field is copied into a dictionary.
 

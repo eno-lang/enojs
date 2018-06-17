@@ -16,3 +16,16 @@ exports[`validation.expectedSectionGotSections provides a correct message 1`] = 
  *   10 |   
 "
 `;
+
+exports[`validation.expectedSectionGotSections provides correct selection metadata 1`] = `
+Array [
+  Array [
+    1,
+    0,
+  ],
+  Array [
+    9,
+    2,
+  ],
+]
+`;

@@ -25,6 +25,6 @@ describe('resolution.copyingSectionIntoEmpty', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[5, 0], [5, 15]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });

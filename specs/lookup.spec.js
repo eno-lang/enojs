@@ -2,49 +2,69 @@ const eno = require('../eno.js');
 
 const sample = `
 color: cyan
-
+close:up
 # notes
 `.trim();
 
 const scenarios = [
   {
-    element: 'color',
+    element: 'color', // 'o'
     index: [3],
     zone: 'name'
   },
   {
-    element: 'color',
-    index: [1, 3],
+    element: 'color', // 'o'
+    index: [0, 3],
     zone: 'name'
   },
   {
-    element: 'color',
+    element: 'color', // ' '
+    index: [6],
+    zone: 'nameOperator'
+  },
+  {
+    element: 'color', // ' '
+    index: [0, 6],
+    zone: 'nameOperator'
+  },
+  {
+    element: 'color', // 'c'
     index: [7],
     zone: 'value'
   },
   {
-    element: 'color',
-    index: [1, 7],
+    element: 'color', // 'c'
+    index: [0, 7],
     zone: 'value'
   },
   {
-    element: 'notes',
-    index: [13],
+    element: 'close', // 'u'
+    index: [18],
+    zone: 'value'
+  },
+  {
+    element: 'close', // 'u'
+    index: [1, 6],
+    zone: 'value'
+  },
+  {
+    element: 'notes', // '#'
+    index: [21],
     zone: 'sectionOperator'
   },
   {
-    element: 'notes',
-    index: [3, 0],
+    element: 'notes', // '#'
+    index: [2, 0],
     zone: 'sectionOperator'
   },
   {
-    element: 'notes',
-    index: [19],
+    element: 'notes', // 's'
+    index: [27],
     zone: 'name'
   },
   {
-    element: 'notes',
-    index: [3, 6],
+    element: 'notes', // 's'
+    index: [2, 6],
     zone: 'name'
   },
 ];

@@ -10,3 +10,16 @@ exports[`validation.expectedFieldGotFields provides a correct message 1`] = `
       4 |   
 "
 `;
+
+exports[`validation.expectedFieldGotFields provides correct selection metadata 1`] = `
+Array [
+  Array [
+    1,
+    0,
+  ],
+  Array [
+    2,
+    30,
+  ],
+]
+`;

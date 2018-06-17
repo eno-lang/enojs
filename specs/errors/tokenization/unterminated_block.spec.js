@@ -24,6 +24,6 @@ describe('tokenization.unterminatedBlock', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[2, 4], [2, 16]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });

@@ -24,6 +24,6 @@ describe('validation.expectedDictionaryGotDictionaries', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[2, 0], [9, 37]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });

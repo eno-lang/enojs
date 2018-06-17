@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`analysis.missingNameForListItem provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    0,
+  ],
+  Array [
+    0,
+    5,
+  ],
+]
+`;
+
 exports[`analysis.missingNameForListItem provides the correct message 1`] = `
 "Line 1 contains a list item without a name for a list being specified before.
 

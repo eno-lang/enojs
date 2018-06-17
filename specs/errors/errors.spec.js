@@ -23,7 +23,7 @@ for(let _class of [EnoError, EnoParseError, EnoValidationError]) {
     });
 
     it('returns the expected selection range', () => {
-      expect(error.selection).toEqual(selection);
+      expect(error.selection).toMatchSnapshot();
     });
 
     it('returns the expected cursor location', () => {

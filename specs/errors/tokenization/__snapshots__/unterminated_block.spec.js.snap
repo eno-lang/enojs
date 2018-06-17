@@ -13,3 +13,16 @@ exports[`tokenization.unterminatedBlock provides a correct message 1`] = `
  *    7 |   
 "
 `;
+
+exports[`tokenization.unterminatedBlock provides correct selection metadata 1`] = `
+Array [
+  Array [
+    1,
+    4,
+  ],
+  Array [
+    1,
+    16,
+  ],
+]
+`;

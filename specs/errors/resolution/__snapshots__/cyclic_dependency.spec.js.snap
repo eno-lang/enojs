@@ -14,6 +14,19 @@ exports[`resolution.cyclicDependency in scenario A returns the correct message 1
 "
 `;
 
+exports[`resolution.cyclicDependency in scenario A returns the correct message 2`] = `
+Array [
+  Array [
+    4,
+    4,
+  ],
+  Array [
+    4,
+    5,
+  ],
+]
+`;
+
 exports[`resolution.cyclicDependency in scenario B returns the correct message 1`] = `
 "In line 7 'one' is copied into itself.
 
@@ -29,6 +42,19 @@ exports[`resolution.cyclicDependency in scenario B returns the correct message 1
 "
 `;
 
+exports[`resolution.cyclicDependency in scenario B returns the correct message 2`] = `
+Array [
+  Array [
+    6,
+    6,
+  ],
+  Array [
+    6,
+    9,
+  ],
+]
+`;
+
 exports[`resolution.cyclicDependency in scenario C returns the correct message 1`] = `
 "In line 4 'either' is copied into itself.
 
@@ -39,6 +65,19 @@ exports[`resolution.cyclicDependency in scenario C returns the correct message 1
  >    4 | or < either
       5 | or = either
 "
+`;
+
+exports[`resolution.cyclicDependency in scenario C returns the correct message 2`] = `
+Array [
+  Array [
+    3,
+    5,
+  ],
+  Array [
+    3,
+    11,
+  ],
+]
 `;
 
 exports[`resolution.cyclicDependency in scenario D returns the correct message 1`] = `
@@ -59,6 +98,19 @@ exports[`resolution.cyclicDependency in scenario D returns the correct message 1
 "
 `;
 
+exports[`resolution.cyclicDependency in scenario D returns the correct message 2`] = `
+Array [
+  Array [
+    9,
+    10,
+  ],
+  Array [
+    9,
+    13,
+  ],
+]
+`;
+
 exports[`resolution.cyclicDependency in scenario E returns the correct message 1`] = `
 "In line 2 'foo' is copied into itself.
 
@@ -69,6 +121,19 @@ exports[`resolution.cyclicDependency in scenario E returns the correct message 1
 "
 `;
 
+exports[`resolution.cyclicDependency in scenario E returns the correct message 2`] = `
+Array [
+  Array [
+    1,
+    9,
+  ],
+  Array [
+    1,
+    12,
+  ],
+]
+`;
+
 exports[`resolution.cyclicDependency in scenario F returns the correct message 1`] = `
 "In line 3 'a' is copied into itself.
 
@@ -77,4 +142,17 @@ exports[`resolution.cyclicDependency in scenario F returns the correct message 1
  *    2 | ## b
  >    3 | ### c < a
 "
+`;
+
+exports[`resolution.cyclicDependency in scenario F returns the correct message 2`] = `
+Array [
+  Array [
+    2,
+    8,
+  ],
+  Array [
+    2,
+    9,
+  ],
+]
 `;

@@ -21,6 +21,6 @@ describe('analysis.missingNameForFieldAppend', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[1, 0], [1, 5]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });

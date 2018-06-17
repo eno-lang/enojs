@@ -25,7 +25,8 @@ const parse = (input, ...optional) => {
   let options = {
     locale: 'en',
     reporter: 'text',
-    sourceLabel: null
+    sourceLabel: null,
+    zeroIndexing: false
   };
 
   if(typeof input !== 'string') {
@@ -60,6 +61,9 @@ const parse = (input, ...optional) => {
       'greatly appreciated, visit https://github.com/eno-lang/eno-locales if you wish to contribute.'
     );
   }
+
+  options.indexing = options.zeroIndexing ? 0 : 1;
+  delete options.zeroIndexing;
 
   options.messages = messages[options.locale];
 

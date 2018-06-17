@@ -23,6 +23,6 @@ describe('resolution.copyingFieldIntoSection', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[3, 0], [3, 17]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });

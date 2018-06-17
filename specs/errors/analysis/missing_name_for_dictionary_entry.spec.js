@@ -21,6 +21,6 @@ describe('analysis.listItemInField', () => {
   });
 
   it(`provides correct selection metadata`, () => {
-    expect(error.selection).toEqual([[1, 0], [1, 18]]);
+    expect(error.selection).toMatchSnapshot();
   });
 });
