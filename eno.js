@@ -1,6 +1,6 @@
 // const EnoBuilder = require('./lib/builder.js');
 const EnoParser = require('./lib/parser.js');
-const { EnoError, EnoParseError, EnoValidationError } = require('./lib/errors.js');
+const { EnoError, EnoParseError, EnoValidationError } = require('./lib/error_types.js');
 const messages = require('./lib/messages.js');
 
 const locales = Object.keys(messages);

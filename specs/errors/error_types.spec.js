@@ -1,4 +1,4 @@
-const { EnoError, EnoParseError, EnoValidationError } = require('../../lib/errors.js');
+const { EnoError, EnoParseError, EnoValidationError } = require('../../lib/error_types.js');
 
 const text = 'My error';
 const snippet = 'My snippet'
