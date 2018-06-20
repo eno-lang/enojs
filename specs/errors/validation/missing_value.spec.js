@@ -5,7 +5,6 @@ describe('validation.missingValue', () => {
   let error;
 
   describe('missingDictionaryEntryValue', () => {
-
     beforeAll(() => {
       const document = eno.parse(`
         dictionary:
@@ -29,30 +28,55 @@ describe('validation.missingValue', () => {
   });
 
   describe('missingFieldValue', () => {
+    describe('without empty appendices', () => {
+      beforeAll(() => {
+        const document = eno.parse(`
+          required:
+        `);
 
-    beforeAll(() => {
-      const document = eno.parse(`
-        required:
-      `);
+        try {
+          document.field('required', { required: true });
+        } catch(err) {
+          error = err;
+        }
+      })
 
-      try {
-        document.field('required', { required: true });
-      } catch(err) {
-        error = err;
-      }
-    })
+      it('provides a correct message', () => {
+        expect(error.message).toMatchSnapshot();
+      });
 
-    it('provides a correct message', () => {
-      expect(error.message).toMatchSnapshot();
+      it('provides correct selection metadata', () => {
+        expect(error.selection).toMatchSnapshot();
+      });
     });
 
-    it('provides correct selection metadata', () => {
-      expect(error.selection).toMatchSnapshot();
+    describe('with empty appendices', () => {
+      beforeAll(() => {
+        const document = eno.parse(`
+          required:
+          |
+
+          |
+        `);
+
+        try {
+          document.field('required', { required: true });
+        } catch(err) {
+          error = err;
+        }
+      })
+
+      it('provides a correct message', () => {
+        expect(error.message).toMatchSnapshot();
+      });
+
+      it('provides correct selection metadata', () => {
+        expect(error.selection).toMatchSnapshot();
+      });
     });
   });
 
   describe('missingListItemValue', () => {
-
     beforeAll(() => {
       const document = eno.parse(`
         values required:
