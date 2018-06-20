@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validation.missingValue missingDictionaryEntryValue provides a correct message 1`] = `
+"The dictionary entry 'required' must contain a value.
+
+   Line | Content
+      1 | 
+      2 |         dictionary:
+ >    3 |         required =
+      4 |       
+"
+`;
+
+exports[`validation.missingValue missingDictionaryEntryValue provides correct selection metadata 1`] = `
+Array [
+  Array [
+    2,
+    0,
+  ],
+  Array [
+    2,
+    18,
+  ],
+]
+`;
+
+exports[`validation.missingValue missingFieldValue provides a correct message 1`] = `
+"The field 'required' must contain a value.
+
+   Line | Content
+      1 | 
+ >    2 |         required:
+      3 |       
+"
+`;
+
+exports[`validation.missingValue missingFieldValue provides correct selection metadata 1`] = `
+Array [
+  Array [
+    1,
+    0,
+  ],
+  Array [
+    1,
+    17,
+  ],
+]
+`;
+
+exports[`validation.missingValue missingListItemValue provides a correct message 1`] = `
+"The list 'values required' may not contain empty items.
+
+   Line | Content
+   ...
+      2 |         values required:
+      3 |         - value
+ >    4 |         -
+      5 |       
+"
+`;
+
+exports[`validation.missingValue missingListItemValue provides correct selection metadata 1`] = `
+Array [
+  Array [
+    3,
+    0,
+  ],
+  Array [
+    3,
+    9,
+  ],
+]
+`;
