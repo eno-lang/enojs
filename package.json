@@ -1,9 +1,15 @@
 {
   "author": "Simon Repp <simon@fdpl.io>",
-  "bugs": "https://github.com/eno-lang/enojs/issues/",
+  "bugs": {
+    "url": "https://github.com/eno-lang/enojs/issues/"
+  },
   "devDependencies": {
     "jest": "^23.1.0"
   },
+  "files": [
+    "eno.js",
+    "lib/"
+  ],
   "name": "enojs",
   "description": "JavaScript implementation of the eno library specification",
   "homepage": "https://eno-lang.org/javascript/",
