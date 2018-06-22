@@ -26,7 +26,7 @@ describe('validation.valueError', () => {
 
   describe('calling error on a field', () => {
     const document = eno.parse('language: yaml');
-    const field = document.elements()[0];
+    const field = document.element('language');
 
     const error = field.error();
 
@@ -65,7 +65,7 @@ describe('validation.valueError', () => {
 
   describe('calling error on an empty element', () => {
     const document = eno.parse('language:');
-    const empty = document.elements()[0];
+    const empty = document.element('language');
 
     const error = empty.error();
 
@@ -109,7 +109,7 @@ describe('validation.valueError', () => {
       -- language
     `);
 
-    const block = document.elements()[0];
+    const block = document.element('language');
     const error = block.error();
 
     it(`provides a correct message`, () => {
@@ -151,7 +151,7 @@ describe('validation.valueError', () => {
       -- language
     `);
 
-    const block = document.elements()[0];
+    const block = document.element('language');
     const error = block.error();
 
     it(`provides a correct message`, () => {
@@ -176,6 +176,52 @@ describe('validation.valueError', () => {
 
     describe('providing an error function', () => {
       const error = block.error(({ name, value }) => `${name} can not be ${value}`);
+
+      it(`provides a correct message`, () => {
+        expect(error.message).toMatchSnapshot();
+      });
+
+      it(`provides correct selection metadata`, () => {
+        expect(error.selection).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('calling error on a field with appendices', () => {
+    const document = eno.parse(`
+      languages:
+      \\ eno
+      \\ yaml
+      |
+
+      |
+    `);
+
+    const field = document.element('languages');
+    const error = field.error();
+
+    it(`provides a correct message`, () => {
+      expect(error.message).toMatchSnapshot();
+    });
+
+    it(`provides correct selection metadata`, () => {
+      expect(error.selection).toMatchSnapshot();
+    });
+
+    describe('providing a custom message', () => {
+      const error = field.error('a highly custom error');
+
+      it(`provides a correct message`, () => {
+        expect(error.message).toMatchSnapshot();
+      });
+
+      it(`provides correct selection metadata`, () => {
+        expect(error.selection).toMatchSnapshot();
+      });
+    });
+
+    describe('providing an error function', () => {
+      const error = field.error(({ name, value }) => `${name} can not be ${value}`);
 
       it(`provides a correct message`, () => {
         expect(error.message).toMatchSnapshot();

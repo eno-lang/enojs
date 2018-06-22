@@ -138,6 +138,90 @@ Array [
 ]
 `;
 
+exports[`validation.valueError calling error on a field with appendices provides a correct message 1`] = `
+"There is a problem with the value of the element 'languages'.
+
+   Line | Content
+      1 | 
+ >    2 |       languages:
+ >    3 |       \\\\ eno
+ >    4 |       \\\\ yaml
+ >    5 |       |
+ >    6 | 
+ >    7 |       |
+      8 |     
+"
+`;
+
+exports[`validation.valueError calling error on a field with appendices provides correct selection metadata 1`] = `
+Array [
+  Array [
+    1,
+    16,
+  ],
+  Array [
+    6,
+    7,
+  ],
+]
+`;
+
+exports[`validation.valueError calling error on a field with appendices providing a custom message provides a correct message 1`] = `
+"a highly custom error
+
+   Line | Content
+      1 | 
+ >    2 |       languages:
+ >    3 |       \\\\ eno
+ >    4 |       \\\\ yaml
+ >    5 |       |
+ >    6 | 
+ >    7 |       |
+      8 |     
+"
+`;
+
+exports[`validation.valueError calling error on a field with appendices providing a custom message provides correct selection metadata 1`] = `
+Array [
+  Array [
+    1,
+    16,
+  ],
+  Array [
+    6,
+    7,
+  ],
+]
+`;
+
+exports[`validation.valueError calling error on a field with appendices providing an error function provides a correct message 1`] = `
+"languages can not be eno yaml
+
+   Line | Content
+      1 | 
+ >    2 |       languages:
+ >    3 |       \\\\ eno
+ >    4 |       \\\\ yaml
+ >    5 |       |
+ >    6 | 
+ >    7 |       |
+      8 |     
+"
+`;
+
+exports[`validation.valueError calling error on a field with appendices providing an error function provides correct selection metadata 1`] = `
+Array [
+  Array [
+    1,
+    16,
+  ],
+  Array [
+    6,
+    7,
+  ],
+]
+`;
+
 exports[`validation.valueError calling error on an empty block provides a correct message 1`] = `
 "There is a problem with the value of the element 'language'.
 
