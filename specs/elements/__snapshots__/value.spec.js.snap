@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EnoValue value() 'required' alias for 'enforceValue' when set to true throws an error 1`] = `
+"The field 'language' must contain a value.
+
+   Line | Content
+      1 | 
+ >    2 |           language:
+ *    3 |           |
+      4 |         
+"
+`;
