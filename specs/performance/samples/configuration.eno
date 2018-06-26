@@ -1,0 +1,20 @@
+# production
+## server-a
+conf:
+ruby=yes
+python=no
+clean: yes
+steps:
+- npm
+- bundle
+- audit
+## server-b
+conf:
+ruby=yes
+python=yes
+clean: no
+steps:
+- npm
+- bundle
+- audit
+# staging < production

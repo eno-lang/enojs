@@ -1,0 +1,22 @@
+# doc
+colors:
+- blue
+- green
+- orange
+- red
+traits:
+tired = somewhat
+extroverted = sometimes
+funny = always
+inventive = occasionally
+things:
+- boxes
+- canes
+- pyramids
+- cubes
+## deep
+sea: blue
+### deep
+sea: darkblue
+#### deep
+sea: black

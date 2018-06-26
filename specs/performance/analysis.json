@@ -1,0 +1,29 @@
+{
+  "reference": {
+    "_evaluated": "2018-06-26T13:20:31.435Z",
+    "configuration": {
+      "change": "0× slower / +0 seconds",
+      "time": 0.29395003800094127
+    },
+    "content": {
+      "change": "0× slower / +0 seconds",
+      "time": 0.3031028599999845
+    },
+    "hierarchy": {
+      "change": "0× slower / +0 seconds",
+      "time": 0.19510343200340868
+    },
+    "invoice": {
+      "change": "0× slower / +0 seconds",
+      "time": 0.42913332299888135
+    },
+    "journey": {
+      "change": "0× slower / +0 seconds",
+      "time": 0.3675495900027454
+    },
+    "post": {
+      "change": "0× slower / +0 seconds",
+      "time": 0.10915226200222969
+    }
+  }
+}

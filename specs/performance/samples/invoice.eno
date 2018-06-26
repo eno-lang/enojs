@@ -1,0 +1,42 @@
+invoice: 34843
+date: 2001-01-23
+tax: 251.42
+total: 4443.52
+
+-- comments
+Late afternoon is best.
+Backup contact is Nancy
+Billsmer @ 338-4338.
+-- comments
+
+# bill-to
+
+given: Chris
+family: Dumars
+
+## address
+
+-- lines
+458 Walkman Dr.
+Suite #292
+-- lines
+
+city: Royal Oak
+state: MI
+postal: 48046
+
+# ship-to < bill-to
+
+# product
+
+sku: BL394D
+quantity: 4
+description: Basketball
+price: 450.00
+
+# product
+
+sku: BL4438H
+quantity: 1
+description: Super Hoop
+price : 2392.00

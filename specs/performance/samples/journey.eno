@@ -1,0 +1,36 @@
+title: Journey to the End of the Night Vienna 2009
+date: 2009-08-07
+time: 18:30
+abstract: Prater Hauptallee - Metalab
+# checkpoint
+special: start
+location:  Hauptallee A
+coordinates: 48.205870, 16.413690
+# checkpoint
+location: Ilgplatz
+hint: Scientists / Indian Burial Ground
+coordinates: 48.219534, 16.405041
+## safezone
+shape: circle
+center: 48.219513, 16.405041
+radius: 20
+# checkpoint
+location: Krakauerstrasse 27
+hint: Fortune Tellers / Playground something
+coordinates: 48.226835, 16.396787
+# checkpoint
+location: Wallensteinplatz
+hint: Puzzle / Riddle
+coordinates: 48.229600, 16.371639
+# checkpoint
+location: Bindergasse 3
+hint: Bathtub / Childhood memories
+coordinates: 48.225857, 16.355580
+# checkpoint
+location: Servittenkirche Vorplatz
+hint: Wohnzimmer setting
+coordinates: 48.220560, 16.364078
+# checkpoint
+special: finish
+location: Friedrich-Schmidt-Platz 1
+coordinates: 48.211004, 16.356364
