@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validation.expectedListGotLists provides a correct message 1`] = `
+"Instead of the expected single list 'languages' several lists with this name were found.
+
+   Line | Content
+ >    1 | languages:
+ *    2 | - eno (eno notation)
+ *    3 | - yaml (yaml ain't markup language)
+      4 | 
+ >    5 | languages:
+ *    6 | - json (javascript object notation)
+ *    7 | - cson (coffeescript object notation)
+"
+`;
+
+exports[`validation.expectedListGotLists provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    0,
+  ],
+  Array [
+    6,
+    37,
+  ],
+]
+`;

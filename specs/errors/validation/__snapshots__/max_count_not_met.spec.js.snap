@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validation.maxCountNotMet provides a correct message 1`] = `
+"The list 'languages' contains 4 items, but may only contain a maximum of 3 items.
+
+   Line | Content
+ *    1 | languages:
+ >    2 | - cson
+ >    3 | - eno
+ >    4 | - json
+ >    5 | - yaml
+"
+`;
+
+exports[`validation.maxCountNotMet provides correct selection metadata 1`] = `
+Array [
+  Array [
+    1,
+    0,
+  ],
+  Array [
+    4,
+    6,
+  ],
+]
+`;

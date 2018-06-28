@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validation.expectedElementGotElements provides a correct message 1`] = `
+"Instead of the expected single element 'language' several elements with this name were found.
+
+   Line | Content
+ >    1 | language: eno
+ >    2 | language: json
+"
+`;
+
+exports[`validation.expectedElementGotElements provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    0,
+  ],
+  Array [
+    1,
+    14,
+  ],
+]
+`;

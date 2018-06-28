@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validation.expectedDictionariesGotSection provides a correct message 1`] = `
+"Only dictionaries with the name 'languages' were expected, but a section with this name was found.
+
+   Line | Content
+   ...
+      5 | json = JavaScript Object Notation
+      6 | 
+ >    7 | # languages
+ >    8 | yaml: YAML Ain't Markup Language
+"
+`;
+
+exports[`validation.expectedDictionariesGotSection provides correct selection metadata 1`] = `
+Array [
+  Array [
+    6,
+    0,
+  ],
+  Array [
+    7,
+    32,
+  ],
+]
+`;

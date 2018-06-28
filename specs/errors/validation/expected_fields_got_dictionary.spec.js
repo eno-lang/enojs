@@ -1,22 +1,19 @@
 const eno = require('../../../eno.js');
 
 const input = `
-# languages
-eno: eno notation
+language:
+yaml = yaml ain't markup language
 
-# languages
-json: JavaScript Object Notation
-
-# languages
-yaml: YAML Ain't Markup Language
+language:
+json = javascript object notation
 `.trim();
 
-describe('validation.expectedSectionGotSections', () => {
+describe('validation.expectedFieldsGotDictionary', () => {
   const document = eno.parse(input);
 
   let error;
   try {
-    document.section('languages');
+    document.fields('language');
   } catch(err) {
     error = err;
   }

@@ -1,9 +1,9 @@
 const eno = require('../../../eno.js');
 
+const input = '# emptyness';
+
 describe('validation.missingDictionary', () => {
-  const document = eno.parse(`
-    # emptyness
-  `);
+  const document = eno.parse(input);
 
   let error;
   try {

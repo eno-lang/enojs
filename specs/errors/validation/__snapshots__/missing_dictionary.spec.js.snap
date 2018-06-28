@@ -4,21 +4,19 @@ exports[`validation.missingDictionary provides a correct message 1`] = `
 "The dictionary 'presence' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
    Line | Content
-      1 | 
- >    2 |     # emptyness
- *    3 |   
+ >    1 | # emptyness
 "
 `;
 
 exports[`validation.missingDictionary provides correct selection metadata 1`] = `
 Array [
   Array [
-    1,
-    15,
+    0,
+    11,
   ],
   Array [
-    1,
-    15,
+    0,
+    11,
   ],
 ]
 `;

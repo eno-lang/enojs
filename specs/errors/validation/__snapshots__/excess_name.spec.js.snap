@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validation.excessName with a custom message provides a correct message 1`] = `
+"my custom message
+
+   Line | Content
+ >    1 | language: eno
+"
+`;
+
+exports[`validation.excessName with a custom message provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    0,
+  ],
+  Array [
+    0,
+    13,
+  ],
+]
+`;
+
+exports[`validation.excessName without a custom message provides a correct message 1`] = `
+"An excess element named 'language' was found, is it possibly a typo?
+
+   Line | Content
+ >    1 | language: eno
+"
+`;
+
+exports[`validation.excessName without a custom message provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    0,
+  ],
+  Array [
+    0,
+    13,
+  ],
+]
+`;

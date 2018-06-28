@@ -1,14 +1,16 @@
 const eno = require('../../../eno.js');
 
+const input = `
+language: eno
+language: json
+`.trim();
+
 describe('validation.expectedFieldGotFields', () => {
-  const document = eno.parse(`
-    eno: eno notation
-    eno: eno notation language
-  `);
+  const document = eno.parse(input);
 
   let error;
   try {
-    document.field('eno');
+    document.field('language');
   } catch(err) {
     error = err;
   }

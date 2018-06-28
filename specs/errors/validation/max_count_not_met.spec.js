@@ -1,22 +1,19 @@
 const eno = require('../../../eno.js');
 
 const input = `
-# languages
-eno: eno notation
-
-# languages
-json: JavaScript Object Notation
-
-# languages
-yaml: YAML Ain't Markup Language
+languages:
+- cson
+- eno
+- json
+- yaml
 `.trim();
 
-describe('validation.expectedSectionGotSections', () => {
+describe('validation.maxCountNotMet', () => {
   const document = eno.parse(input);
 
   let error;
   try {
-    document.section('languages');
+    document.list('languages', { maxCount: 3 });
   } catch(err) {
     error = err;
   }

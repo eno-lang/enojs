@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validation.exactCountNotMet provides a correct message 1`] = `
+"The list 'languages' contains 2 items, but must contain exactly 5 items.
+
+   Line | Content
+ *    1 | languages:
+ >    2 | - eno
+ >    3 | - json
+"
+`;
+
+exports[`validation.exactCountNotMet provides correct selection metadata 1`] = `
+Array [
+  Array [
+    1,
+    0,
+  ],
+  Array [
+    2,
+    6,
+  ],
+]
+`;

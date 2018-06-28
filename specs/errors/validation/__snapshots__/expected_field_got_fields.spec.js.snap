@@ -1,25 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`validation.expectedFieldGotFields provides a correct message 1`] = `
-"Instead of the expected single field 'eno' several fields with this name were found.
+"Instead of the expected single field 'language' several fields with this name were found.
 
    Line | Content
-      1 | 
- >    2 |     eno: eno notation
- >    3 |     eno: eno notation language
-      4 |   
+ >    1 | language: eno
+ >    2 | language: json
 "
 `;
 
 exports[`validation.expectedFieldGotFields provides correct selection metadata 1`] = `
 Array [
   Array [
-    1,
+    0,
     0,
   ],
   Array [
-    2,
-    30,
+    1,
+    14,
   ],
 ]
 `;

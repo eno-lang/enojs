@@ -2,12 +2,12 @@ const eno = require('../../../eno.js');
 
 const input = '# emptyness';
 
-describe('validation.missingSection', () => {
+describe('validation.missingElement', () => {
   const document = eno.parse(input);
 
   let error;
   try {
-    document.section('emptyness').section('presence');
+    document.section('emptyness').element('presence');
   } catch(err) {
     error = err;
   }

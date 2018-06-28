@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validation.expectedListsGotField provides a correct message 1`] = `
+"Only lists with the name 'languages' were expected, but a field with this name was found.
+
+   Line | Content
+ >    1 | languages:
+ >    2 | | eno (eno notation)
+ >    3 | | yaml (yaml ain't markup language)
+      4 | 
+      5 | languages:
+   ...
+"
+`;
+
+exports[`validation.expectedListsGotField provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    0,
+  ],
+  Array [
+    2,
+    35,
+  ],
+]
+`;
