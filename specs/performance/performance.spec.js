@@ -17,7 +17,7 @@ const SAMPLES = {
 
 let analysis, reference;
 
-describe('Performance', () => {
+describe.skip('Performance', () => {
 
   beforeAll(() => {
     const analysisFile = path.join(__dirname, 'analysis.json');
