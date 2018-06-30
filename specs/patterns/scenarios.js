@@ -5,52 +5,52 @@ const space = require('./space.js');
 
 const SCENARIOS = {
 
-  APPEND_WITH_NEWLINE_SCENARIOS: [
+  NEWLINE_CONTINUATION_SCENARIOS: [
     {
       captures: {
-        [matcher.APPEND_WITH_NEWLINE_OPERATOR_INDEX]: '|'
+        [matcher.NEWLINE_CONTINUATION_OPERATOR_INDEX]: '|'
       },
       syntax: '|',
       variants: space('|')
     },
     {
       captures: {
-        [matcher.APPEND_WITH_NEWLINE_OPERATOR_INDEX]: '|',
-        [matcher.APPEND_WITH_NEWLINE_VALUE_INDEX]: 'Value'
+        [matcher.NEWLINE_CONTINUATION_OPERATOR_INDEX]: '|',
+        [matcher.NEWLINE_CONTINUATION_VALUE_INDEX]: 'Value'
       },
       syntax: '| Value',
       variants: space('|', 'Value')
     },
     {
       captures: {
-        [matcher.APPEND_WITH_NEWLINE_OPERATOR_INDEX]: '|',
-        [matcher.APPEND_WITH_NEWLINE_VALUE_INDEX]: '|'
+        [matcher.NEWLINE_CONTINUATION_OPERATOR_INDEX]: '|',
+        [matcher.NEWLINE_CONTINUATION_VALUE_INDEX]: '|'
       },
       syntax: '| |',
       variants: space('|', '|')
     }
   ],
 
-  APPEND_WITH_SPACE_SCENARIOS: [
+  LINE_CONTINUATION_SCENARIOS: [
     {
       captures: {
-        [matcher.APPEND_WITH_SPACE_OPERATOR_INDEX]: '\\'
+        [matcher.LINE_CONTINUATION_OPERATOR_INDEX]: '\\'
       },
       syntax: '\\',
       variants: space('\\')
     },
     {
       captures: {
-        [matcher.APPEND_WITH_SPACE_OPERATOR_INDEX]: '\\',
-        [matcher.APPEND_WITH_SPACE_VALUE_INDEX]: 'Value'
+        [matcher.LINE_CONTINUATION_OPERATOR_INDEX]: '\\',
+        [matcher.LINE_CONTINUATION_VALUE_INDEX]: 'Value'
       },
       syntax: '\\ Value',
       variants: space('\\', 'Value')
     },
     {
       captures: {
-        [matcher.APPEND_WITH_SPACE_OPERATOR_INDEX]: '\\',
-        [matcher.APPEND_WITH_SPACE_VALUE_INDEX]: '\\'
+        [matcher.LINE_CONTINUATION_OPERATOR_INDEX]: '\\',
+        [matcher.LINE_CONTINUATION_VALUE_INDEX]: '\\'
       },
       syntax: '\\ \\',
       variants: space('\\', '\\')

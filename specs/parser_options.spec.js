@@ -33,7 +33,7 @@ describe('Parser options', () => {
   });
 
   describe('sourceLabel', () => {
-    
+
     test('is printed in text reports if provided', () => {
       expect(() => eno.parse('boom!', { sourceLabel: '/some/dubious-file.eno' })).toThrowErrorMatchingSnapshot();
     });
