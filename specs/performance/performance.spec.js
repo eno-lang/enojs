@@ -45,11 +45,13 @@ describe.skip('Performance', () => {
 
       const duration = ((after - before) / 1000.0);
       const delta = reference ? duration - reference[name]['time'] : 0;
-      const factor = reference ? reference[name]['time'] / duration : 0;
 
+      let change, factor;
       if(delta >= 0) {
+        factor = reference ? duration / reference[name]['time'] : 0;
         change = `${factor.toPrecision(3)}× slower / +${delta} seconds`;
       } else {
+        factor = reference ? reference[name]['time'] / duration : 0;
         change = `${factor.toPrecision(3)}× faster / ${delta} seconds`;
       }
 
