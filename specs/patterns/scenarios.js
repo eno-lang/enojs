@@ -118,7 +118,7 @@ const SCENARIOS = {
     {
       captures: {
         [matcher.NAME_UNESCAPED_INDEX]: 'Name',
-        [matcher.DICTIONARY_ENTRY_EQUALS_INDEX]: '=',
+        [matcher.DICTIONARY_ENTRY_OPERATOR_INDEX]: '=',
         [matcher.DICTIONARY_ENTRY_VALUE_INDEX]: 'Value'
       },
       syntax: 'Name = Value',
@@ -127,7 +127,7 @@ const SCENARIOS = {
     {
       captures: {
         [matcher.NAME_UNESCAPED_INDEX]: 'The Name',
-        [matcher.DICTIONARY_ENTRY_EQUALS_INDEX]: '=',
+        [matcher.DICTIONARY_ENTRY_OPERATOR_INDEX]: '=',
         [matcher.DICTIONARY_ENTRY_VALUE_INDEX]: 'The Value'
       },
       syntax: 'The Name = The Value',
@@ -136,7 +136,7 @@ const SCENARIOS = {
     {
       captures: {
         [matcher.NAME_UNESCAPED_INDEX]: 'Name',
-        [matcher.DICTIONARY_ENTRY_EQUALS_INDEX]: '=',
+        [matcher.DICTIONARY_ENTRY_OPERATOR_INDEX]: '=',
         [matcher.DICTIONARY_ENTRY_VALUE_INDEX]: '='
       },
       syntax: 'Name = =',
@@ -145,7 +145,7 @@ const SCENARIOS = {
     {
       captures: {
         [matcher.NAME_UNESCAPED_INDEX]: 'Name',
-        [matcher.DICTIONARY_ENTRY_EQUALS_INDEX]: '=',
+        [matcher.DICTIONARY_ENTRY_OPERATOR_INDEX]: '=',
         [matcher.DICTIONARY_ENTRY_VALUE_INDEX]: ':'
       },
       syntax: 'Name = :',
@@ -155,7 +155,7 @@ const SCENARIOS = {
       captures: {
         [matcher.NAME_ESCAPED_QUOTES_INDEX]: '`',
         [matcher.NAME_ESCAPED_INDEX]: '<=:',
-        [matcher.DICTIONARY_ENTRY_EQUALS_INDEX]: '=',
+        [matcher.DICTIONARY_ENTRY_OPERATOR_INDEX]: '=',
         [matcher.DICTIONARY_ENTRY_VALUE_INDEX]: '`<=:`'
       },
       syntax: '`<=:` = `<=:`',
@@ -165,7 +165,7 @@ const SCENARIOS = {
       captures: {
         [matcher.NAME_ESCAPED_QUOTES_INDEX]: '```',
         [matcher.NAME_ESCAPED_INDEX]: '<`=``:',
-        [matcher.DICTIONARY_ENTRY_EQUALS_INDEX]: '=',
+        [matcher.DICTIONARY_ENTRY_OPERATOR_INDEX]: '=',
         [matcher.DICTIONARY_ENTRY_VALUE_INDEX]: '`<=:`'
       },
       syntax: '```<`=``:``` = `<=:`',
