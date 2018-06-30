@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Section tokenization performs to specification 1`] = `
+Array [
+  Object {
+    "depth": 1,
+    "index": 0,
+    "length": 6,
+    "line": 0,
+    "name": "name",
+    "ranges": Object {
+      "name": Array [
+        2,
+        6,
+      ],
+      "sectionOperator": Array [
+        0,
+        1,
+      ],
+    },
+    "type": "SECTION",
+  },
+  Object {
+    "index": 7,
+    "length": 0,
+    "line": 1,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "depth": 2,
+    "index": 8,
+    "length": 11,
+    "line": 2,
+    "name": "name",
+    "ranges": Object {
+      "name": Array [
+        7,
+        11,
+      ],
+      "sectionOperator": Array [
+        4,
+        6,
+      ],
+    },
+    "type": "SECTION",
+  },
+  Object {
+    "index": 20,
+    "length": 0,
+    "line": 3,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "depth": 3,
+    "index": 21,
+    "length": 11,
+    "line": 4,
+    "name": "name",
+    "ranges": Object {
+      "name": Array [
+        7,
+        11,
+      ],
+      "sectionOperator": Array [
+        0,
+        3,
+      ],
+    },
+    "type": "SECTION",
+  },
+  Object {
+    "index": 33,
+    "length": 0,
+    "line": 5,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "depth": 4,
+    "index": 34,
+    "length": 16,
+    "line": 6,
+    "name": "name",
+    "ranges": Object {
+      "name": Array [
+        12,
+        16,
+      ],
+      "sectionOperator": Array [
+        4,
+        8,
+      ],
+    },
+    "type": "SECTION",
+  },
+  Object {
+    "index": 51,
+    "length": 0,
+    "line": 7,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "depth": 1,
+    "index": 52,
+    "length": 6,
+    "line": 8,
+    "name": "name",
+    "ranges": Object {
+      "name": Array [
+        2,
+        6,
+      ],
+      "sectionOperator": Array [
+        0,
+        1,
+      ],
+    },
+    "type": "SECTION",
+  },
+]
+`;

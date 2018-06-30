@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Block tokenization performs to specification 1`] = `
+Array [
+  Object {
+    "contentRange": Array [
+      8,
+      12,
+    ],
+    "index": 0,
+    "length": 7,
+    "line": 0,
+    "name": "name",
+    "ranges": Object {
+      "blockOperator": Array [
+        0,
+        2,
+      ],
+      "name": Array [
+        3,
+        7,
+      ],
+    },
+    "type": "BLOCK",
+  },
+  Object {
+    "index": 8,
+    "length": 5,
+    "line": 1,
+    "ranges": Object {
+      "content": Array [
+        0,
+        5,
+      ],
+    },
+    "type": "BLOCK_CONTENT",
+  },
+  Object {
+    "index": 14,
+    "length": 7,
+    "line": 2,
+    "ranges": Object {
+      "blockOperator": Array [
+        0,
+        2,
+      ],
+      "name": Array [
+        3,
+        7,
+      ],
+    },
+    "type": "BLOCK_TERMINATOR",
+  },
+  Object {
+    "index": 22,
+    "length": 0,
+    "line": 3,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "contentRange": Array [
+      34,
+      40,
+    ],
+    "index": 23,
+    "length": 10,
+    "line": 4,
+    "name": "name",
+    "ranges": Object {
+      "blockOperator": Array [
+        0,
+        2,
+      ],
+      "name": Array [
+        6,
+        10,
+      ],
+    },
+    "type": "BLOCK",
+  },
+  Object {
+    "index": 34,
+    "length": 0,
+    "line": 5,
+    "ranges": Object {
+      "content": Array [
+        0,
+        0,
+      ],
+    },
+    "type": "BLOCK_CONTENT",
+  },
+  Object {
+    "index": 35,
+    "length": 5,
+    "line": 6,
+    "ranges": Object {
+      "content": Array [
+        0,
+        5,
+      ],
+    },
+    "type": "BLOCK_CONTENT",
+  },
+  Object {
+    "index": 41,
+    "length": 0,
+    "line": 7,
+    "ranges": Object {
+      "content": Array [
+        0,
+        0,
+      ],
+    },
+    "type": "BLOCK_CONTENT",
+  },
+  Object {
+    "index": 42,
+    "length": 11,
+    "line": 8,
+    "ranges": Object {
+      "blockOperator": Array [
+        4,
+        6,
+      ],
+      "name": Array [
+        7,
+        11,
+      ],
+    },
+    "type": "BLOCK_TERMINATOR",
+  },
+  Object {
+    "index": 54,
+    "length": 0,
+    "line": 9,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "contentRange": Array [
+      70,
+      85,
+    ],
+    "index": 55,
+    "length": 14,
+    "line": 10,
+    "name": "name",
+    "ranges": Object {
+      "blockOperator": Array [
+        4,
+        6,
+      ],
+      "name": Array [
+        10,
+        14,
+      ],
+    },
+    "type": "BLOCK",
+  },
+  Object {
+    "index": 70,
+    "length": 5,
+    "line": 11,
+    "ranges": Object {
+      "content": Array [
+        0,
+        5,
+      ],
+    },
+    "type": "BLOCK_CONTENT",
+  },
+  Object {
+    "index": 76,
+    "length": 0,
+    "line": 12,
+    "ranges": Object {
+      "content": Array [
+        0,
+        0,
+      ],
+    },
+    "type": "BLOCK_CONTENT",
+  },
+  Object {
+    "index": 77,
+    "length": 9,
+    "line": 13,
+    "ranges": Object {
+      "content": Array [
+        0,
+        9,
+      ],
+    },
+    "type": "BLOCK_CONTENT",
+  },
+  Object {
+    "index": 87,
+    "length": 15,
+    "line": 14,
+    "ranges": Object {
+      "blockOperator": Array [
+        8,
+        10,
+      ],
+      "name": Array [
+        11,
+        15,
+      ],
+    },
+    "type": "BLOCK_TERMINATOR",
+  },
+]
+`;

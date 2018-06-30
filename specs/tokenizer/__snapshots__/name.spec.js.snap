@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Name tokenization performs to specification 1`] = `
+Array [
+  Object {
+    "index": 0,
+    "length": 5,
+    "line": 0,
+    "name": "name",
+    "ranges": Object {
+      "name": Array [
+        0,
+        4,
+      ],
+      "nameOperator": Array [
+        4,
+        5,
+      ],
+    },
+    "type": "NAME",
+  },
+  Object {
+    "index": 6,
+    "length": 0,
+    "line": 1,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 7,
+    "length": 5,
+    "line": 2,
+    "name": "name",
+    "ranges": Object {
+      "name": Array [
+        0,
+        4,
+      ],
+      "nameOperator": Array [
+        4,
+        5,
+      ],
+    },
+    "type": "NAME",
+  },
+  Object {
+    "index": 13,
+    "length": 0,
+    "line": 3,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 14,
+    "length": 9,
+    "line": 4,
+    "name": "name",
+    "ranges": Object {
+      "name": Array [
+        0,
+        4,
+      ],
+      "nameOperator": Array [
+        8,
+        9,
+      ],
+    },
+    "type": "NAME",
+  },
+  Object {
+    "index": 24,
+    "length": 0,
+    "line": 5,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 25,
+    "length": 13,
+    "line": 6,
+    "name": "name",
+    "ranges": Object {
+      "name": Array [
+        4,
+        8,
+      ],
+      "nameOperator": Array [
+        12,
+        13,
+      ],
+    },
+    "type": "NAME",
+  },
+  Object {
+    "index": 39,
+    "length": 0,
+    "line": 7,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 40,
+    "length": 5,
+    "line": 8,
+    "name": "name",
+    "ranges": Object {
+      "name": Array [
+        0,
+        4,
+      ],
+      "nameOperator": Array [
+        4,
+        5,
+      ],
+    },
+    "type": "NAME",
+  },
+]
+`;

@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List item tokenization performs to specification 1`] = `
+Array [
+  Object {
+    "index": 0,
+    "length": 7,
+    "line": 0,
+    "ranges": Object {
+      "itemOperator": Array [
+        0,
+        1,
+      ],
+      "value": Array [
+        2,
+        7,
+      ],
+    },
+    "type": "LIST_ITEM",
+    "value": "value",
+  },
+  Object {
+    "index": 8,
+    "length": 0,
+    "line": 1,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 9,
+    "length": 10,
+    "line": 2,
+    "ranges": Object {
+      "itemOperator": Array [
+        0,
+        1,
+      ],
+      "value": Array [
+        5,
+        10,
+      ],
+    },
+    "type": "LIST_ITEM",
+    "value": "value",
+  },
+  Object {
+    "index": 20,
+    "length": 0,
+    "line": 3,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 21,
+    "length": 11,
+    "line": 4,
+    "ranges": Object {
+      "itemOperator": Array [
+        4,
+        5,
+      ],
+      "value": Array [
+        6,
+        11,
+      ],
+    },
+    "type": "LIST_ITEM",
+    "value": "value",
+  },
+  Object {
+    "index": 33,
+    "length": 0,
+    "line": 5,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 34,
+    "length": 14,
+    "line": 6,
+    "ranges": Object {
+      "itemOperator": Array [
+        4,
+        5,
+      ],
+      "value": Array [
+        9,
+        14,
+      ],
+    },
+    "type": "LIST_ITEM",
+    "value": "value",
+  },
+  Object {
+    "index": 49,
+    "length": 0,
+    "line": 7,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 50,
+    "length": 7,
+    "line": 8,
+    "ranges": Object {
+      "itemOperator": Array [
+        0,
+        1,
+      ],
+      "value": Array [
+        2,
+        7,
+      ],
+    },
+    "type": "LIST_ITEM",
+    "value": "value",
+  },
+]
+`;

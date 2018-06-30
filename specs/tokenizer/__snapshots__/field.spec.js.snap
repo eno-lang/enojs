@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field tokenization performs to specification 1`] = `
+Array [
+  Object {
+    "index": 0,
+    "length": 11,
+    "line": 0,
+    "name": "name",
+    "ranges": Object {
+      "name": Array [
+        0,
+        4,
+      ],
+      "nameOperator": Array [
+        4,
+        5,
+      ],
+      "value": Array [
+        6,
+        11,
+      ],
+    },
+    "type": "FIELD",
+    "value": "value",
+  },
+  Object {
+    "index": 12,
+    "length": 0,
+    "line": 1,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 13,
+    "length": 14,
+    "line": 2,
+    "name": "name",
+    "ranges": Object {
+      "name": Array [
+        0,
+        4,
+      ],
+      "nameOperator": Array [
+        4,
+        5,
+      ],
+      "value": Array [
+        9,
+        14,
+      ],
+    },
+    "type": "FIELD",
+    "value": "value",
+  },
+  Object {
+    "index": 28,
+    "length": 0,
+    "line": 3,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 29,
+    "length": 15,
+    "line": 4,
+    "name": "name",
+    "ranges": Object {
+      "name": Array [
+        0,
+        4,
+      ],
+      "nameOperator": Array [
+        8,
+        9,
+      ],
+      "value": Array [
+        10,
+        15,
+      ],
+    },
+    "type": "FIELD",
+    "value": "value",
+  },
+  Object {
+    "index": 45,
+    "length": 0,
+    "line": 5,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 46,
+    "length": 22,
+    "line": 6,
+    "name": "name",
+    "ranges": Object {
+      "name": Array [
+        4,
+        8,
+      ],
+      "nameOperator": Array [
+        12,
+        13,
+      ],
+      "value": Array [
+        17,
+        22,
+      ],
+    },
+    "type": "FIELD",
+    "value": "value",
+  },
+  Object {
+    "index": 69,
+    "length": 0,
+    "line": 7,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 70,
+    "length": 11,
+    "line": 8,
+    "name": "name",
+    "ranges": Object {
+      "name": Array [
+        0,
+        4,
+      ],
+      "nameOperator": Array [
+        4,
+        5,
+      ],
+      "value": Array [
+        6,
+        11,
+      ],
+    },
+    "type": "FIELD",
+    "value": "value",
+  },
+]
+`;
