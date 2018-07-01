@@ -1,9 +1,13 @@
+const eno = require('../../eno.js');
 const EnoDictionary = require('../../lib/elements/dictionary.js');
+const EnoValue = require('../../lib/elements/value.js');
 
 const context = {};
 const instruction = {
   name: 'languages',
   subinstructions: [{
+    type: 'EMPTY_LINE'
+  }, {
     name: 'eno',
     type: 'DICTIONARY_ENTRY',
     value: 'eno notation'
@@ -38,6 +42,62 @@ describe('EnoDictionary', () => {
 
   it('has enforceAllElements disabled by default', () => {
     expect(dictionary._enforceAllElements).toBe(false);
+  });
+
+  describe('element()', () => {
+    describe('fetching an existing element', () => {
+      beforeEach(() => {
+        result = dictionary.element('eno');
+      });
+
+      it('returns an element', () => {
+        expect(result instanceof EnoValue).toBe(true);
+      });
+
+      it('returns the right element', () => {
+        expect(result.name).toEqual('eno');
+      });
+    });
+
+    describe('fetching a missing element', () => {
+      it('throws an error', () => {
+        expect(() => eno.parse('languages:').dictionary('languages').element('missing')).toThrowErrorMatchingSnapshot();
+      });
+
+      describe('with { enforceElement: false }', () => {
+        it('returns null', () => {
+          expect(dictionary.element('missing', { required: false })).toBeNull();
+        });
+      });
+
+      describe('with { required: false }', () => {
+        it('returns null', () => {
+          expect(dictionary.element('missing', { required: false })).toBeNull();
+        });
+      });
+    });
+  });
+
+  describe('enforceAllElements()', () => {
+    it('sets the _enforceAllElements property to true', () => {
+      dictionary.enforceAllElements();
+      expect(dictionary._enforceAllElements).toBe(true);
+    });
+
+    describe('passing true explicitly', () => {
+      it('sets the _enforceAllElements property to true', () => {
+        dictionary.enforceAllElements(true);
+        expect(dictionary._enforceAllElements).toBe(true);
+      });
+    });
+
+    describe('passing false explicitly', () => {
+      it('sets the _enforceAllElements property back to false', () => {
+        dictionary.enforceAllElements(true);
+        dictionary.enforceAllElements(false);
+        expect(dictionary._enforceAllElements).toBe(false);
+      });
+    });
   });
 
   describe('entry()', () => {
@@ -123,17 +183,36 @@ describe('EnoDictionary', () => {
   });
 
   describe('touch()', () => {
-    it('touches the dictionary', () => {
-      dictionary.touch();
-      expect(dictionary.touched).toBe(true);
-    });
+    describe('without options', () => {
+      beforeEach(() => {
+        dictionary.touch();
+      });
 
-    it('does not touch the entries', () => {
-      for(let entry of dictionary.entries()) {
-        if(entry.name !== 'eno') {
+      it('touches the dictionary', () => {
+        expect(dictionary.touched).toBe(true);
+      });
+
+      it('does not touch the entries', () => {
+        for(let entry of dictionary.entries()) {
           expect(entry.touched).toBe(false);
         }
-      }
+      });
+    });
+
+    describe('with { entries: true }', () => {
+      beforeEach(() => {
+        dictionary.touch({ entries: true });
+      });
+
+      it('touches the dictionary', () => {
+        expect(dictionary.touched).toBe(true);
+      });
+
+      it('touches the entries', () => {
+        for(let entry of dictionary.entries()) {
+          expect(entry.touched).toBe(true);
+        }
+      });
     });
   });
 });

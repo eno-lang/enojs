@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EnoDictionary element() fetching a missing element throws an error 1`] = `
+"The dictionary entry 'missing' is missing - in case it has been specified look for typos and also check for correct capitalization.
+
+   Line | Content
+ >    1 | languages:
+"
+`;

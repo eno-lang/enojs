@@ -1,4 +1,5 @@
 const EnoList = require('../../lib/elements/list.js');
+const EnoValue = require('../../lib/elements/value.js');
 
 const context = {};
 const instruction = {
@@ -79,7 +80,7 @@ describe('EnoList', () => {
         result = list.items(({ value }) => value.toUpperCase());
       });
 
-      it('applies the loader', () => {
+      it('returns the processed values', () => {
         expect(result).toEqual(['ENO', 'JSON', 'YAML']);
       });
 
@@ -91,6 +92,22 @@ describe('EnoList', () => {
         for(let item of list.elements()) {
           expect(item.touched).toBe(true);
         }
+      });
+    });
+
+    describe('with { withElements: true }', () => {
+      beforeEach(() => {
+        result = list.items({ withElements: true });
+      });
+
+      it('returns the elements', () => {
+        for(let item of result) {
+          expect(item.element instanceof EnoValue).toBe(true);
+        }
+      });
+
+      it('returns the values', () => {
+        expect(result.map(item => item.value)).toEqual(['eno', 'json', 'yaml']);
       });
     });
   });
@@ -120,18 +137,36 @@ describe('EnoList', () => {
   });
 
   describe('touch()', () => {
-    beforeEach(() => {
-      list.touch();
+    describe('without options', () => {
+      beforeEach(() => {
+        list.touch();
+      });
+
+      it('touches the list itself', () => {
+        expect(list.touched).toBe(true);
+      });
+
+      it('does not touch the list items', () => {
+        for(let item of list.elements()) {
+          expect(item.touched).toBe(false);
+        }
+      });
     });
 
-    it('touches the list itself', () => {
-      expect(list.touched).toBe(true);
-    });
+    describe('with { items: true }', () => {
+      beforeEach(() => {
+        list.touch({ items: true });
+      });
 
-    it('does not touch the list items', () => {
-      for(let item of list.elements()) {
-        expect(item.touched).toBe(false);
-      }
+      it('touches the list itself', () => {
+        expect(list.touched).toBe(true);
+      });
+
+      it('touches the list items', () => {
+        for(let item of list.elements()) {
+          expect(item.touched).toBe(true);
+        }
+      });
     });
   });
 });
