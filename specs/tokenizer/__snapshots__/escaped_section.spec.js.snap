@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Escaped section tokenization performs to specification 1`] = `
+Array [
+  Object {
+    "depth": 1,
+    "index": 0,
+    "length": 8,
+    "line": 0,
+    "name": "name",
+    "ranges": Object {
+      "escapeBeginOperator": Array [
+        2,
+        3,
+      ],
+      "escapeEndOperator": Array [
+        7,
+        8,
+      ],
+      "name": Array [
+        3,
+        7,
+      ],
+      "sectionOperator": Array [
+        0,
+        1,
+      ],
+    },
+    "type": "SECTION",
+  },
+  Object {
+    "index": 9,
+    "length": 0,
+    "line": 1,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "depth": 2,
+    "index": 10,
+    "length": 12,
+    "line": 2,
+    "name": "na\`me",
+    "ranges": Object {
+      "escapeBeginOperator": Array [
+        3,
+        5,
+      ],
+      "escapeEndOperator": Array [
+        10,
+        12,
+      ],
+      "name": Array [
+        5,
+        10,
+      ],
+      "sectionOperator": Array [
+        0,
+        2,
+      ],
+    },
+    "type": "SECTION",
+  },
+  Object {
+    "index": 23,
+    "length": 0,
+    "line": 3,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "depth": 3,
+    "index": 24,
+    "length": 16,
+    "line": 4,
+    "name": "na\`\`me",
+    "ranges": Object {
+      "escapeBeginOperator": Array [
+        4,
+        7,
+      ],
+      "escapeEndOperator": Array [
+        13,
+        16,
+      ],
+      "name": Array [
+        7,
+        13,
+      ],
+      "sectionOperator": Array [
+        0,
+        3,
+      ],
+    },
+    "type": "SECTION",
+  },
+  Object {
+    "index": 41,
+    "length": 0,
+    "line": 5,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "depth": 4,
+    "index": 42,
+    "length": 21,
+    "line": 6,
+    "name": "\`name\`",
+    "ranges": Object {
+      "escapeBeginOperator": Array [
+        9,
+        11,
+      ],
+      "escapeEndOperator": Array [
+        19,
+        21,
+      ],
+      "name": Array [
+        12,
+        18,
+      ],
+      "sectionOperator": Array [
+        4,
+        8,
+      ],
+    },
+    "type": "SECTION",
+  },
+  Object {
+    "index": 64,
+    "length": 0,
+    "line": 7,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "depth": 1,
+    "index": 65,
+    "length": 8,
+    "line": 8,
+    "name": "name",
+    "ranges": Object {
+      "escapeBeginOperator": Array [
+        2,
+        3,
+      ],
+      "escapeEndOperator": Array [
+        7,
+        8,
+      ],
+      "name": Array [
+        3,
+        7,
+      ],
+      "sectionOperator": Array [
+        0,
+        1,
+      ],
+    },
+    "type": "SECTION",
+  },
+]
+`;

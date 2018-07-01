@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Escaped name tokenization performs to specification 1`] = `
+Array [
+  Object {
+    "index": 0,
+    "length": 7,
+    "line": 0,
+    "name": "name",
+    "ranges": Object {
+      "escapeBeginOperator": Array [
+        0,
+        1,
+      ],
+      "escapeEndOperator": Array [
+        5,
+        6,
+      ],
+      "name": Array [
+        1,
+        5,
+      ],
+      "nameOperator": Array [
+        6,
+        7,
+      ],
+    },
+    "type": "NAME",
+  },
+  Object {
+    "index": 8,
+    "length": 0,
+    "line": 1,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 9,
+    "length": 10,
+    "line": 2,
+    "name": "na\`me",
+    "ranges": Object {
+      "escapeBeginOperator": Array [
+        0,
+        2,
+      ],
+      "escapeEndOperator": Array [
+        7,
+        9,
+      ],
+      "name": Array [
+        2,
+        7,
+      ],
+      "nameOperator": Array [
+        9,
+        10,
+      ],
+    },
+    "type": "NAME",
+  },
+  Object {
+    "index": 20,
+    "length": 0,
+    "line": 3,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 21,
+    "length": 17,
+    "line": 4,
+    "name": "na\`\`me",
+    "ranges": Object {
+      "escapeBeginOperator": Array [
+        0,
+        3,
+      ],
+      "escapeEndOperator": Array [
+        9,
+        12,
+      ],
+      "name": Array [
+        3,
+        9,
+      ],
+      "nameOperator": Array [
+        16,
+        17,
+      ],
+    },
+    "type": "NAME",
+  },
+  Object {
+    "index": 39,
+    "length": 0,
+    "line": 5,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 40,
+    "length": 21,
+    "line": 6,
+    "name": "\`name\`",
+    "ranges": Object {
+      "escapeBeginOperator": Array [
+        4,
+        6,
+      ],
+      "escapeEndOperator": Array [
+        14,
+        16,
+      ],
+      "name": Array [
+        7,
+        13,
+      ],
+      "nameOperator": Array [
+        20,
+        21,
+      ],
+    },
+    "type": "NAME",
+  },
+  Object {
+    "index": 62,
+    "length": 0,
+    "line": 7,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 63,
+    "length": 7,
+    "line": 8,
+    "name": "name",
+    "ranges": Object {
+      "escapeBeginOperator": Array [
+        0,
+        1,
+      ],
+      "escapeEndOperator": Array [
+        5,
+        6,
+      ],
+      "name": Array [
+        1,
+        5,
+      ],
+      "nameOperator": Array [
+        6,
+        7,
+      ],
+    },
+    "type": "NAME",
+  },
+]
+`;

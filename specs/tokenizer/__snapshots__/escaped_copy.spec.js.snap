@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Escaped copy tokenization performs to specification 1`] = `
+Array [
+  Object {
+    "index": 0,
+    "length": 17,
+    "line": 0,
+    "name": "name",
+    "ranges": Object {
+      "copyOperator": Array [
+        7,
+        8,
+      ],
+      "escapeBeginOperator": Array [
+        0,
+        1,
+      ],
+      "escapeEndOperator": Array [
+        5,
+        6,
+      ],
+      "name": Array [
+        1,
+        5,
+      ],
+      "template": Array [
+        9,
+        17,
+      ],
+    },
+    "template": "template",
+    "type": "NAME",
+  },
+  Object {
+    "index": 18,
+    "length": 0,
+    "line": 1,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 19,
+    "length": 20,
+    "line": 2,
+    "name": "na\`me",
+    "ranges": Object {
+      "copyOperator": Array [
+        10,
+        11,
+      ],
+      "escapeBeginOperator": Array [
+        0,
+        2,
+      ],
+      "escapeEndOperator": Array [
+        7,
+        9,
+      ],
+      "name": Array [
+        2,
+        7,
+      ],
+      "template": Array [
+        12,
+        20,
+      ],
+    },
+    "template": "template",
+    "type": "NAME",
+  },
+  Object {
+    "index": 40,
+    "length": 0,
+    "line": 3,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 41,
+    "length": 26,
+    "line": 4,
+    "name": "na\`\`me",
+    "ranges": Object {
+      "copyOperator": Array [
+        16,
+        17,
+      ],
+      "escapeBeginOperator": Array [
+        0,
+        3,
+      ],
+      "escapeEndOperator": Array [
+        9,
+        12,
+      ],
+      "name": Array [
+        3,
+        9,
+      ],
+      "template": Array [
+        18,
+        26,
+      ],
+    },
+    "template": "template",
+    "type": "NAME",
+  },
+  Object {
+    "index": 68,
+    "length": 0,
+    "line": 5,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 69,
+    "length": 30,
+    "line": 6,
+    "name": "\`name\`",
+    "ranges": Object {
+      "copyOperator": Array [
+        20,
+        21,
+      ],
+      "escapeBeginOperator": Array [
+        4,
+        6,
+      ],
+      "escapeEndOperator": Array [
+        14,
+        16,
+      ],
+      "name": Array [
+        7,
+        13,
+      ],
+      "template": Array [
+        22,
+        30,
+      ],
+    },
+    "template": "template",
+    "type": "NAME",
+  },
+  Object {
+    "index": 100,
+    "length": 0,
+    "line": 7,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 101,
+    "length": 17,
+    "line": 8,
+    "name": "name",
+    "ranges": Object {
+      "copyOperator": Array [
+        7,
+        8,
+      ],
+      "escapeBeginOperator": Array [
+        0,
+        1,
+      ],
+      "escapeEndOperator": Array [
+        5,
+        6,
+      ],
+      "name": Array [
+        1,
+        5,
+      ],
+      "template": Array [
+        9,
+        17,
+      ],
+    },
+    "template": "template",
+    "type": "NAME",
+  },
+]
+`;
