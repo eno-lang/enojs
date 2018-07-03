@@ -1,0 +1,907 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Continuation analysis performs to specification 1`] = `
+Array [
+  Object {
+    "index": 0,
+    "length": 12,
+    "line": 0,
+    "name": "Field",
+    "ranges": Object {
+      "name": Array [
+        0,
+        5,
+      ],
+      "nameOperator": Array [
+        5,
+        6,
+      ],
+      "value": Array [
+        7,
+        12,
+      ],
+    },
+    "subinstructions": Array [
+      Object {
+        "index": 13,
+        "length": 19,
+        "line": 1,
+        "ranges": Object {
+          "lineContinuationOperator": Array [
+            0,
+            1,
+          ],
+          "value": Array [
+            2,
+            19,
+          ],
+        },
+        "separator": " ",
+        "type": "CONTINUATION",
+        "value": "Line continuation",
+      },
+      Object {
+        "index": 33,
+        "length": 22,
+        "line": 2,
+        "ranges": Object {
+          "newlineContinuationOperator": Array [
+            0,
+            1,
+          ],
+          "value": Array [
+            2,
+            22,
+          ],
+        },
+        "separator": "
+",
+        "type": "CONTINUATION",
+        "value": "Newline continuation",
+      },
+    ],
+    "type": "FIELD",
+    "value": "Value",
+  },
+  Object {
+    "index": 13,
+    "length": 19,
+    "line": 1,
+    "ranges": Object {
+      "lineContinuationOperator": Array [
+        0,
+        1,
+      ],
+      "value": Array [
+        2,
+        19,
+      ],
+    },
+    "separator": " ",
+    "type": "CONTINUATION",
+    "value": "Line continuation",
+  },
+  Object {
+    "index": 33,
+    "length": 22,
+    "line": 2,
+    "ranges": Object {
+      "newlineContinuationOperator": Array [
+        0,
+        1,
+      ],
+      "value": Array [
+        2,
+        22,
+      ],
+    },
+    "separator": "
+",
+    "type": "CONTINUATION",
+    "value": "Newline continuation",
+  },
+  Object {
+    "index": 56,
+    "length": 0,
+    "line": 3,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 57,
+    "length": 11,
+    "line": 4,
+    "name": "Dictionary",
+    "ranges": Object {
+      "name": Array [
+        0,
+        10,
+      ],
+      "nameOperator": Array [
+        10,
+        11,
+      ],
+    },
+    "subinstructions": Array [
+      Object {
+        "index": 69,
+        "length": 13,
+        "line": 5,
+        "name": "Empty",
+        "ranges": Object {
+          "entryOperator": Array [
+            6,
+            7,
+          ],
+          "name": Array [
+            0,
+            5,
+          ],
+          "value": Array [
+            8,
+            13,
+          ],
+        },
+        "subinstructions": Array [
+          Object {
+            "index": 83,
+            "length": 19,
+            "line": 6,
+            "ranges": Object {
+              "lineContinuationOperator": Array [
+                0,
+                1,
+              ],
+              "value": Array [
+                2,
+                19,
+              ],
+            },
+            "separator": " ",
+            "type": "CONTINUATION",
+            "value": "Line continuation",
+          },
+          Object {
+            "index": 103,
+            "length": 22,
+            "line": 7,
+            "ranges": Object {
+              "newlineContinuationOperator": Array [
+                0,
+                1,
+              ],
+              "value": Array [
+                2,
+                22,
+              ],
+            },
+            "separator": "
+",
+            "type": "CONTINUATION",
+            "value": "Newline continuation",
+          },
+        ],
+        "type": "DICTIONARY_ENTRY",
+        "value": "Value",
+      },
+    ],
+    "type": "DICTIONARY",
+  },
+  Object {
+    "index": 69,
+    "length": 13,
+    "line": 5,
+    "name": "Empty",
+    "ranges": Object {
+      "entryOperator": Array [
+        6,
+        7,
+      ],
+      "name": Array [
+        0,
+        5,
+      ],
+      "value": Array [
+        8,
+        13,
+      ],
+    },
+    "subinstructions": Array [
+      Object {
+        "index": 83,
+        "length": 19,
+        "line": 6,
+        "ranges": Object {
+          "lineContinuationOperator": Array [
+            0,
+            1,
+          ],
+          "value": Array [
+            2,
+            19,
+          ],
+        },
+        "separator": " ",
+        "type": "CONTINUATION",
+        "value": "Line continuation",
+      },
+      Object {
+        "index": 103,
+        "length": 22,
+        "line": 7,
+        "ranges": Object {
+          "newlineContinuationOperator": Array [
+            0,
+            1,
+          ],
+          "value": Array [
+            2,
+            22,
+          ],
+        },
+        "separator": "
+",
+        "type": "CONTINUATION",
+        "value": "Newline continuation",
+      },
+    ],
+    "type": "DICTIONARY_ENTRY",
+    "value": "Value",
+  },
+  Object {
+    "index": 83,
+    "length": 19,
+    "line": 6,
+    "ranges": Object {
+      "lineContinuationOperator": Array [
+        0,
+        1,
+      ],
+      "value": Array [
+        2,
+        19,
+      ],
+    },
+    "separator": " ",
+    "type": "CONTINUATION",
+    "value": "Line continuation",
+  },
+  Object {
+    "index": 103,
+    "length": 22,
+    "line": 7,
+    "ranges": Object {
+      "newlineContinuationOperator": Array [
+        0,
+        1,
+      ],
+      "value": Array [
+        2,
+        22,
+      ],
+    },
+    "separator": "
+",
+    "type": "CONTINUATION",
+    "value": "Newline continuation",
+  },
+  Object {
+    "index": 126,
+    "length": 0,
+    "line": 8,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 127,
+    "length": 5,
+    "line": 9,
+    "name": "List",
+    "ranges": Object {
+      "name": Array [
+        0,
+        4,
+      ],
+      "nameOperator": Array [
+        4,
+        5,
+      ],
+    },
+    "subinstructions": Array [
+      Object {
+        "index": 133,
+        "length": 7,
+        "line": 10,
+        "name": "List",
+        "ranges": Object {
+          "itemOperator": Array [
+            0,
+            1,
+          ],
+          "value": Array [
+            2,
+            7,
+          ],
+        },
+        "subinstructions": Array [
+          Object {
+            "index": 141,
+            "length": 19,
+            "line": 11,
+            "ranges": Object {
+              "lineContinuationOperator": Array [
+                0,
+                1,
+              ],
+              "value": Array [
+                2,
+                19,
+              ],
+            },
+            "separator": " ",
+            "type": "CONTINUATION",
+            "value": "Line continuation",
+          },
+          Object {
+            "index": 161,
+            "length": 22,
+            "line": 12,
+            "ranges": Object {
+              "newlineContinuationOperator": Array [
+                0,
+                1,
+              ],
+              "value": Array [
+                2,
+                22,
+              ],
+            },
+            "separator": "
+",
+            "type": "CONTINUATION",
+            "value": "Newline continuation",
+          },
+        ],
+        "type": "LIST_ITEM",
+        "value": "Value",
+      },
+    ],
+    "type": "LIST",
+  },
+  Object {
+    "index": 133,
+    "length": 7,
+    "line": 10,
+    "name": "List",
+    "ranges": Object {
+      "itemOperator": Array [
+        0,
+        1,
+      ],
+      "value": Array [
+        2,
+        7,
+      ],
+    },
+    "subinstructions": Array [
+      Object {
+        "index": 141,
+        "length": 19,
+        "line": 11,
+        "ranges": Object {
+          "lineContinuationOperator": Array [
+            0,
+            1,
+          ],
+          "value": Array [
+            2,
+            19,
+          ],
+        },
+        "separator": " ",
+        "type": "CONTINUATION",
+        "value": "Line continuation",
+      },
+      Object {
+        "index": 161,
+        "length": 22,
+        "line": 12,
+        "ranges": Object {
+          "newlineContinuationOperator": Array [
+            0,
+            1,
+          ],
+          "value": Array [
+            2,
+            22,
+          ],
+        },
+        "separator": "
+",
+        "type": "CONTINUATION",
+        "value": "Newline continuation",
+      },
+    ],
+    "type": "LIST_ITEM",
+    "value": "Value",
+  },
+  Object {
+    "index": 141,
+    "length": 19,
+    "line": 11,
+    "ranges": Object {
+      "lineContinuationOperator": Array [
+        0,
+        1,
+      ],
+      "value": Array [
+        2,
+        19,
+      ],
+    },
+    "separator": " ",
+    "type": "CONTINUATION",
+    "value": "Line continuation",
+  },
+  Object {
+    "index": 161,
+    "length": 22,
+    "line": 12,
+    "ranges": Object {
+      "newlineContinuationOperator": Array [
+        0,
+        1,
+      ],
+      "value": Array [
+        2,
+        22,
+      ],
+    },
+    "separator": "
+",
+    "type": "CONTINUATION",
+    "value": "Newline continuation",
+  },
+  Object {
+    "index": 184,
+    "length": 0,
+    "line": 13,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 185,
+    "length": 12,
+    "line": 14,
+    "name": "Empty field",
+    "ranges": Object {
+      "name": Array [
+        0,
+        11,
+      ],
+      "nameOperator": Array [
+        11,
+        12,
+      ],
+    },
+    "subinstructions": Array [
+      Object {
+        "index": 198,
+        "length": 19,
+        "line": 15,
+        "ranges": Object {
+          "lineContinuationOperator": Array [
+            0,
+            1,
+          ],
+          "value": Array [
+            2,
+            19,
+          ],
+        },
+        "separator": " ",
+        "type": "CONTINUATION",
+        "value": "Line continuation",
+      },
+      Object {
+        "index": 218,
+        "length": 22,
+        "line": 16,
+        "ranges": Object {
+          "newlineContinuationOperator": Array [
+            0,
+            1,
+          ],
+          "value": Array [
+            2,
+            22,
+          ],
+        },
+        "separator": "
+",
+        "type": "CONTINUATION",
+        "value": "Newline continuation",
+      },
+    ],
+    "type": "FIELD",
+  },
+  Object {
+    "index": 198,
+    "length": 19,
+    "line": 15,
+    "ranges": Object {
+      "lineContinuationOperator": Array [
+        0,
+        1,
+      ],
+      "value": Array [
+        2,
+        19,
+      ],
+    },
+    "separator": " ",
+    "type": "CONTINUATION",
+    "value": "Line continuation",
+  },
+  Object {
+    "index": 218,
+    "length": 22,
+    "line": 16,
+    "ranges": Object {
+      "newlineContinuationOperator": Array [
+        0,
+        1,
+      ],
+      "value": Array [
+        2,
+        22,
+      ],
+    },
+    "separator": "
+",
+    "type": "CONTINUATION",
+    "value": "Newline continuation",
+  },
+  Object {
+    "index": 241,
+    "length": 0,
+    "line": 17,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 242,
+    "length": 28,
+    "line": 18,
+    "name": "Dictionary with empty entry",
+    "ranges": Object {
+      "name": Array [
+        0,
+        27,
+      ],
+      "nameOperator": Array [
+        27,
+        28,
+      ],
+    },
+    "subinstructions": Array [
+      Object {
+        "index": 271,
+        "length": 13,
+        "line": 19,
+        "name": "Empty entry",
+        "ranges": Object {
+          "entryOperator": Array [
+            12,
+            13,
+          ],
+          "name": Array [
+            0,
+            11,
+          ],
+        },
+        "subinstructions": Array [
+          Object {
+            "index": 285,
+            "length": 19,
+            "line": 20,
+            "ranges": Object {
+              "lineContinuationOperator": Array [
+                0,
+                1,
+              ],
+              "value": Array [
+                2,
+                19,
+              ],
+            },
+            "separator": " ",
+            "type": "CONTINUATION",
+            "value": "Line continuation",
+          },
+          Object {
+            "index": 305,
+            "length": 22,
+            "line": 21,
+            "ranges": Object {
+              "newlineContinuationOperator": Array [
+                0,
+                1,
+              ],
+              "value": Array [
+                2,
+                22,
+              ],
+            },
+            "separator": "
+",
+            "type": "CONTINUATION",
+            "value": "Newline continuation",
+          },
+        ],
+        "type": "DICTIONARY_ENTRY",
+        "value": null,
+      },
+    ],
+    "type": "DICTIONARY",
+  },
+  Object {
+    "index": 271,
+    "length": 13,
+    "line": 19,
+    "name": "Empty entry",
+    "ranges": Object {
+      "entryOperator": Array [
+        12,
+        13,
+      ],
+      "name": Array [
+        0,
+        11,
+      ],
+    },
+    "subinstructions": Array [
+      Object {
+        "index": 285,
+        "length": 19,
+        "line": 20,
+        "ranges": Object {
+          "lineContinuationOperator": Array [
+            0,
+            1,
+          ],
+          "value": Array [
+            2,
+            19,
+          ],
+        },
+        "separator": " ",
+        "type": "CONTINUATION",
+        "value": "Line continuation",
+      },
+      Object {
+        "index": 305,
+        "length": 22,
+        "line": 21,
+        "ranges": Object {
+          "newlineContinuationOperator": Array [
+            0,
+            1,
+          ],
+          "value": Array [
+            2,
+            22,
+          ],
+        },
+        "separator": "
+",
+        "type": "CONTINUATION",
+        "value": "Newline continuation",
+      },
+    ],
+    "type": "DICTIONARY_ENTRY",
+    "value": null,
+  },
+  Object {
+    "index": 285,
+    "length": 19,
+    "line": 20,
+    "ranges": Object {
+      "lineContinuationOperator": Array [
+        0,
+        1,
+      ],
+      "value": Array [
+        2,
+        19,
+      ],
+    },
+    "separator": " ",
+    "type": "CONTINUATION",
+    "value": "Line continuation",
+  },
+  Object {
+    "index": 305,
+    "length": 22,
+    "line": 21,
+    "ranges": Object {
+      "newlineContinuationOperator": Array [
+        0,
+        1,
+      ],
+      "value": Array [
+        2,
+        22,
+      ],
+    },
+    "separator": "
+",
+    "type": "CONTINUATION",
+    "value": "Newline continuation",
+  },
+  Object {
+    "index": 328,
+    "length": 0,
+    "line": 22,
+    "type": "EMPTY_LINE",
+  },
+  Object {
+    "index": 329,
+    "length": 21,
+    "line": 23,
+    "name": "List with empty item",
+    "ranges": Object {
+      "name": Array [
+        0,
+        20,
+      ],
+      "nameOperator": Array [
+        20,
+        21,
+      ],
+    },
+    "subinstructions": Array [
+      Object {
+        "index": 351,
+        "length": 1,
+        "line": 24,
+        "name": "List with empty item",
+        "ranges": Object {
+          "itemOperator": Array [
+            0,
+            1,
+          ],
+        },
+        "subinstructions": Array [
+          Object {
+            "index": 353,
+            "length": 19,
+            "line": 25,
+            "ranges": Object {
+              "lineContinuationOperator": Array [
+                0,
+                1,
+              ],
+              "value": Array [
+                2,
+                19,
+              ],
+            },
+            "separator": " ",
+            "type": "CONTINUATION",
+            "value": "Line continuation",
+          },
+          Object {
+            "index": 373,
+            "length": 22,
+            "line": 26,
+            "ranges": Object {
+              "newlineContinuationOperator": Array [
+                0,
+                1,
+              ],
+              "value": Array [
+                2,
+                22,
+              ],
+            },
+            "separator": "
+",
+            "type": "CONTINUATION",
+            "value": "Newline continuation",
+          },
+        ],
+        "type": "LIST_ITEM",
+        "value": null,
+      },
+    ],
+    "type": "LIST",
+  },
+  Object {
+    "index": 351,
+    "length": 1,
+    "line": 24,
+    "name": "List with empty item",
+    "ranges": Object {
+      "itemOperator": Array [
+        0,
+        1,
+      ],
+    },
+    "subinstructions": Array [
+      Object {
+        "index": 353,
+        "length": 19,
+        "line": 25,
+        "ranges": Object {
+          "lineContinuationOperator": Array [
+            0,
+            1,
+          ],
+          "value": Array [
+            2,
+            19,
+          ],
+        },
+        "separator": " ",
+        "type": "CONTINUATION",
+        "value": "Line continuation",
+      },
+      Object {
+        "index": 373,
+        "length": 22,
+        "line": 26,
+        "ranges": Object {
+          "newlineContinuationOperator": Array [
+            0,
+            1,
+          ],
+          "value": Array [
+            2,
+            22,
+          ],
+        },
+        "separator": "
+",
+        "type": "CONTINUATION",
+        "value": "Newline continuation",
+      },
+    ],
+    "type": "LIST_ITEM",
+    "value": null,
+  },
+  Object {
+    "index": 353,
+    "length": 19,
+    "line": 25,
+    "ranges": Object {
+      "lineContinuationOperator": Array [
+        0,
+        1,
+      ],
+      "value": Array [
+        2,
+        19,
+      ],
+    },
+    "separator": " ",
+    "type": "CONTINUATION",
+    "value": "Line continuation",
+  },
+  Object {
+    "index": 373,
+    "length": 22,
+    "line": 26,
+    "ranges": Object {
+      "newlineContinuationOperator": Array [
+        0,
+        1,
+      ],
+      "value": Array [
+        2,
+        22,
+      ],
+    },
+    "separator": "
+",
+    "type": "CONTINUATION",
+    "value": "Newline continuation",
+  },
+]
+`;

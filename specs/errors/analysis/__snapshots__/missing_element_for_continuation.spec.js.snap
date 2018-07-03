@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`analysis.missingElementForContinuation provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    0,
+  ],
+  Array [
+    0,
+    5,
+  ],
+]
+`;
+
+exports[`analysis.missingElementForContinuation provides the correct message 1`] = `
+"Line 1 contains a continuation without any continuable element being specified before.
+
+   Line | Content
+ >    1 | | eno
+"
+`;

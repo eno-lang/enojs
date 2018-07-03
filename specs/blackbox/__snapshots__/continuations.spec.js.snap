@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blackbox test Continuations performs as expected 1`] = `
+Array [
+  Object {
+    "Field": "Value Line continuation
+Newline continuation",
+  },
+  Object {
+    "Dictionary": Array [
+      Object {
+        "Entry": "Value Line continuation
+Newline continuation",
+      },
+    ],
+  },
+  Object {
+    "List": Array [
+      "Value Line continuation
+Newline continuation",
+    ],
+  },
+  Object {
+    "Empty field": "Line continuation
+Newline continuation",
+  },
+  Object {
+    "Dictionary with empty entry": Array [
+      Object {
+        "Empty entry": "Line continuation
+Newline continuation",
+      },
+    ],
+  },
+  Object {
+    "List with empty item": Array [
+      "Line continuation
+Newline continuation",
+    ],
+  },
+]
+`;

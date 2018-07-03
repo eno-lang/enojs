@@ -4,7 +4,7 @@ const input = `
 | eno
 `.trim();
 
-describe('analysis.missingNameForFieldAppend', () => {
+describe('analysis.missingElementForContinuation', () => {
 
   let error;
 
