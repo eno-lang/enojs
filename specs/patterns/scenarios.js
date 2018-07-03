@@ -95,7 +95,7 @@ const SCENARIOS = {
   COMMENT_SCENARIOS: [
     {
       captures: {
-        [matcher.COMMENT_ANGLE_INDEX]: '>',
+        [matcher.COMMENT_OPERATOR_INDEX]: '>',
         [matcher.COMMENT_TEXT_INDEX]: 'Comment Text'
       },
       syntax: '> Comment Text',
@@ -153,7 +153,7 @@ const SCENARIOS = {
     },
     {
       captures: {
-        [matcher.NAME_ESCAPED_QUOTES_INDEX]: '`',
+        [matcher.NAME_ESCAPE_BEGIN_OPERATOR_INDEX]: '`',
         [matcher.NAME_ESCAPED_INDEX]: '<=:',
         [matcher.DICTIONARY_ENTRY_OPERATOR_INDEX]: '=',
         [matcher.DICTIONARY_ENTRY_VALUE_INDEX]: '`<=:`'
@@ -163,7 +163,7 @@ const SCENARIOS = {
     },
     {
       captures: {
-        [matcher.NAME_ESCAPED_QUOTES_INDEX]: '```',
+        [matcher.NAME_ESCAPE_BEGIN_OPERATOR_INDEX]: '```',
         [matcher.NAME_ESCAPED_INDEX]: '<`=``:',
         [matcher.DICTIONARY_ENTRY_OPERATOR_INDEX]: '=',
         [matcher.DICTIONARY_ENTRY_VALUE_INDEX]: '`<=:`'
@@ -213,7 +213,7 @@ const SCENARIOS = {
     },
     {
       captures: {
-        [matcher.NAME_ESCAPED_QUOTES_INDEX]: '`',
+        [matcher.NAME_ESCAPE_BEGIN_OPERATOR_INDEX]: '`',
         [matcher.NAME_ESCAPED_INDEX]: '<=:',
         [matcher.NAME_OPERATOR_INDEX]: ':',
         [matcher.FIELD_VALUE_INDEX]: '`<=:`'
@@ -223,7 +223,7 @@ const SCENARIOS = {
     },
     {
       captures: {
-        [matcher.NAME_ESCAPED_QUOTES_INDEX]: '```',
+        [matcher.NAME_ESCAPE_BEGIN_OPERATOR_INDEX]: '```',
         [matcher.NAME_ESCAPED_INDEX]: '<`=``:',
         [matcher.NAME_OPERATOR_INDEX]: ':',
         [matcher.FIELD_VALUE_INDEX]: '`<=:`'
@@ -335,7 +335,7 @@ const SCENARIOS = {
     },
     {
       captures: {
-        [matcher.NAME_ESCAPED_QUOTES_INDEX]: '`',
+        [matcher.NAME_ESCAPE_BEGIN_OPERATOR_INDEX]: '`',
         [matcher.NAME_ESCAPED_INDEX]: '<=:',
         [matcher.NAME_OPERATOR_INDEX]: ':'
       },
@@ -344,7 +344,7 @@ const SCENARIOS = {
     },
     {
       captures: {
-        [matcher.NAME_ESCAPED_QUOTES_INDEX]: '```',
+        [matcher.NAME_ESCAPE_BEGIN_OPERATOR_INDEX]: '```',
         [matcher.NAME_ESCAPED_INDEX]: '<`=``:',
         [matcher.NAME_OPERATOR_INDEX]: ':'
       },
@@ -393,7 +393,7 @@ const SCENARIOS = {
     {
       captures: {
         [matcher.SECTION_HASHES_INDEX]: '#',
-        [matcher.SECTION_NAME_ESCAPED_QUOTES_INDEX]: '`',
+        [matcher.SECTION_NAME_ESCAPE_BEGIN_OPERATOR_INDEX]: '`',
         [matcher.SECTION_NAME_ESCAPED_INDEX]: '<=:',
         [matcher.SECTION_COPY_OPERATOR_INDEX]: '<',
         [matcher.SECTION_TEMPLATE_INDEX]: '`<=:`'
@@ -404,7 +404,7 @@ const SCENARIOS = {
     {
       captures: {
         [matcher.SECTION_HASHES_INDEX]: '#',
-        [matcher.SECTION_NAME_ESCAPED_QUOTES_INDEX]: '```',
+        [matcher.SECTION_NAME_ESCAPE_BEGIN_OPERATOR_INDEX]: '```',
         [matcher.SECTION_NAME_ESCAPED_INDEX]: '<`=``:',
         [matcher.SECTION_COPY_OPERATOR_INDEX]: '<',
         [matcher.SECTION_TEMPLATE_INDEX]: '```<`=``:```'

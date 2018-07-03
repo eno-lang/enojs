@@ -58,13 +58,6 @@ describe('EnoValue', () => {
       });
     });
 
-    describe('with a name and a long value', () => {
-      it('returns a debug abstraction with a truncated value', () => {
-        const unnamedLongValue = new EnoValue(context, instructionUnnamedLongValue, parent);
-        expect(unnamedLongValue.toString()).toEqual('[object EnoValue value="The languag..."]');
-      });
-    });
-
     describe('with a name and no value', () => {
       it('returns a debug abstraction', () => {
         const namedEmptyValue = new EnoValue(context, instructionNamedEmpty, parent);
@@ -83,6 +76,13 @@ describe('EnoValue', () => {
       it('returns a debug abstraction', () => {
         const voidValue = new EnoValue(context, instructionVoid, parent);
         expect(voidValue.toString()).toEqual('[object EnoValue value=null]');
+      });
+    });
+
+    describe('with no name and a long value', () => {
+      it('returns a debug abstraction with a truncated value', () => {
+        const unnamedLongValue = new EnoValue(context, instructionUnnamedLongValue, parent);
+        expect(unnamedLongValue.toString()).toEqual('[object EnoValue value="The languag..."]');
       });
     });
   });
