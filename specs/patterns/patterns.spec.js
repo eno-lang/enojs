@@ -1,11 +1,11 @@
 const matcher = require('../../lib/grammar_matcher.js');
 const scenarios = require('./scenarios.js');
 
-// TODO: These tests are not possible in that form after the last tokenizer rewrite, decide future for them - drop or adapt
-describe.skip('Unified grammar matcher', () => {
+describe('Unified grammar matcher', () => {
   for(let scenario of scenarios) {
     for(let variant of scenario.variants) {
       describe(`with "${variant}"`, () => {
+        matcher.GRAMMAR_REGEXP.lastIndex = 0;
         const match = matcher.GRAMMAR_REGEXP.exec(variant);
 
         if(scenario.captures) {
