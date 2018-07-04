@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`integer 4 2 throws an error 1`] = `
+"'integer' must contain an integer, for instance '42' or '-21'.
+
+   Line | Content
+ >    1 | integer: 4 2
+"
+`;
+
+exports[`integer 42,0 throws an error 1`] = `
+"'integer' must contain an integer, for instance '42' or '-21'.
+
+   Line | Content
+ >    1 | integer: 42,0
+"
+`;
+
+exports[`integer 42.0 throws an error 1`] = `
+"'integer' must contain an integer, for instance '42' or '-21'.
+
+   Line | Content
+ >    1 | integer: 42.0
+"
+`;
+
+exports[`integer fortytwo throws an error 1`] = `
+"'integer' must contain an integer, for instance '42' or '-21'.
+
+   Line | Content
+ >    1 | integer: fortytwo
+"
+`;

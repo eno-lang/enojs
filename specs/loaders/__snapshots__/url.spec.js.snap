@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`url htp://www.invalid.com throws an error 1`] = `
+"'url' must contain valid URL, for instance 'https://eno-lang.org'.
+
+   Line | Content
+ >    1 | url: htp://www.invalid.com
+"
+`;
+
+exports[`url http:/invalid.com throws an error 1`] = `
+"'url' must contain valid URL, for instance 'https://eno-lang.org'.
+
+   Line | Content
+ >    1 | url: http:/invalid.com
+"
+`;
+
+exports[`url https//invalid.com throws an error 1`] = `
+"'url' must contain valid URL, for instance 'https://eno-lang.org'.
+
+   Line | Content
+ >    1 | url: https//invalid.com
+"
+`;
+
+exports[`url https://invalid throws an error 1`] = `
+"'url' must contain valid URL, for instance 'https://eno-lang.org'.
+
+   Line | Content
+ >    1 | url: https://invalid
+"
+`;
+
+exports[`url invalid throws an error 1`] = `
+"'url' must contain valid URL, for instance 'https://eno-lang.org'.
+
+   Line | Content
+ >    1 | url: invalid
+"
+`;
+
+exports[`url www.invalid throws an error 1`] = `
+"'url' must contain valid URL, for instance 'https://eno-lang.org'.
+
+   Line | Content
+ >    1 | url: www.invalid
+"
+`;
+
+exports[`url www.invalid.com throws an error 1`] = `
+"'url' must contain valid URL, for instance 'https://eno-lang.org'.
+
+   Line | Content
+ >    1 | url: www.invalid.com
+"
+`;

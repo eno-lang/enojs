@@ -1,14 +1,11 @@
 // const EnoBuilder = require('./lib/builder.js');
 const EnoParser = require('./lib/parser.js');
 const { EnoError, EnoParseError, EnoValidationError } = require('./lib/error_types.js');
+const loaders = require('./lib/loaders.js');
 const messages = require('./lib/messages.js');
 
 const locales = Object.keys(messages);
 const reporters = ['html', 'terminal', 'text']
-
-// TODO: Parser and Builder (no generic dumper concept exists in eno)
-// TODO: - Pass default loaders to parse(..), which are always run when getting any values from the resulting document (e.g. ERB default loader to interpolate things)
-//       - Generally enable possiblity to run multiple loaders in order (then you can also pass multiple loaders to the individual getters e.g.)
 
 // const build = object => {
 //
@@ -85,5 +82,6 @@ module.exports = {
   EnoSection: require('./lib/elements/section.js'),
   EnoValidationError,
   EnoValue: require('./lib/elements/value.js'),
+  loaders,
   parse
 };

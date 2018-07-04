@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`json { "invalid": true, } throws an error 1`] = `
+"'json' must contain valid JSON - the parser returned: 'Unexpected token } in JSON at position 19'.
+
+   Line | Content
+ >    1 | json: { \\"invalid\\": true, }
+"
+`;
+
+exports[`json { invalid: true } throws an error 1`] = `
+"'json' must contain valid JSON - the parser returned: 'Unexpected token i in JSON at position 2'.
+
+   Line | Content
+ >    1 | json: { invalid: true }
+"
+`;
+
+exports[`json invalid throws an error 1`] = `
+"'json' must contain valid JSON - the parser returned: 'Unexpected token i in JSON at position 0'.
+
+   Line | Content
+ >    1 | json: invalid
+"
+`;

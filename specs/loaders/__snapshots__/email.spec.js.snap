@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`email @eno-lang.org throws an error 1`] = `
+"'email' must contain a valid email address, for instance 'jane.doe@eno-lang.org'.
+
+   Line | Content
+ >    1 | email: @eno-lang.org
+"
+`;
+
+exports[`email john.doe@.org throws an error 1`] = `
+"'email' must contain a valid email address, for instance 'jane.doe@eno-lang.org'.
+
+   Line | Content
+ >    1 | email: john.doe@.org
+"
+`;
+
+exports[`email john.doe@eno-lang throws an error 1`] = `
+"'email' must contain a valid email address, for instance 'jane.doe@eno-lang.org'.
+
+   Line | Content
+ >    1 | email: john.doe@eno-lang
+"
+`;

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`color #ab throws an error 1`] = `
+"'color' must contain a color, for instance '#B6D918', '#fff' or '#01b'.
+
+   Line | Content
+ >    1 | color: #ab
+"
+`;
+
+exports[`color #abcd throws an error 1`] = `
+"'color' must contain a color, for instance '#B6D918', '#fff' or '#01b'.
+
+   Line | Content
+ >    1 | color: #abcd
+"
+`;
+
+exports[`color #abcde throws an error 1`] = `
+"'color' must contain a color, for instance '#B6D918', '#fff' or '#01b'.
+
+   Line | Content
+ >    1 | color: #abcde
+"
+`;
+
+exports[`color #bcdefg throws an error 1`] = `
+"'color' must contain a color, for instance '#B6D918', '#fff' or '#01b'.
+
+   Line | Content
+ >    1 | color: #bcdefg
+"
+`;

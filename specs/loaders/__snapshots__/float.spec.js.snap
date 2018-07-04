@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`float 4 2.0 throws an error 1`] = `
+"'float' must contain a decimal number, for instance '13.0', '-9.159' or '42'.
+
+   Line | Content
+ >    1 | float: 4 2.0
+"
+`;
+
+exports[`float 42,0 throws an error 1`] = `
+"'float' must contain a decimal number, for instance '13.0', '-9.159' or '42'.
+
+   Line | Content
+ >    1 | float: 42,0
+"
+`;
+
+exports[`float fortytwo dot zero throws an error 1`] = `
+"'float' must contain a decimal number, for instance '13.0', '-9.159' or '42'.
+
+   Line | Content
+ >    1 | float: fortytwo dot zero
+"
+`;
