@@ -23,7 +23,7 @@ Array [
     "index": 6,
     "length": 0,
     "line": 1,
-    "type": "EMPTY_LINE",
+    "type": "NOOP",
   },
   Object {
     "index": 7,
@@ -46,7 +46,7 @@ Array [
     "index": 13,
     "length": 0,
     "line": 3,
-    "type": "EMPTY_LINE",
+    "type": "NOOP",
   },
   Object {
     "index": 14,
@@ -69,7 +69,7 @@ Array [
     "index": 24,
     "length": 0,
     "line": 5,
-    "type": "EMPTY_LINE",
+    "type": "NOOP",
   },
   Object {
     "index": 25,
@@ -92,7 +92,7 @@ Array [
     "index": 39,
     "length": 0,
     "line": 7,
-    "type": "EMPTY_LINE",
+    "type": "NOOP",
   },
   Object {
     "index": 40,

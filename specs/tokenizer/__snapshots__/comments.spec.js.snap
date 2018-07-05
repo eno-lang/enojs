@@ -17,7 +17,7 @@ Array [
         1,
       ],
     },
-    "type": "COMMENT",
+    "type": "NOOP",
   },
   Object {
     "comment": "more notes",
@@ -34,7 +34,7 @@ Array [
         1,
       ],
     },
-    "type": "COMMENT",
+    "type": "NOOP",
   },
   Object {
     "comment": "note",
@@ -51,7 +51,7 @@ Array [
         5,
       ],
     },
-    "type": "COMMENT",
+    "type": "NOOP",
   },
   Object {
     "comment": null,
@@ -64,7 +64,7 @@ Array [
         5,
       ],
     },
-    "type": "COMMENT",
+    "type": "NOOP",
   },
 ]
 `;

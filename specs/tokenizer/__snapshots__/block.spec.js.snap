@@ -55,7 +55,7 @@ Array [
     "index": 22,
     "length": 0,
     "line": 3,
-    "type": "EMPTY_LINE",
+    "type": "NOOP",
   },
   Object {
     "contentRange": Array [
@@ -134,7 +134,7 @@ Array [
     "index": 54,
     "length": 0,
     "line": 9,
-    "type": "EMPTY_LINE",
+    "type": "NOOP",
   },
   Object {
     "contentRange": Array [

@@ -6,7 +6,7 @@ const context = {};
 const instruction = {
   name: 'languages',
   subinstructions: [{
-    type: 'EMPTY_LINE'
+    type: 'NOOP'
   }, {
     name: 'eno',
     type: 'DICTIONARY_ENTRY',

@@ -104,7 +104,7 @@ Array [
     "index": 56,
     "length": 0,
     "line": 3,
-    "type": "EMPTY_LINE",
+    "type": "NOOP",
   },
   Object {
     "index": 57,
@@ -288,7 +288,7 @@ Array [
     "index": 126,
     "length": 0,
     "line": 8,
-    "type": "EMPTY_LINE",
+    "type": "NOOP",
   },
   Object {
     "index": 127,
@@ -464,7 +464,7 @@ Array [
     "index": 184,
     "length": 0,
     "line": 13,
-    "type": "EMPTY_LINE",
+    "type": "NOOP",
   },
   Object {
     "index": 185,
@@ -563,7 +563,7 @@ Array [
     "index": 241,
     "length": 0,
     "line": 17,
-    "type": "EMPTY_LINE",
+    "type": "NOOP",
   },
   Object {
     "index": 242,
@@ -739,7 +739,7 @@ Array [
     "index": 328,
     "length": 0,
     "line": 22,
-    "type": "EMPTY_LINE",
+    "type": "NOOP",
   },
   Object {
     "index": 329,

@@ -22,7 +22,7 @@ module.exports = {
         comment_operator: [0, 1],
         comment: [2, 9]
       },
-      type: 'COMMENT'
+      type: 'NOOP'
     },
     {
       index: 10,
@@ -39,25 +39,25 @@ module.exports = {
       index: 11,
       length: 0,
       line: 2,
-      type: 'EMPTY_LINE'
+      type: 'NOOP'
     },
     {
       index: 12,
       length: 0,
       line: 3,
-      type: 'EMPTY_LINE'
+      type: 'NOOP'
     },
     {
       index: 13,
       length: 0,
       line: 4,
-      type: 'EMPTY_LINE'
+      type: 'NOOP'
     },
     {
       index: 14,
       length: 0,
       line: 5,
-      type: 'EMPTY_LINE'
+      type: 'NOOP'
     }
   ],
   messages: messages['en']
