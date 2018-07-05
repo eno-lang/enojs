@@ -129,7 +129,7 @@ describe('EnoDictionary', () => {
       });
     });
 
-    describe('with loader', () => {
+    describe('with a loader', () => {
       let result;
 
       beforeEach(() => {
@@ -154,6 +154,47 @@ describe('EnoDictionary', () => {
             expect(entry.touched).toBe(false);
           }
         }
+      });
+    });
+
+    describe('with { element: true }', () => {
+      it('returns the element', () => {
+        const result = dictionary.entry('eno', { element: true });
+        expect(result instanceof EnoValue).toBe(true);
+      });
+    });
+
+    describe('with { withElement: true }', () => {
+      describe('when the entry exists', () => {
+        let result;
+
+        beforeEach(() => {
+          result = dictionary.entry('eno', { withElement: true });
+        });
+
+        it('returns the element', () => {
+          expect(result.element instanceof EnoValue).toBe(true);
+        });
+
+        it('returns the value', () => {
+          expect(result.value).toEqual('eno notation');
+        });
+      });
+
+      describe('when the entry does not exist', () => {
+        let result;
+
+        beforeEach(() => {
+          result = dictionary.entry('missing', { withElement: true });
+        });
+
+        it('returns the element', () => {
+          expect(result.element).toBe(null);
+        });
+
+        it('returns the value', () => {
+          expect(result.value).toBe(null);
+        });
       });
     });
   });
