@@ -1,56 +1,56 @@
 {
   "reference": {
-    "_evaluated": "2018-06-30T13:16:59.847Z",
+    "_evaluated": "2018-07-05T15:06:18.952Z",
     "configuration": {
-      "change": "0.999× slower / +0.00033260700106618746 seconds",
-      "time": 0.29428264500200746
+      "change": "~0 ips (same)",
+      "ips": 44496
     },
     "content": {
-      "change": "1.02× faster / -0.007232895001769046 seconds",
-      "time": 0.29586996499821544
+      "change": "~0 ips (same)",
+      "ips": 111186
     },
     "hierarchy": {
-      "change": "0.990× slower / +0.0020089189969003107 seconds",
-      "time": 0.197112351000309
+      "change": "~0 ips (same)",
+      "ips": 57911
     },
     "invoice": {
-      "change": "0.969× slower / +0.013895560000091789 seconds",
-      "time": 0.44302888299897314
+      "change": "~0 ips (same)",
+      "ips": 25551
     },
     "journey": {
-      "change": "1.01× faster / -0.0024296550005674655 seconds",
-      "time": 0.36511993500217793
+      "change": "~0 ips (same)",
+      "ips": 28301
     },
     "post": {
-      "change": "1.01× faster / -0.001397723004221918 seconds",
-      "time": 0.10775453899800777
+      "change": "~0 ips (same)",
+      "ips": 130451
     }
   },
   "modifications": {
-    "_evaluated": "2018-06-30T16:35:29.625Z",
+    "_evaluated": "2018-07-05T15:07:13.458Z",
     "configuration": {
-      "change": "1.05× faster / -0.01383798800176006 seconds",
-      "time": 0.2804446570002474
+      "change": "-2281 ips (1.05× slower)",
+      "ips": 42215
     },
     "content": {
-      "change": "2.27× faster / -0.16527662699809298 seconds",
-      "time": 0.13059333800012246
+      "change": "-5943 ips (1.06× slower)",
+      "ips": 105243
     },
     "hierarchy": {
-      "change": "1.07× faster / -0.012745295000262558 seconds",
-      "time": 0.18436705600004644
+      "change": "-210 ips (1.00× slower)",
+      "ips": 57701
     },
     "invoice": {
-      "change": "1.06× faster / -0.023535913998726787 seconds",
-      "time": 0.41949296900024635
+      "change": "-1038 ips (1.04× slower)",
+      "ips": 24513
     },
     "journey": {
-      "change": "1.02× slower / +0.005760122998151929 seconds",
-      "time": 0.37088005800032986
+      "change": "-194 ips (1.01× slower)",
+      "ips": 28107
     },
     "post": {
-      "change": "1.12× faster / -0.011447220997884866 seconds",
-      "time": 0.0963073180001229
+      "change": "-8453 ips (1.07× slower)",
+      "ips": 121998
     }
   }
 }

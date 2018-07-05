@@ -30,28 +30,38 @@ analysis.modifications = { _evaluated: new Date() };
 
 for(let [name, content] of Object.entries(SAMPLES)) {
   const before = performance.now();
-  for(let i = 0; i < ITERATIONS; i++)
-    eno.parse(content);
-  const after = performance.now();
+  let milliseconds = 0;
+  let iterations = 0;
 
-  const duration = ((after - before) / 1000.0);
-  const delta = reference ? duration - reference[name]['time'] : 0;
+  while(milliseconds < 4000) {
+    for(let i = 0; i < 1000; i++) {
+      eno.parse(content);
+    }
+
+    iterations += 1000;
+    milliseconds = performance.now() - before;
+  }
+
+  ips = parseInt(iterations / (milliseconds / 1000.0));
+  const delta = reference ? ips - reference[name]['ips'] : 0;
 
   let change, factor;
-  if(delta >= 0) {
-    factor = reference ? duration / reference[name]['time'] : 0;
-    change = `${factor.toPrecision(3)}× slower / +${delta} seconds`;
+  if(delta === 0) {
+    change = "~0 ips (same)";
+  } else if(delta >= 0) {
+    factor = reference ? (ips / reference[name]['ips']).toPrecision(3) : 0;
+    change = `+${delta} ips (${factor}× faster)`;
   } else {
-    factor = reference ? reference[name]['time'] / duration : 0;
-    change = `${factor.toPrecision(3)}× faster / ${delta} seconds`;
+    factor = reference ? (reference[name]['ips'] / ips).toPrecision(3) : 0;
+    change = `${delta} ips (${factor}× slower)`;
   }
 
   analysis.modifications[name] = {
     change: change,
-    time: duration
+    ips: ips
   };
 
-  console.log(`${ITERATIONS/1000}k ${name} => ${change}`);
+  console.log(`${change} [${name}]`);
 }
 
 fs.writeFileSync(path.join(__dirname, 'analysis.json'), JSON.stringify(analysis, null, 2));
