@@ -3,7 +3,7 @@ const eno = require('../eno.js');
 describe('Property issues', () => {
   describe('EnoSection', () => {
     describe('toString as field name', () => {
-      test('does not have any side effects', () => {
+      it('does not have any side effects', () => {
         const document = eno.parse('toString: ok');
 
         expect(document.raw()).toEqual([{ toString: 'ok' }]);
@@ -11,7 +11,7 @@ describe('Property issues', () => {
     });
 
     describe('toString as dictionary name', () => {
-      test('does not have any side effects', () => {
+      it('does not have any side effects', () => {
         const document = eno.parse(`
           toString:
           check = ok
@@ -22,7 +22,7 @@ describe('Property issues', () => {
     });
 
     describe('toString as dictionary entry', () => {
-      test('does not have any side effects', () => {
+      it('does not have any side effects', () => {
         const document = eno.parse(`
           check:
           toString = ok
@@ -33,13 +33,13 @@ describe('Property issues', () => {
     });
 
     describe('toString as missing template', () => {
-      test('does not have any side effects', () => {
+      it('does not have any side effects', () => {
         expect(() => eno.parse('check < toString')).toThrowErrorMatchingSnapshot();
       });
     });
 
     describe('toString as name in a complex merge', () => {
-      test('does not have any side effects', () => {
+      it('does not have any side effects', () => {
         const document = eno.parse(`
           # a
           ## toString
@@ -61,7 +61,7 @@ describe('Property issues', () => {
     });
 
     describe('fetching from a missing toString field', () => {
-      test('does not have any side effects', () => {
+      it('does not have any side effects', () => {
         const document = eno.parse('');
 
         expect(document.field('toString')).toBe(null);
@@ -69,7 +69,7 @@ describe('Property issues', () => {
     });
 
     describe('fetching a missing dictionary named toString', () => {
-      test('does not have any side effects', () => {
+      it('does not have any side effects', () => {
         const document = eno.parse('');
 
         expect(() => document.dictionary('toString')).toThrowErrorMatchingSnapshot();
@@ -77,7 +77,7 @@ describe('Property issues', () => {
     });
 
     describe('fetching a missing list named toString', () => {
-      test('does not have any side effects', () => {
+      it('does not have any side effects', () => {
         const document = eno.parse('');
 
         expect(document.list('toString')).toEqual([]);
@@ -85,7 +85,7 @@ describe('Property issues', () => {
     });
 
     describe('fetching a missing section named toString', () => {
-      test('does not have any side effects', () => {
+      it('does not have any side effects', () => {
         const document = eno.parse('');
 
         expect(() => document.section('toString')).toThrowErrorMatchingSnapshot();
@@ -93,7 +93,7 @@ describe('Property issues', () => {
     });
 
     describe('fetching missing sections named toString', () => {
-      test('does not have any side effects', () => {
+      it('does not have any side effects', () => {
         const document = eno.parse('');
 
         expect(document.sections('toString')).toEqual([]);
@@ -101,7 +101,7 @@ describe('Property issues', () => {
     });
 
     describe('asserting toString has been touched', () => {
-      test('does not have any side effects', () => {
+      it('does not have any side effects', () => {
         const document = eno.parse('');
 
         expect(() => document.assertAllTouched({ only: 'toString' })).not.toThrow();
@@ -113,7 +113,7 @@ describe('Property issues', () => {
   describe('EnoDictionary', () => {
 
     describe('asserting toString has been touched', () => {
-      test('does not have any side effects', () => {
+      it('does not have any side effects', () => {
         const document = eno.parse(`
           color ratings:
           red = 1
@@ -127,7 +127,7 @@ describe('Property issues', () => {
     });
 
     describe('fetching a missing dictionary entry named toString', () => {
-      test('does not have any side effects', () => {
+      it('does not have any side effects', () => {
         const document = eno.parse(`
           color ratings:
           red = 1

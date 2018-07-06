@@ -77,11 +77,11 @@ describe('Element/Token lookup', () => {
     describe(`at (${scenario.index.join(', ')})`, () => {
       const lookup = document.lookup(...scenario.index);
 
-      test(`looks up element '${scenario.element}'`, () => {
+      it(`looks up element '${scenario.element}'`, () => {
         expect(lookup.element.name).toEqual(scenario.element);
       });
 
-      test(`looks up token '${scenario.zone}'`, () => {
+      it(`looks up token '${scenario.zone}'`, () => {
         expect(lookup.zone).toEqual(scenario.zone);
       });
     });

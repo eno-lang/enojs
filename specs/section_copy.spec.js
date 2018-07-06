@@ -19,23 +19,27 @@ value_1: deep
 `;
 
 describe('Section copy operators', () => {
-  const doc = parse(sample);
+  let doc;
 
-  test('Default section is correctly initialized', () => {
-    const _default = doc.section('default').raw();
-
-    expect(_default).toMatchSnapshot();
+  beforeAll(() => {
+    doc = parse(sample);
   });
 
-  test('Shallow section is correctly merged', () => {
-    const shallow = doc.section('shallow').raw();
-
-    expect(shallow).toMatchSnapshot();
+  describe('Default section', () => {
+    it('is correctly initialized', () => {
+      expect(doc.section('default').raw()).toMatchSnapshot();
+    });
   });
 
-  test('Deep section is correctly merged', () => {
-    const deep = doc.section('deep').raw();
+  describe('Shallow section', () => {
+    it('is correctly merged', () => {
+      expect(doc.section('shallow').raw()).toMatchSnapshot();
+    });
+  });
 
-    expect(deep).toMatchSnapshot();
+  describe('Deep section', () => {
+    it('is correctly merged', () => {
+      expect(doc.section('deep').raw()).toMatchSnapshot();
+    });
   });
 });

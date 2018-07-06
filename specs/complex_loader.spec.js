@@ -1,9 +1,9 @@
 const { parse } = require('../eno.js');
 
-const sample = `
+const input = `
 bad coordinates: Mickey Mouse
 good coordinates: 48.211180, 16.371514
-`;
+`.trim();
 
 const loadCoordinates = ({ name, value }) => {
   const split = value.split(',');
@@ -19,13 +19,13 @@ const loadCoordinates = ({ name, value }) => {
 };
 
 describe('Complex loader', () => {
-  const doc = parse(sample);
+  const doc = parse(input);
 
-  test('throws with bad input', () => {
+  it('throws with bad input', () => {
     expect(() => doc.field('bad coordinates', loadCoordinates)).toThrowErrorMatchingSnapshot();
   });
 
-  test('works with good input', () => {
+  it('works with good input', () => {
     expect(doc.field('good coordinates', loadCoordinates)).toEqual({ lat: 48.211180, lng: 16.371514 });
   });
 });

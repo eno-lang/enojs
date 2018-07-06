@@ -33,7 +33,7 @@ end:
 `;
 
 describe('Empty elements', () => {
-  test('correctly parsed', () => {
+  it('correctly parses', () => {
     const doc = parse(sample);
     expect(doc.raw()).toMatchSnapshot();
   });
