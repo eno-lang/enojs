@@ -1,39 +1,21 @@
 const eno = require('enojs');
-const { loaders } = require('enojs');
 
-describe('commaSeparated', () => {
-  describe('one,two,three', () => {
-    it('splits by comma', () => {
-      const document = eno.parse('value: one,two,three');
-      expect(document.field('value', loaders.commaSeparated)).toEqual(['one', 'two', 'three']);
-    });
-  });
+const examples = {
+  'one,two,three':     ['one', 'two', 'three'],
+  'one , two , three': ['one', 'two', 'three'],
+  ',,':                ['', '', ''],
+  'one two three':     ['one two three'],
+  'one;two;three':     ['one;two;three']
+};
 
-  describe('one , two , three', () => {
-    it('splits by comma and trims the values', () => {
-      const document = eno.parse('value: one , two , three');
-      expect(document.field('value', loaders.commaSeparated)).toEqual(['one', 'two', 'three']);
-    });
-  });
+describe('commaSeparated loader', () => {
+  for(let [value, result] of Object.entries(examples)) {
+    describe(value, () => {
+      const document = eno.parse(`value: ${value}`);
 
-  describe(',,', () => {
-    it('splits by comma and retains empty values', () => {
-      const document = eno.parse('value: ,,');
-      expect(document.field('value', loaders.commaSeparated)).toEqual(['', '', '']);
+      it(`returns ${result}`, () => {
+        expect(document.commaSeparated('value')).toEqual(result);
+      });
     });
-  });
-
-  describe('one two three', () => {
-    it('returns the value unaltered as a single array item', () => {
-      const document = eno.parse('value: one two three');
-      expect(document.field('value', loaders.commaSeparated)).toEqual(['one two three']);
-    });
-  });
-
-  describe('one;two;three', () => {
-    it('returns the value unaltered as a single array item', () => {
-      const document = eno.parse('value: one;two;three');
-      expect(document.field('value', loaders.commaSeparated)).toEqual(['one;two;three']);
-    });
-  });
+  }
 });

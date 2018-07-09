@@ -1,49 +1,28 @@
 const eno = require('enojs');
-const { loaders } = require('enojs');
 
-describe('json', () => {
+const examples = {
+  '{ "valid": true }':    { valid: true },
+  '42':                   42,
+  '["valid", true]':      ['valid', true],
+  'invalid':              false,
+  '{ invalid: true }':    false,
+  '{ "invalid": true, }': false
+};
 
-  let document;
+describe('json loader', () => {
+  for(let [value, result] of Object.entries(examples)) {
+    describe(value, () => {
+      const document = eno.parse(`value: ${value}`);
 
-  describe('{ "valid": true }', () => {
-    it('returns { "valid": true }', () => {
-      document = eno.parse('json: { "valid": true }');
-      expect(document.field('json', loaders.json)).toEqual({ valid: true });
+      if(result === false) {
+        it('throws an error', () => {
+          expect(() => document.json('value')).toThrowErrorMatchingSnapshot();
+        });
+      } else {
+        it(`returns ${result}`, () => {
+          expect(document.json('value')).toEqual(result);
+        });
+      }
     });
-  });
-
-  describe('42', () => {
-    it('returns 42', () => {
-      document = eno.parse('json: 42');
-      expect(document.field('json', loaders.json)).toBe(42);
-    });
-  });
-
-  describe('["valid", true]', () => {
-    it('returns ["valid", true]', () => {
-      document = eno.parse('json: ["valid", true]');
-      expect(document.field('json', loaders.json)).toEqual(['valid', true]);
-    });
-  });
-
-  describe('invalid', () => {
-    it('throws an error', () => {
-      document = eno.parse('json: invalid');
-      expect(() => document.field('json', loaders.json)).toThrowErrorMatchingSnapshot();
-    });
-  });
-
-  describe('{ invalid: true }', () => {
-    it('throws an error', () => {
-      document = eno.parse('json: { invalid: true }');
-      expect(() => document.field('json', loaders.json)).toThrowErrorMatchingSnapshot();
-    });
-  });
-
-  describe('{ "invalid": true, }', () => {
-    it('throws an error', () => {
-      document = eno.parse('json: { "invalid": true, }');
-      expect(() => document.field('json', loaders.json)).toThrowErrorMatchingSnapshot();
-    });
-  });
+  }
 });

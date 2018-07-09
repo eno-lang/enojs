@@ -1,33 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`integer 4 2 throws an error 1`] = `
-"'integer' must contain an integer, for instance '42' or '-21'.
+exports[`integer loader 4 2 throws an error 1`] = `
+"'value' must contain an integer, for instance '42' or '-21'.
 
    Line | Content
- >    1 | integer: 4 2
+ >    1 | value: 4 2
 "
 `;
 
-exports[`integer 42,0 throws an error 1`] = `
-"'integer' must contain an integer, for instance '42' or '-21'.
+exports[`integer loader 42,0 throws an error 1`] = `
+"'value' must contain an integer, for instance '42' or '-21'.
 
    Line | Content
- >    1 | integer: 42,0
+ >    1 | value: 42,0
 "
 `;
 
-exports[`integer 42.0 throws an error 1`] = `
-"'integer' must contain an integer, for instance '42' or '-21'.
+exports[`integer loader 42.0 throws an error 1`] = `
+"'value' must contain an integer, for instance '42' or '-21'.
 
    Line | Content
- >    1 | integer: 42.0
+ >    1 | value: 42.0
 "
 `;
 
-exports[`integer fortytwo throws an error 1`] = `
-"'integer' must contain an integer, for instance '42' or '-21'.
+exports[`integer loader fortytwo throws an error 1`] = `
+"'value' must contain an integer, for instance '42' or '-21'.
 
    Line | Content
- >    1 | integer: fortytwo
+ >    1 | value: fortytwo
 "
 `;

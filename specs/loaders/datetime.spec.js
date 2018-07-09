@@ -1,84 +1,34 @@
 const eno = require('enojs');
-const { loaders } = require('enojs');
 
-describe('datetime', () => {
+const examples = {
+  '1990':                         '1990-01-01T00:00:00.000Z',
+  '1991-01':                      '1991-01-01T00:00:00.000Z',
+  '1992-02-02':                   '1992-02-02T00:00:00.000Z',
+  '1993-03-03T19:20+01:00':       '1993-03-03T18:20:00.000Z',
+  '1994-04-04T19:20:30+01:00':    '1994-04-04T18:20:30.000Z',
+  '1995-05-05T19:20:30.45+01:00': '1995-05-05T18:20:30.450Z',
+  '1996-06-06T08:15:30-05:00':    '1996-06-06T13:15:30.000Z',
+  '1997-07-07T13:15:30Z':         '1997-07-07T13:15:30.000Z',
+  '2002 12 14':                   false,
+  '2002-12-14 20:15':             false,
+  'January':                      false,
+  '13:00':                        false
+};
 
-  let document;
+describe('datetime loader', () => {
+  for(let [value, result] of Object.entries(examples)) {
+    describe(value, () => {
+      const document = eno.parse(`value: ${value}`);
 
-  describe('1997', () => {
-    it('returns a correctly set Date object', () => {
-      document = eno.parse('datetime: 1997');
-      expect(document.field('datetime', loaders.datetime)).toMatchSnapshot();
+      if(result === false) {
+        it('throws an error', () => {
+          expect(() => document.datetime('value')).toThrowErrorMatchingSnapshot();
+        });
+      } else {
+        it(`returns ${result}`, () => {
+          expect(document.datetime('value').toISOString()).toBe(result);
+        });
+      }
     });
-  });
-
-  describe('1997-07', () => {
-    it('returns a correctly set Date object', () => {
-      document = eno.parse('datetime: 1997-07');
-      expect(document.field('datetime', loaders.datetime)).toMatchSnapshot();
-    });
-  });
-
-  describe('1997-07-16', () => {
-    it('returns a correctly set Date object', () => {
-      document = eno.parse('datetime: 1997-07-16');
-      expect(document.field('datetime', loaders.datetime)).toMatchSnapshot();
-    });
-  });
-
-  describe('1997-07-16T19:20+01:00', () => {
-    it('returns a correctly set Date object', () => {
-      document = eno.parse('datetime: 1997-07-16T19:20+01:00');
-      expect(document.field('datetime', loaders.datetime)).toMatchSnapshot();
-    });
-  });
-
-  describe('1997-07-16T19:20:30+01:00', () => {
-    it('returns a correctly set Date object', () => {
-      document = eno.parse('datetime: 1997-07-16T19:20:30+01:00');
-      expect(document.field('datetime', loaders.datetime)).toMatchSnapshot();
-    });
-  });
-
-  describe('1997-07-16T19:20:30.45+01:00', () => {
-    it('returns a correctly set Date object', () => {
-      document = eno.parse('datetime: 1997-07-16T19:20:30.45+01:00');
-      expect(document.field('datetime', loaders.datetime)).toMatchSnapshot();
-    });
-  });
-
-  describe('1994-11-05T08:15:30-05:00', () => {
-    it('returns a correctly set Date object', () => {
-      document = eno.parse('datetime: 1994-11-05T08:15:30-05:00');
-      expect(document.field('datetime', loaders.datetime)).toMatchSnapshot();
-    });
-  });
-
-  describe('1994-11-05T13:15:30Z', () => {
-    it('returns a correctly set Date object', () => {
-      document = eno.parse('datetime: 1994-11-05T13:15:30Z');
-      expect(document.field('datetime', loaders.datetime)).toMatchSnapshot();
-    });
-  });
-
-  describe('2002 12 14', () => {
-    it('throws an error', () => {
-      document = eno.parse('datetime: 2002 12 14');
-      expect(() => document.field('datetime', loaders.datetime)).toThrowErrorMatchingSnapshot();
-    });
-  });
-
-  describe('January', () => {
-    it('throws an error', () => {
-      document = eno.parse('datetime: January');
-      expect(() => document.field('datetime', loaders.datetime)).toThrowErrorMatchingSnapshot();
-    });
-  });
-
-  describe('13:00', () => {
-    it('throws an error', () => {
-      document = eno.parse('datetime: 13:00');
-      expect(() => document.field('datetime', loaders.datetime)).toThrowErrorMatchingSnapshot();
-    });
-  });
+  }
 });

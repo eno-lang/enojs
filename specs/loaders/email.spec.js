@@ -1,35 +1,26 @@
 const eno = require('enojs');
-const { loaders } = require('enojs');
 
-describe('email', () => {
+const examples = {
+  'john.doe@eno-lang.org': 'john.doe@eno-lang.org',
+  'john.doe@eno-lang':     false,
+  '@eno-lang.org':         false,
+  'john.doe@.org':         false
+};
 
-  let document;
+describe('email loader', () => {
+  for(let [value, result] of Object.entries(examples)) {
+    describe(value, () => {
+      const document = eno.parse(`value: ${value}`);
 
-  describe('john.doe@eno-lang.org', () => {
-    it('returns the email', () => {
-      document = eno.parse('email: john.doe@eno-lang.org');
-      expect(document.field('email', loaders.email)).toBe('john.doe@eno-lang.org');
+      if(result === false) {
+        it('throws an error', () => {
+          expect(() => document.email('value')).toThrowErrorMatchingSnapshot();
+        });
+      } else {
+        it(`returns ${result}`, () => {
+          expect(document.email('value')).toBe(result);
+        });
+      }
     });
-  });
-
-  describe('john.doe@eno-lang', () => {
-    it('throws an error', () => {
-      document = eno.parse('email: john.doe@eno-lang');
-      expect(() => document.field('email', loaders.email)).toThrowErrorMatchingSnapshot();
-    });
-  });
-
-  describe('@eno-lang.org', () => {
-    it('throws an error', () => {
-      document = eno.parse('email: @eno-lang.org');
-      expect(() => document.field('email', loaders.email)).toThrowErrorMatchingSnapshot();
-    });
-  });
-
-  describe('john.doe@.org', () => {
-    it('throws an error', () => {
-      document = eno.parse('email: john.doe@.org');
-      expect(() => document.field('email', loaders.email)).toThrowErrorMatchingSnapshot();
-    });
-  });
+  }
 });

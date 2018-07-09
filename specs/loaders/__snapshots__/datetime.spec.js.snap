@@ -1,41 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`datetime 13:00 throws an error 1`] = `
-"'datetime' must contain a valid date or date and time, for instance '1997-07-16' or '1994-11-05T13:15Z' (see https://www.w3.org/TR/NOTE-datetime).
+exports[`datetime loader 13:00 throws an error 1`] = `
+"'value' must contain a valid date or date and time, for instance '1997-07-16' or '1994-11-05T13:15Z' (see https://www.w3.org/TR/NOTE-datetime).
 
    Line | Content
- >    1 | datetime: 13:00
+ >    1 | value: 13:00
 "
 `;
 
-exports[`datetime 1994-11-05T08:15:30-05:00 returns a correctly set Date object 1`] = `1994-11-05T13:15:30.000Z`;
-
-exports[`datetime 1994-11-05T13:15:30Z returns a correctly set Date object 1`] = `1994-11-05T13:15:30.000Z`;
-
-exports[`datetime 1997 returns a correctly set Date object 1`] = `1997-01-01T00:00:00.000Z`;
-
-exports[`datetime 1997-07 returns a correctly set Date object 1`] = `1997-07-01T00:00:00.000Z`;
-
-exports[`datetime 1997-07-16 returns a correctly set Date object 1`] = `1997-07-16T00:00:00.000Z`;
-
-exports[`datetime 1997-07-16T19:20+01:00 returns a correctly set Date object 1`] = `1997-07-16T18:20:00.000Z`;
-
-exports[`datetime 1997-07-16T19:20:30+01:00 returns a correctly set Date object 1`] = `1997-07-16T18:20:30.000Z`;
-
-exports[`datetime 1997-07-16T19:20:30.45+01:00 returns a correctly set Date object 1`] = `1997-07-16T18:20:30.450Z`;
-
-exports[`datetime 2002 12 14 throws an error 1`] = `
-"'datetime' must contain a valid date or date and time, for instance '1997-07-16' or '1994-11-05T13:15Z' (see https://www.w3.org/TR/NOTE-datetime).
+exports[`datetime loader 2002 12 14 throws an error 1`] = `
+"'value' must contain a valid date or date and time, for instance '1997-07-16' or '1994-11-05T13:15Z' (see https://www.w3.org/TR/NOTE-datetime).
 
    Line | Content
- >    1 | datetime: 2002 12 14
+ >    1 | value: 2002 12 14
 "
 `;
 
-exports[`datetime January throws an error 1`] = `
-"'datetime' must contain a valid date or date and time, for instance '1997-07-16' or '1994-11-05T13:15Z' (see https://www.w3.org/TR/NOTE-datetime).
+exports[`datetime loader 2002-12-14 20:15 throws an error 1`] = `
+"'value' must contain a valid date or date and time, for instance '1997-07-16' or '1994-11-05T13:15Z' (see https://www.w3.org/TR/NOTE-datetime).
 
    Line | Content
- >    1 | datetime: January
+ >    1 | value: 2002-12-14 20:15
+"
+`;
+
+exports[`datetime loader January throws an error 1`] = `
+"'value' must contain a valid date or date and time, for instance '1997-07-16' or '1994-11-05T13:15Z' (see https://www.w3.org/TR/NOTE-datetime).
+
+   Line | Content
+ >    1 | value: January
 "
 `;

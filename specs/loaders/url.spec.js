@@ -1,84 +1,32 @@
 const eno = require('enojs');
-const { loaders } = require('enojs');
 
-describe('url', () => {
+const examples = {
+  'http://www.valid.com':  'http://www.valid.com',
+  'https://valid.com':     'https://valid.com',
+  'https://www.valid.com': 'https://www.valid.com',
+  'invalid':               false,
+  'www.invalid':           false,
+  'www.invalid.com':       false,
+  'htp://www.invalid.com': false,
+  'http:/invalid.com':     false,
+  'https//invalid.com':    false,
+  'https://invalid':       false
+};
 
-  let document;
+describe('url loader', () => {
+  for(let [value, result] of Object.entries(examples)) {
+    describe(value, () => {
+      const document = eno.parse(`value: ${value}`);
 
-  describe('http://valid.com', () => {
-    it('returns the url', () => {
-      document = eno.parse('url: http://valid.com');
-      expect(document.field('url', loaders.url)).toBe('http://valid.com');
+      if(result === false) {
+        it('throws an error', () => {
+          expect(() => document.url('value')).toThrowErrorMatchingSnapshot();
+        });
+      } else {
+        it(`returns '${result}'`, () => {
+          expect(document.url('value')).toBe(result);
+        });
+      }
     });
-  });
-
-  describe('http://www.valid.com', () => {
-    it('returns the url', () => {
-      document = eno.parse('url: http://www.valid.com');
-      expect(document.field('url', loaders.url)).toBe('http://www.valid.com');
-    });
-  });
-
-  describe('https://valid.com', () => {
-    it('returns the url', () => {
-      document = eno.parse('url: https://valid.com');
-      expect(document.field('url', loaders.url)).toBe('https://valid.com');
-    });
-  });
-
-  describe('https://www.valid.com', () => {
-    it('returns the url', () => {
-      document = eno.parse('url: https://www.valid.com');
-      expect(document.field('url', loaders.url)).toBe('https://www.valid.com');
-    });
-  });
-
-  describe('invalid', () => {
-    it('throws an error', () => {
-      document = eno.parse('url: invalid');
-      expect(() => document.field('url', loaders.url)).toThrowErrorMatchingSnapshot();
-    });
-  });
-
-  describe('www.invalid', () => {
-    it('throws an error', () => {
-      document = eno.parse('url: www.invalid');
-      expect(() => document.field('url', loaders.url)).toThrowErrorMatchingSnapshot();
-    });
-  });
-
-  describe('www.invalid.com', () => {
-    it('throws an error', () => {
-      document = eno.parse('url: www.invalid.com');
-      expect(() => document.field('url', loaders.url)).toThrowErrorMatchingSnapshot();
-    });
-  });
-
-  describe('htp://www.invalid.com', () => {
-    it('throws an error', () => {
-      document = eno.parse('url: htp://www.invalid.com');
-      expect(() => document.field('url', loaders.url)).toThrowErrorMatchingSnapshot();
-    });
-  });
-
-  describe('http:/invalid.com', () => {
-    it('throws an error', () => {
-      document = eno.parse('url: http:/invalid.com');
-      expect(() => document.field('url', loaders.url)).toThrowErrorMatchingSnapshot();
-    });
-  });
-
-  describe('https//invalid.com', () => {
-    it('throws an error', () => {
-      document = eno.parse('url: https//invalid.com');
-      expect(() => document.field('url', loaders.url)).toThrowErrorMatchingSnapshot();
-    });
-  });
-
-  describe('https://invalid', () => {
-    it('throws an error', () => {
-      document = eno.parse('url: https://invalid');
-      expect(() => document.field('url', loaders.url)).toThrowErrorMatchingSnapshot();
-    });
-  });
+  }
 });

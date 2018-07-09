@@ -1,33 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`color #ab throws an error 1`] = `
-"'color' must contain a color, for instance '#B6D918', '#fff' or '#01b'.
+exports[`color loader #ab throws an error 1`] = `
+"'value' must contain a color, for instance '#B6D918', '#fff' or '#01b'.
 
    Line | Content
- >    1 | color: #ab
+ >    1 | value: #ab
 "
 `;
 
-exports[`color #abcd throws an error 1`] = `
-"'color' must contain a color, for instance '#B6D918', '#fff' or '#01b'.
+exports[`color loader #abcd throws an error 1`] = `
+"'value' must contain a color, for instance '#B6D918', '#fff' or '#01b'.
 
    Line | Content
- >    1 | color: #abcd
+ >    1 | value: #abcd
 "
 `;
 
-exports[`color #abcde throws an error 1`] = `
-"'color' must contain a color, for instance '#B6D918', '#fff' or '#01b'.
+exports[`color loader #abcde throws an error 1`] = `
+"'value' must contain a color, for instance '#B6D918', '#fff' or '#01b'.
 
    Line | Content
- >    1 | color: #abcde
+ >    1 | value: #abcde
 "
 `;
 
-exports[`color #bcdefg throws an error 1`] = `
-"'color' must contain a color, for instance '#B6D918', '#fff' or '#01b'.
+exports[`color loader #bcdefg throws an error 1`] = `
+"'value' must contain a color, for instance '#B6D918', '#fff' or '#01b'.
 
    Line | Content
- >    1 | color: #bcdefg
+ >    1 | value: #bcdefg
+"
+`;
+
+exports[`color loader blue throws an error 1`] = `
+"'value' must contain a color, for instance '#B6D918', '#fff' or '#01b'.
+
+   Line | Content
+ >    1 | value: blue
 "
 `;

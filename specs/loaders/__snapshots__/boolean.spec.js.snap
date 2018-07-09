@@ -1,17 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`boolean sicher throws an error 1`] = `
-"'boolean' must contain a boolean - allowed values are 'true', 'false', 'yes' and 'no'.
+exports[`boolean loader nope throws an error 1`] = `
+"'value' must contain a boolean - allowed values are 'true', 'false', 'yes' and 'no'.
 
    Line | Content
- >    1 | boolean: sicher
-"
-`;
-
-exports[`boolean yes yes throws an error 1`] = `
-"'boolean' must contain a boolean - allowed values are 'true', 'false', 'yes' and 'no'.
-
-   Line | Content
- >    1 | boolean: yes yes
+ >    1 | value: nope
 "
 `;
