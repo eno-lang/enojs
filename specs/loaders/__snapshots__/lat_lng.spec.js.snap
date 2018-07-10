@@ -8,6 +8,14 @@ exports[`latLng loader , 16.413690 throws an error 1`] = `
 "
 `;
 
+exports[`latLng loader 10,1000 throws an error 1`] = `
+"'value' must contain a valid latitude/longitude coordinate pair, for instance '48.2093723, 16.356099'.
+
+   Line | Content
+ >    1 | value: 10,1000
+"
+`;
+
 exports[`latLng loader 48,205870, 16,413690 throws an error 1`] = `
 "'value' must contain a valid latitude/longitude coordinate pair, for instance '48.2093723, 16.356099'.
 
@@ -21,5 +29,13 @@ exports[`latLng loader 48.205870, throws an error 1`] = `
 
    Line | Content
  >    1 | value: 48.205870,
+"
+`;
+
+exports[`latLng loader 1000,10 throws an error 1`] = `
+"'value' must contain a valid latitude/longitude coordinate pair, for instance '48.2093723, 16.356099'.
+
+   Line | Content
+ >    1 | value: 1000,10
 "
 `;

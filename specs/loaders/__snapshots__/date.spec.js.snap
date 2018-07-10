@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`date loader 13:00 throws an error 1`] = `
+"'value' must contain a valid date, for instance '1993-11-18'.
+
+   Line | Content
+ >    1 | value: 13:00
+"
+`;
+
+exports[`date loader 1990 throws an error 1`] = `
+"'value' must contain a valid date, for instance '1993-11-18'.
+
+   Line | Content
+ >    1 | value: 1990
+"
+`;
+
+exports[`date loader 1991-01 throws an error 1`] = `
+"'value' must contain a valid date, for instance '1993-11-18'.
+
+   Line | Content
+ >    1 | value: 1991-01
+"
+`;
+
+exports[`date loader 1993-03-03T19:20+01:00 throws an error 1`] = `
+"'value' must contain a valid date, for instance '1993-11-18'.
+
+   Line | Content
+ >    1 | value: 1993-03-03T19:20+01:00
+"
+`;
+
+exports[`date loader 1994-04-04T19:20:30+01:00 throws an error 1`] = `
+"'value' must contain a valid date, for instance '1993-11-18'.
+
+   Line | Content
+ >    1 | value: 1994-04-04T19:20:30+01:00
+"
+`;
+
+exports[`date loader 1995-05-05T19:20:30.45+01:00 throws an error 1`] = `
+"'value' must contain a valid date, for instance '1993-11-18'.
+
+   Line | Content
+ >    1 | value: 1995-05-05T19:20:30.45+01:00
+"
+`;
+
+exports[`date loader 1996-06-06T08:15:30-05:00 throws an error 1`] = `
+"'value' must contain a valid date, for instance '1993-11-18'.
+
+   Line | Content
+ >    1 | value: 1996-06-06T08:15:30-05:00
+"
+`;
+
+exports[`date loader 1997-07-07T13:15:30Z throws an error 1`] = `
+"'value' must contain a valid date, for instance '1993-11-18'.
+
+   Line | Content
+ >    1 | value: 1997-07-07T13:15:30Z
+"
+`;
+
+exports[`date loader 2002 12 14 throws an error 1`] = `
+"'value' must contain a valid date, for instance '1993-11-18'.
+
+   Line | Content
+ >    1 | value: 2002 12 14
+"
+`;
+
+exports[`date loader 2002-12-14 20:15 throws an error 1`] = `
+"'value' must contain a valid date, for instance '1993-11-18'.
+
+   Line | Content
+ >    1 | value: 2002-12-14 20:15
+"
+`;
+
+exports[`date loader January throws an error 1`] = `
+"'value' must contain a valid date, for instance '1993-11-18'.
+
+   Line | Content
+ >    1 | value: January
+"
+`;

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`datetime loader 13:00 throws an error 1`] = `
-"'value' must contain a valid date or date and time, for instance '1997-07-16' or '1994-11-05T13:15Z' (see https://www.w3.org/TR/NOTE-datetime).
+"'value' must contain a valid date or date and time, for instance '1961-01-22' or '1989-11-09T19:17Z' (see https://www.w3.org/TR/NOTE-datetime).
 
    Line | Content
  >    1 | value: 13:00
@@ -9,7 +9,7 @@ exports[`datetime loader 13:00 throws an error 1`] = `
 `;
 
 exports[`datetime loader 2002 12 14 throws an error 1`] = `
-"'value' must contain a valid date or date and time, for instance '1997-07-16' or '1994-11-05T13:15Z' (see https://www.w3.org/TR/NOTE-datetime).
+"'value' must contain a valid date or date and time, for instance '1961-01-22' or '1989-11-09T19:17Z' (see https://www.w3.org/TR/NOTE-datetime).
 
    Line | Content
  >    1 | value: 2002 12 14
@@ -17,7 +17,7 @@ exports[`datetime loader 2002 12 14 throws an error 1`] = `
 `;
 
 exports[`datetime loader 2002-12-14 20:15 throws an error 1`] = `
-"'value' must contain a valid date or date and time, for instance '1997-07-16' or '1994-11-05T13:15Z' (see https://www.w3.org/TR/NOTE-datetime).
+"'value' must contain a valid date or date and time, for instance '1961-01-22' or '1989-11-09T19:17Z' (see https://www.w3.org/TR/NOTE-datetime).
 
    Line | Content
  >    1 | value: 2002-12-14 20:15
@@ -25,7 +25,7 @@ exports[`datetime loader 2002-12-14 20:15 throws an error 1`] = `
 `;
 
 exports[`datetime loader January throws an error 1`] = `
-"'value' must contain a valid date or date and time, for instance '1997-07-16' or '1994-11-05T13:15Z' (see https://www.w3.org/TR/NOTE-datetime).
+"'value' must contain a valid date or date and time, for instance '1961-01-22' or '1989-11-09T19:17Z' (see https://www.w3.org/TR/NOTE-datetime).
 
    Line | Content
  >    1 | value: January
