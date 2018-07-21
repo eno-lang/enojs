@@ -1,6 +1,10 @@
 # Changelog
 
-## Unreleased
+## 0.15.0 / `2018-07-21`
+
+#### Added
+
+- enojs now maintains a changelog `dac3e45`
 
 #### Changed
 
