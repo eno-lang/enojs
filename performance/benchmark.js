@@ -4,8 +4,6 @@ const path = require('path');
 
 const { performance } = require('perf_hooks');
 
-const ITERATIONS = 10000;
-
 const SAMPLES = {
   configuration: fs.readFileSync(path.join(__dirname, 'samples/configuration.eno'), 'utf-8'),
   content: fs.readFileSync(path.join(__dirname, 'samples/content.eno'), 'utf-8'),
