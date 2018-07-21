@@ -25,11 +25,11 @@ describe('Loader bootstrapping', () => {
     document = eno.parse(input);
   });
 
-  describe('EnoDictionary', () => {
+  describe('EnoFieldset', () => {
     let ratings;
 
     beforeEach(() => {
-      ratings = document.dictionary('ratings');
+      ratings = document.fieldset('ratings');
     })
 
     it('bootstraps loaders as entry proxy methods', () => {

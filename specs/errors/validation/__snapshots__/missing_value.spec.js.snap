@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`validation.missingValue missingDictionaryEntryValue provides a correct message 1`] = `
-"The dictionary entry 'required' must contain a value.
+exports[`validation.missingValue missingFieldsetEntryValue provides a correct message 1`] = `
+"The fieldset entry 'required' must contain a value.
 
    Line | Content
       1 | 
-      2 |         dictionary:
+      2 |         fieldset:
  >    3 |         required =
       4 |       
 "
 `;
 
-exports[`validation.missingValue missingDictionaryEntryValue provides correct selection metadata 1`] = `
+exports[`validation.missingValue missingFieldsetEntryValue provides correct selection metadata 1`] = `
 Array [
   Array [
     2,

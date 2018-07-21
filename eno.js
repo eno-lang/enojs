@@ -73,7 +73,7 @@ const parse = (input, ...optional) => {
 };
 
 module.exports = {
-  EnoDictionary: require('./lib/elements/dictionary.js'),
+  EnoFieldset: require('./lib/elements/fieldset.js'),
   EnoEmpty: require('./lib/elements/empty.js'),
   EnoError,
   EnoList: require('./lib/elements/list.js'),

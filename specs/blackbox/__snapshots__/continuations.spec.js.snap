@@ -7,7 +7,7 @@ Array [
 Newline continuation",
   },
   Object {
-    "Dictionary": Array [
+    "Fieldset": Array [
       Object {
         "Entry": "Value Line continuation
 Newline continuation",
@@ -25,7 +25,7 @@ Newline continuation",
 Newline continuation",
   },
   Object {
-    "Dictionary with empty entry": Array [
+    "Fieldset with empty entry": Array [
       Object {
         "Empty entry": "Line continuation
 Newline continuation",

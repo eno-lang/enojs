@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolution.copyingBlockIntoFieldset provides correct selection metadata 1`] = `
+Array [
+  Array [
+    4,
+    0,
+  ],
+  Array [
+    4,
+    15,
+  ],
+]
+`;
+
+exports[`resolution.copyingBlockIntoFieldset provides the correct message 1`] = `
+"In line 5 a block is copied into a fieldset.
+
+   Line | Content
+   ...
+      3 | -- original
+      4 | 
+ >    5 | copy < original
+      6 | entry = value
+"
+`;

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolution.copyingListIntoFieldset provides correct selection metadata 1`] = `
+Array [
+  Array [
+    3,
+    0,
+  ],
+  Array [
+    3,
+    15,
+  ],
+]
+`;
+
+exports[`resolution.copyingListIntoFieldset provides the correct message 1`] = `
+"In line 4 a list is copied into a fieldset.
+
+   Line | Content
+   ...
+      2 | - value
+      3 | 
+ >    4 | copy < original
+      5 | entry = value
+"
+`;

@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`enforceAllElements is enforced when requested 1`] = `
-"The dictionary entry 'missing' is missing - in case it has been specified look for typos and also check for correct capitalization.
+"The fieldset entry 'missing' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
    Line | Content
       1 | 
- >    2 | dictionary:
+ >    2 | fieldset:
  *    3 | present = yes
       4 | 
       5 | # section
@@ -18,25 +18,25 @@ exports[`enforceAllElements is enforced when requested 2`] = `
 
    Line | Content
  *    1 | 
- *    2 | dictionary:
+ *    2 | fieldset:
  *    3 | present = yes
  *    4 | 
  *    5 | # section
  *    6 | 
- *    7 | dictionary in section:
+ *    7 | fieldset in section:
  *    8 | present = yes
  *    9 | 
 "
 `;
 
 exports[`enforceAllElements is enforced when requested 3`] = `
-"The dictionary entry 'missing' is missing - in case it has been specified look for typos and also check for correct capitalization.
+"The fieldset entry 'missing' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
    Line | Content
    ...
       5 | # section
       6 | 
- >    7 | dictionary in section:
+ >    7 | fieldset in section:
  *    8 | present = yes
       9 | 
 "
@@ -51,7 +51,7 @@ exports[`enforceAllElements is enforced when requested 4`] = `
       4 | 
  >    5 | # section
  *    6 | 
- *    7 | dictionary in section:
+ *    7 | fieldset in section:
  *    8 | present = yes
  *    9 | 
 "

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validation.expectedFieldsetGotList provides a correct message 1`] = `
+"Instead of the expected fieldset 'languages' a list with this name was found.
+
+   Line | Content
+ >    1 | languages:
+ >    2 | - eno (eno notation)
+ >    3 | - json (JavaScript Object Notation)
+"
+`;
+
+exports[`validation.expectedFieldsetGotList provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    0,
+  ],
+  Array [
+    2,
+    35,
+  ],
+]
+`;

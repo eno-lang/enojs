@@ -4,15 +4,15 @@ describe('validation.missingValue', () => {
 
   let error;
 
-  describe('missingDictionaryEntryValue', () => {
+  describe('missingFieldsetEntryValue', () => {
     beforeAll(() => {
       const document = eno.parse(`
-        dictionary:
+        fieldset:
         required =
       `);
 
       try {
-        document.dictionary('dictionary').entry('required', { required: true });
+        document.fieldset('fieldset').entry('required', { required: true });
       } catch(err) {
         error = err;
       }

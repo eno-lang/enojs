@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Property issues EnoSection fetching a missing dictionary named toString does not have any side effects 1`] = `
-"The dictionary 'toString' is missing - in case it has been specified look for typos and also check for correct capitalization.
+exports[`Property issues EnoSection fetching a missing fieldset named toString does not have any side effects 1`] = `
+"The fieldset 'toString' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
    Line | Content
  *    1 | 

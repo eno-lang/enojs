@@ -1,52 +1,52 @@
 const eno = require('../../eno.js');
-const EnoDictionary = require('../../lib/elements/dictionary.js');
+const EnoFieldset = require('../../lib/elements/fieldset.js');
 const EnoList = require('../../lib/elements/list.js');
 const EnoValue = require('../../lib/elements/value.js');
 
-describe('Fetching an empty element through dictionary()', () => {
+describe('Fetching an empty element through fieldset()', () => {
   const document = eno.parse('languages:');
-  const dictionary = document.dictionary('languages');
+  const fieldset = document.fieldset('languages');
 
-  it('returns a dictionary', () => {
-    expect(dictionary instanceof EnoDictionary).toBe(true);
+  it('returns a fieldset', () => {
+    expect(fieldset instanceof EnoFieldset).toBe(true);
   });
 
-  it('returns a dictionary with enforceAllElements disabled', () => {
-    expect(dictionary._enforceAllElements).toBe(false);
+  it('returns a fieldset with enforceAllElements disabled', () => {
+    expect(fieldset._enforceAllElements).toBe(false);
   });
 
   describe('when enforceAllElements was enabled on the document', () => {
     document.enforceAllElements();
-    const dictionary = document.dictionary('languages');
+    const fieldset = document.fieldset('languages');
 
-    it('returns a dictionary with enforceAllElements enabled', () => {
-      expect(dictionary._enforceAllElements).toBe(true);
+    it('returns a fieldset with enforceAllElements enabled', () => {
+      expect(fieldset._enforceAllElements).toBe(true);
     });
   });
 });
 
-describe('Fetching an empty element through dictionaries()', () => {
+describe('Fetching an empty element through fieldsets()', () => {
   const document = eno.parse('languages:');
-  const dictionaries = document.dictionaries('languages');
+  const fieldsets = document.fieldsets('languages');
 
   it('returns one element', () => {
-    expect(dictionaries.length).toBe(1);
+    expect(fieldsets.length).toBe(1);
   });
 
-  it('returns a dictionary as first element', () => {
-    expect(dictionaries[0] instanceof EnoDictionary).toBe(true);
+  it('returns a fieldset as first element', () => {
+    expect(fieldsets[0] instanceof EnoFieldset).toBe(true);
   });
 
-  it('returns a dictionary with enforceAllElements disabled', () => {
-    expect(dictionaries[0]._enforceAllElements).toBe(false);
+  it('returns a fieldset with enforceAllElements disabled', () => {
+    expect(fieldsets[0]._enforceAllElements).toBe(false);
   });
 
   describe('when enforceAllElements was enabled on the document', () => {
     document.enforceAllElements();
-    const dictionaries = document.dictionaries('languages');
+    const fieldsets = document.fieldsets('languages');
 
-    it('returns a dictionary with enforceAllElements enabled', () => {
-      expect(dictionaries[0]._enforceAllElements).toBe(true);
+    it('returns a fieldset with enforceAllElements enabled', () => {
+      expect(fieldsets[0]._enforceAllElements).toBe(true);
     });
   });
 });

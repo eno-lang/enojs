@@ -1,12 +1,12 @@
 const { parse } = require('../eno.js');
 
 const sample = `
-dictionary:
+fieldset:
 present = yes
 
 # section
 
-dictionary in section:
+fieldset in section:
 present = yes
 `;
 
@@ -15,19 +15,19 @@ describe('enforceAllElements', () => {
     const doc = parse(sample);
     const section = doc.section('section');
     const result = {
-      dictionaryEntry: doc.dictionary('dictionary').entry('missing'),
+      fieldsetEntry: doc.fieldset('fieldset').entry('missing'),
       field: doc.field('missing'),
       section: {
-        dictionaryEntry: section.dictionary('dictionary in section').entry('missing'),
+        fieldsetEntry: section.fieldset('fieldset in section').entry('missing'),
         field: section.field('missing')
       }
     };
 
     const expected = {
-      dictionaryEntry: null,
+      fieldsetEntry: null,
       field: null,
       section: {
-        dictionaryEntry: null,
+        fieldsetEntry: null,
         field: null
       }
     };
@@ -42,9 +42,9 @@ describe('enforceAllElements', () => {
 
     const section = doc.section('section');
 
-    expect(() => doc.dictionary('dictionary').entry('missing')).toThrowErrorMatchingSnapshot();
+    expect(() => doc.fieldset('fieldset').entry('missing')).toThrowErrorMatchingSnapshot();
     expect(() => doc.field('missing')).toThrowErrorMatchingSnapshot();
-    expect(() => section.dictionary('dictionary in section').entry('missing')).toThrowErrorMatchingSnapshot();
+    expect(() => section.fieldset('fieldset in section').entry('missing')).toThrowErrorMatchingSnapshot();
     expect(() => section.field('missing')).toThrowErrorMatchingSnapshot();
   });
 });

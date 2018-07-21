@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fieldset entry tokenization performs to specification 1`] = `
+Array [
+  Object {
+    "index": 0,
+    "length": 13,
+    "line": 0,
+    "name": "entry",
+    "ranges": Object {
+      "entryOperator": Array [
+        6,
+        7,
+      ],
+      "name": Array [
+        0,
+        5,
+      ],
+      "value": Array [
+        8,
+        13,
+      ],
+    },
+    "type": "FIELDSET_ENTRY",
+    "value": "value",
+  },
+  Object {
+    "index": 14,
+    "length": 0,
+    "line": 1,
+    "type": "NOOP",
+  },
+  Object {
+    "index": 15,
+    "length": 16,
+    "line": 2,
+    "name": "entry",
+    "ranges": Object {
+      "entryOperator": Array [
+        9,
+        10,
+      ],
+      "name": Array [
+        0,
+        5,
+      ],
+      "value": Array [
+        11,
+        16,
+      ],
+    },
+    "type": "FIELDSET_ENTRY",
+    "value": "value",
+  },
+  Object {
+    "index": 32,
+    "length": 0,
+    "line": 3,
+    "type": "NOOP",
+  },
+  Object {
+    "index": 33,
+    "length": 17,
+    "line": 4,
+    "name": "entry",
+    "ranges": Object {
+      "entryOperator": Array [
+        10,
+        11,
+      ],
+      "name": Array [
+        4,
+        9,
+      ],
+      "value": Array [
+        12,
+        17,
+      ],
+    },
+    "type": "FIELDSET_ENTRY",
+    "value": "value",
+  },
+  Object {
+    "index": 51,
+    "length": 0,
+    "line": 5,
+    "type": "NOOP",
+  },
+  Object {
+    "index": 52,
+    "length": 20,
+    "line": 6,
+    "name": "entry",
+    "ranges": Object {
+      "entryOperator": Array [
+        13,
+        14,
+      ],
+      "name": Array [
+        4,
+        9,
+      ],
+      "value": Array [
+        15,
+        20,
+      ],
+    },
+    "type": "FIELDSET_ENTRY",
+    "value": "value",
+  },
+  Object {
+    "index": 73,
+    "length": 0,
+    "line": 7,
+    "type": "NOOP",
+  },
+  Object {
+    "index": 74,
+    "length": 23,
+    "line": 8,
+    "name": "entry",
+    "ranges": Object {
+      "entryOperator": Array [
+        13,
+        14,
+      ],
+      "name": Array [
+        4,
+        9,
+      ],
+      "value": Array [
+        18,
+        23,
+      ],
+    },
+    "type": "FIELDSET_ENTRY",
+    "value": "value",
+  },
+  Object {
+    "index": 98,
+    "length": 0,
+    "line": 9,
+    "type": "NOOP",
+  },
+  Object {
+    "index": 99,
+    "length": 13,
+    "line": 10,
+    "name": "entry",
+    "ranges": Object {
+      "entryOperator": Array [
+        6,
+        7,
+      ],
+      "name": Array [
+        0,
+        5,
+      ],
+      "value": Array [
+        8,
+        13,
+      ],
+    },
+    "type": "FIELDSET_ENTRY",
+    "value": "value",
+  },
+]
+`;

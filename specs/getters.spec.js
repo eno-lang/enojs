@@ -5,14 +5,14 @@ Field: Value
 List:
 - Value
 - Value
-Dictionary:
+Fieldset:
 Foo = Bar
 Bar = Baz
 Empty List:
 `;
 
 const expected = {
-  dictionary: {
+  fieldset: {
     foo: 'Bar',
     bar: 'Baz'
   },
@@ -29,15 +29,15 @@ describe('Getters', () => {
     const document = parse(sample);
 
     const result = {
-      dictionary: document.dictionary('Dictionary'),
+      fieldset: document.fieldset('Fieldset'),
       emptyList: document.list('Empty List'),
       field: document.field('Field'),
       list: document.list('List')
     };
 
-    result.dictionary  = {
-      foo: result.dictionary.entry('Foo'),
-      bar: result.dictionary.entry('Bar')
+    result.fieldset  = {
+      foo: result.fieldset.entry('Foo'),
+      bar: result.fieldset.entry('Bar')
     };
 
     expect(result).toEqual(expected);

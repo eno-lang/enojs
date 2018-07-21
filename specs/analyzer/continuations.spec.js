@@ -5,7 +5,7 @@ Field: Value
 \\ Line continuation
 | Newline continuation
 
-Dictionary:
+Fieldset:
 Empty = Value
 \\ Line continuation
 | Newline continuation
@@ -19,7 +19,7 @@ Empty field:
 \\ Line continuation
 | Newline continuation
 
-Dictionary with empty entry:
+Fieldset with empty entry:
 Empty entry =
 \\ Line continuation
 | Newline continuation

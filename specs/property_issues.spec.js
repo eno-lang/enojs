@@ -10,7 +10,7 @@ describe('Property issues', () => {
       });
     });
 
-    describe('toString as dictionary name', () => {
+    describe('toString as fieldset name', () => {
       it('does not have any side effects', () => {
         const document = eno.parse(`
           toString:
@@ -21,7 +21,7 @@ describe('Property issues', () => {
       });
     });
 
-    describe('toString as dictionary entry', () => {
+    describe('toString as fieldset entry', () => {
       it('does not have any side effects', () => {
         const document = eno.parse(`
           check:
@@ -68,11 +68,11 @@ describe('Property issues', () => {
       });
     });
 
-    describe('fetching a missing dictionary named toString', () => {
+    describe('fetching a missing fieldset named toString', () => {
       it('does not have any side effects', () => {
         const document = eno.parse('');
 
-        expect(() => document.dictionary('toString')).toThrowErrorMatchingSnapshot();
+        expect(() => document.fieldset('toString')).toThrowErrorMatchingSnapshot();
       });
     });
 
@@ -110,7 +110,7 @@ describe('Property issues', () => {
 
   });
 
-  describe('EnoDictionary', () => {
+  describe('EnoFieldset', () => {
 
     describe('asserting toString has been touched', () => {
       it('does not have any side effects', () => {
@@ -120,13 +120,13 @@ describe('Property issues', () => {
           blue = 2
         `);
 
-        const dictionary = document.dictionary('color ratings');
+        const fieldset = document.fieldset('color ratings');
 
-        expect(() => dictionary.assertAllTouched({ only: 'toString' })).not.toThrow();
+        expect(() => fieldset.assertAllTouched({ only: 'toString' })).not.toThrow();
       });
     });
 
-    describe('fetching a missing dictionary entry named toString', () => {
+    describe('fetching a missing fieldset entry named toString', () => {
       it('does not have any side effects', () => {
         const document = eno.parse(`
           color ratings:
@@ -134,9 +134,9 @@ describe('Property issues', () => {
           blue = 2
         `);
 
-        const dictionary = document.dictionary('color ratings');
+        const fieldset = document.fieldset('color ratings');
 
-        expect(dictionary.entry('toString')).toBe(null);
+        expect(fieldset.entry('toString')).toBe(null);
       });
     });
 

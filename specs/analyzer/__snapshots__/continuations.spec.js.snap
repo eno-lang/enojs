@@ -108,22 +108,22 @@ Array [
   },
   Object {
     "index": 57,
-    "length": 11,
+    "length": 9,
     "line": 4,
-    "name": "Dictionary",
+    "name": "Fieldset",
     "ranges": Object {
       "name": Array [
         0,
-        10,
+        8,
       ],
       "nameOperator": Array [
-        10,
-        11,
+        8,
+        9,
       ],
     },
     "subinstructions": Array [
       Object {
-        "index": 69,
+        "index": 67,
         "length": 13,
         "line": 5,
         "name": "Empty",
@@ -143,7 +143,7 @@ Array [
         },
         "subinstructions": Array [
           Object {
-            "index": 83,
+            "index": 81,
             "length": 19,
             "line": 6,
             "ranges": Object {
@@ -161,7 +161,7 @@ Array [
             "value": "Line continuation",
           },
           Object {
-            "index": 103,
+            "index": 101,
             "length": 22,
             "line": 7,
             "ranges": Object {
@@ -180,14 +180,14 @@ Array [
             "value": "Newline continuation",
           },
         ],
-        "type": "DICTIONARY_ENTRY",
+        "type": "FIELDSET_ENTRY",
         "value": "Value",
       },
     ],
-    "type": "DICTIONARY",
+    "type": "FIELDSET",
   },
   Object {
-    "index": 69,
+    "index": 67,
     "length": 13,
     "line": 5,
     "name": "Empty",
@@ -207,7 +207,7 @@ Array [
     },
     "subinstructions": Array [
       Object {
-        "index": 83,
+        "index": 81,
         "length": 19,
         "line": 6,
         "ranges": Object {
@@ -225,7 +225,7 @@ Array [
         "value": "Line continuation",
       },
       Object {
-        "index": 103,
+        "index": 101,
         "length": 22,
         "line": 7,
         "ranges": Object {
@@ -244,11 +244,11 @@ Array [
         "value": "Newline continuation",
       },
     ],
-    "type": "DICTIONARY_ENTRY",
+    "type": "FIELDSET_ENTRY",
     "value": "Value",
   },
   Object {
-    "index": 83,
+    "index": 81,
     "length": 19,
     "line": 6,
     "ranges": Object {
@@ -266,7 +266,7 @@ Array [
     "value": "Line continuation",
   },
   Object {
-    "index": 103,
+    "index": 101,
     "length": 22,
     "line": 7,
     "ranges": Object {
@@ -285,13 +285,13 @@ Array [
     "value": "Newline continuation",
   },
   Object {
-    "index": 126,
+    "index": 124,
     "length": 0,
     "line": 8,
     "type": "NOOP",
   },
   Object {
-    "index": 127,
+    "index": 125,
     "length": 5,
     "line": 9,
     "name": "List",
@@ -307,7 +307,7 @@ Array [
     },
     "subinstructions": Array [
       Object {
-        "index": 133,
+        "index": 131,
         "length": 7,
         "line": 10,
         "name": "List",
@@ -323,7 +323,7 @@ Array [
         },
         "subinstructions": Array [
           Object {
-            "index": 141,
+            "index": 139,
             "length": 19,
             "line": 11,
             "ranges": Object {
@@ -341,7 +341,7 @@ Array [
             "value": "Line continuation",
           },
           Object {
-            "index": 161,
+            "index": 159,
             "length": 22,
             "line": 12,
             "ranges": Object {
@@ -367,7 +367,7 @@ Array [
     "type": "LIST",
   },
   Object {
-    "index": 133,
+    "index": 131,
     "length": 7,
     "line": 10,
     "name": "List",
@@ -383,7 +383,7 @@ Array [
     },
     "subinstructions": Array [
       Object {
-        "index": 141,
+        "index": 139,
         "length": 19,
         "line": 11,
         "ranges": Object {
@@ -401,7 +401,7 @@ Array [
         "value": "Line continuation",
       },
       Object {
-        "index": 161,
+        "index": 159,
         "length": 22,
         "line": 12,
         "ranges": Object {
@@ -424,7 +424,7 @@ Array [
     "value": "Value",
   },
   Object {
-    "index": 141,
+    "index": 139,
     "length": 19,
     "line": 11,
     "ranges": Object {
@@ -442,7 +442,7 @@ Array [
     "value": "Line continuation",
   },
   Object {
-    "index": 161,
+    "index": 159,
     "length": 22,
     "line": 12,
     "ranges": Object {
@@ -461,13 +461,13 @@ Array [
     "value": "Newline continuation",
   },
   Object {
-    "index": 184,
+    "index": 182,
     "length": 0,
     "line": 13,
     "type": "NOOP",
   },
   Object {
-    "index": 185,
+    "index": 183,
     "length": 12,
     "line": 14,
     "name": "Empty field",
@@ -483,7 +483,7 @@ Array [
     },
     "subinstructions": Array [
       Object {
-        "index": 198,
+        "index": 196,
         "length": 19,
         "line": 15,
         "ranges": Object {
@@ -501,7 +501,7 @@ Array [
         "value": "Line continuation",
       },
       Object {
-        "index": 218,
+        "index": 216,
         "length": 22,
         "line": 16,
         "ranges": Object {
@@ -523,7 +523,7 @@ Array [
     "type": "FIELD",
   },
   Object {
-    "index": 198,
+    "index": 196,
     "length": 19,
     "line": 15,
     "ranges": Object {
@@ -541,7 +541,7 @@ Array [
     "value": "Line continuation",
   },
   Object {
-    "index": 218,
+    "index": 216,
     "length": 22,
     "line": 16,
     "ranges": Object {
@@ -560,29 +560,29 @@ Array [
     "value": "Newline continuation",
   },
   Object {
-    "index": 241,
+    "index": 239,
     "length": 0,
     "line": 17,
     "type": "NOOP",
   },
   Object {
-    "index": 242,
-    "length": 28,
+    "index": 240,
+    "length": 26,
     "line": 18,
-    "name": "Dictionary with empty entry",
+    "name": "Fieldset with empty entry",
     "ranges": Object {
       "name": Array [
         0,
-        27,
+        25,
       ],
       "nameOperator": Array [
-        27,
-        28,
+        25,
+        26,
       ],
     },
     "subinstructions": Array [
       Object {
-        "index": 271,
+        "index": 267,
         "length": 13,
         "line": 19,
         "name": "Empty entry",
@@ -598,7 +598,7 @@ Array [
         },
         "subinstructions": Array [
           Object {
-            "index": 285,
+            "index": 281,
             "length": 19,
             "line": 20,
             "ranges": Object {
@@ -616,7 +616,7 @@ Array [
             "value": "Line continuation",
           },
           Object {
-            "index": 305,
+            "index": 301,
             "length": 22,
             "line": 21,
             "ranges": Object {
@@ -635,14 +635,14 @@ Array [
             "value": "Newline continuation",
           },
         ],
-        "type": "DICTIONARY_ENTRY",
+        "type": "FIELDSET_ENTRY",
         "value": null,
       },
     ],
-    "type": "DICTIONARY",
+    "type": "FIELDSET",
   },
   Object {
-    "index": 271,
+    "index": 267,
     "length": 13,
     "line": 19,
     "name": "Empty entry",
@@ -658,7 +658,7 @@ Array [
     },
     "subinstructions": Array [
       Object {
-        "index": 285,
+        "index": 281,
         "length": 19,
         "line": 20,
         "ranges": Object {
@@ -676,7 +676,7 @@ Array [
         "value": "Line continuation",
       },
       Object {
-        "index": 305,
+        "index": 301,
         "length": 22,
         "line": 21,
         "ranges": Object {
@@ -695,11 +695,11 @@ Array [
         "value": "Newline continuation",
       },
     ],
-    "type": "DICTIONARY_ENTRY",
+    "type": "FIELDSET_ENTRY",
     "value": null,
   },
   Object {
-    "index": 285,
+    "index": 281,
     "length": 19,
     "line": 20,
     "ranges": Object {
@@ -717,7 +717,7 @@ Array [
     "value": "Line continuation",
   },
   Object {
-    "index": 305,
+    "index": 301,
     "length": 22,
     "line": 21,
     "ranges": Object {
@@ -736,13 +736,13 @@ Array [
     "value": "Newline continuation",
   },
   Object {
-    "index": 328,
+    "index": 324,
     "length": 0,
     "line": 22,
     "type": "NOOP",
   },
   Object {
-    "index": 329,
+    "index": 325,
     "length": 21,
     "line": 23,
     "name": "List with empty item",
@@ -758,7 +758,7 @@ Array [
     },
     "subinstructions": Array [
       Object {
-        "index": 351,
+        "index": 347,
         "length": 1,
         "line": 24,
         "name": "List with empty item",
@@ -770,7 +770,7 @@ Array [
         },
         "subinstructions": Array [
           Object {
-            "index": 353,
+            "index": 349,
             "length": 19,
             "line": 25,
             "ranges": Object {
@@ -788,7 +788,7 @@ Array [
             "value": "Line continuation",
           },
           Object {
-            "index": 373,
+            "index": 369,
             "length": 22,
             "line": 26,
             "ranges": Object {
@@ -814,7 +814,7 @@ Array [
     "type": "LIST",
   },
   Object {
-    "index": 351,
+    "index": 347,
     "length": 1,
     "line": 24,
     "name": "List with empty item",
@@ -826,7 +826,7 @@ Array [
     },
     "subinstructions": Array [
       Object {
-        "index": 353,
+        "index": 349,
         "length": 19,
         "line": 25,
         "ranges": Object {
@@ -844,7 +844,7 @@ Array [
         "value": "Line continuation",
       },
       Object {
-        "index": 373,
+        "index": 369,
         "length": 22,
         "line": 26,
         "ranges": Object {
@@ -867,7 +867,7 @@ Array [
     "value": null,
   },
   Object {
-    "index": 353,
+    "index": 349,
     "length": 19,
     "line": 25,
     "ranges": Object {
@@ -885,7 +885,7 @@ Array [
     "value": "Line continuation",
   },
   Object {
-    "index": 373,
+    "index": 369,
     "length": 22,
     "line": 26,
     "ranges": Object {

@@ -7,7 +7,7 @@ list:
 - value
 - value
 
-dictionary:
+fieldset:
 entry = value
 `.trim();
 
@@ -18,9 +18,9 @@ describe('string alias pseudo loader', () => {
     document = eno.parse(input);
   });
 
-  describe('as Dictionary entry proxy', () => {
+  describe('as Fieldset entry proxy', () => {
     it('returns the value unaltered', () => {
-      expect(document.dictionary('dictionary').string('entry')).toBe('value');
+      expect(document.fieldset('fieldset').string('entry')).toBe('value');
     });
   });
 

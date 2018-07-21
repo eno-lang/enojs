@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validation.missingFieldset provides a correct message 1`] = `
+"The fieldset 'presence' is missing - in case it has been specified look for typos and also check for correct capitalization.
+
+   Line | Content
+ >    1 | # emptyness
+"
+`;
+
+exports[`validation.missingFieldset provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    11,
+  ],
+  Array [
+    0,
+    11,
+  ],
+]
+`;

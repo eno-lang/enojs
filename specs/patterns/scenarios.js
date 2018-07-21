@@ -114,12 +114,12 @@ const SCENARIOS = {
     }
   ],
 
-  DICTIONARY_ENTRY_SCENARIOS: [
+  FIELDSET_ENTRY_SCENARIOS: [
     {
       captures: {
         [matcher.NAME_UNESCAPED_INDEX]: 'Name',
-        [matcher.DICTIONARY_ENTRY_OPERATOR_INDEX]: '=',
-        [matcher.DICTIONARY_ENTRY_VALUE_INDEX]: 'Value'
+        [matcher.FIELDSET_ENTRY_OPERATOR_INDEX]: '=',
+        [matcher.FIELDSET_ENTRY_VALUE_INDEX]: 'Value'
       },
       syntax: 'Name = Value',
       variants: space('Name', '=', 'Value')
@@ -127,8 +127,8 @@ const SCENARIOS = {
     {
       captures: {
         [matcher.NAME_UNESCAPED_INDEX]: 'The Name',
-        [matcher.DICTIONARY_ENTRY_OPERATOR_INDEX]: '=',
-        [matcher.DICTIONARY_ENTRY_VALUE_INDEX]: 'The Value'
+        [matcher.FIELDSET_ENTRY_OPERATOR_INDEX]: '=',
+        [matcher.FIELDSET_ENTRY_VALUE_INDEX]: 'The Value'
       },
       syntax: 'The Name = The Value',
       variants: space('The Name', '=', 'The Value')
@@ -136,8 +136,8 @@ const SCENARIOS = {
     {
       captures: {
         [matcher.NAME_UNESCAPED_INDEX]: 'Name',
-        [matcher.DICTIONARY_ENTRY_OPERATOR_INDEX]: '=',
-        [matcher.DICTIONARY_ENTRY_VALUE_INDEX]: '='
+        [matcher.FIELDSET_ENTRY_OPERATOR_INDEX]: '=',
+        [matcher.FIELDSET_ENTRY_VALUE_INDEX]: '='
       },
       syntax: 'Name = =',
       variants: space('Name', '=', ' ', '=')
@@ -145,8 +145,8 @@ const SCENARIOS = {
     {
       captures: {
         [matcher.NAME_UNESCAPED_INDEX]: 'Name',
-        [matcher.DICTIONARY_ENTRY_OPERATOR_INDEX]: '=',
-        [matcher.DICTIONARY_ENTRY_VALUE_INDEX]: ':'
+        [matcher.FIELDSET_ENTRY_OPERATOR_INDEX]: '=',
+        [matcher.FIELDSET_ENTRY_VALUE_INDEX]: ':'
       },
       syntax: 'Name = :',
       variants: space('Name', '=', ' ', ':')
@@ -155,8 +155,8 @@ const SCENARIOS = {
       captures: {
         [matcher.NAME_ESCAPE_BEGIN_OPERATOR_INDEX]: '`',
         [matcher.NAME_ESCAPED_INDEX]: '<=:',
-        [matcher.DICTIONARY_ENTRY_OPERATOR_INDEX]: '=',
-        [matcher.DICTIONARY_ENTRY_VALUE_INDEX]: '`<=:`'
+        [matcher.FIELDSET_ENTRY_OPERATOR_INDEX]: '=',
+        [matcher.FIELDSET_ENTRY_VALUE_INDEX]: '`<=:`'
       },
       syntax: '`<=:` = `<=:`',
       variants: space('`', '<=:', '`', '=', '`<=:`')
@@ -165,8 +165,8 @@ const SCENARIOS = {
       captures: {
         [matcher.NAME_ESCAPE_BEGIN_OPERATOR_INDEX]: '```',
         [matcher.NAME_ESCAPED_INDEX]: '<`=``:',
-        [matcher.DICTIONARY_ENTRY_OPERATOR_INDEX]: '=',
-        [matcher.DICTIONARY_ENTRY_VALUE_INDEX]: '`<=:`'
+        [matcher.FIELDSET_ENTRY_OPERATOR_INDEX]: '=',
+        [matcher.FIELDSET_ENTRY_VALUE_INDEX]: '`<=:`'
       },
       syntax: '```<`=``:``` = `<=:`',
       variants: space('```', '<`=``:', '```', '=', '`<=:`')

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolution.copyingFieldsetIntoSection provides correct selection metadata 1`] = `
+Array [
+  Array [
+    3,
+    0,
+  ],
+  Array [
+    3,
+    17,
+  ],
+]
+`;
+
+exports[`resolution.copyingFieldsetIntoSection provides the correct message 1`] = `
+"In line 4 a fieldset is copied into a section.
+
+   Line | Content
+   ...
+      2 | entry = value
+      3 | 
+ >    4 | # copy < original
+"
+`;

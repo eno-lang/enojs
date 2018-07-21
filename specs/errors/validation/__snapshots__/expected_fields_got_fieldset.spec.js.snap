@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validation.expectedFieldsGotFieldset provides a correct message 1`] = `
+"Only fields with the name 'language' were expected, but a fieldset with this name was found.
+
+   Line | Content
+ >    1 | language:
+ >    2 | yaml = yaml ain't markup language
+      3 | 
+      4 | language:
+   ...
+"
+`;
+
+exports[`validation.expectedFieldsGotFieldset provides correct selection metadata 1`] = `
+Array [
+  Array [
+    0,
+    0,
+  ],
+  Array [
+    1,
+    33,
+  ],
+]
+`;

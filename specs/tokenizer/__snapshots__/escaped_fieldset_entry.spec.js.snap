@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Escaped fieldset entry tokenization performs to specification 1`] = `
+Array [
+  Object {
+    "index": 0,
+    "length": 8,
+    "line": 0,
+    "name": "name",
+    "ranges": Object {
+      "entryOperator": Array [
+        7,
+        8,
+      ],
+      "escapeBeginOperator": Array [
+        0,
+        1,
+      ],
+      "escapeEndOperator": Array [
+        5,
+        6,
+      ],
+      "name": Array [
+        1,
+        5,
+      ],
+    },
+    "type": "FIELDSET_ENTRY",
+    "value": null,
+  },
+  Object {
+    "index": 9,
+    "length": 0,
+    "line": 1,
+    "type": "NOOP",
+  },
+  Object {
+    "index": 10,
+    "length": 11,
+    "line": 2,
+    "name": "na\`me",
+    "ranges": Object {
+      "entryOperator": Array [
+        10,
+        11,
+      ],
+      "escapeBeginOperator": Array [
+        0,
+        2,
+      ],
+      "escapeEndOperator": Array [
+        7,
+        9,
+      ],
+      "name": Array [
+        2,
+        7,
+      ],
+    },
+    "type": "FIELDSET_ENTRY",
+    "value": null,
+  },
+  Object {
+    "index": 22,
+    "length": 0,
+    "line": 3,
+    "type": "NOOP",
+  },
+  Object {
+    "index": 23,
+    "length": 17,
+    "line": 4,
+    "name": "na\`\`me",
+    "ranges": Object {
+      "entryOperator": Array [
+        16,
+        17,
+      ],
+      "escapeBeginOperator": Array [
+        0,
+        3,
+      ],
+      "escapeEndOperator": Array [
+        9,
+        12,
+      ],
+      "name": Array [
+        3,
+        9,
+      ],
+    },
+    "type": "FIELDSET_ENTRY",
+    "value": null,
+  },
+  Object {
+    "index": 41,
+    "length": 0,
+    "line": 5,
+    "type": "NOOP",
+  },
+  Object {
+    "index": 42,
+    "length": 21,
+    "line": 6,
+    "name": "\`name\`",
+    "ranges": Object {
+      "entryOperator": Array [
+        20,
+        21,
+      ],
+      "escapeBeginOperator": Array [
+        4,
+        6,
+      ],
+      "escapeEndOperator": Array [
+        14,
+        16,
+      ],
+      "name": Array [
+        7,
+        13,
+      ],
+    },
+    "type": "FIELDSET_ENTRY",
+    "value": null,
+  },
+  Object {
+    "index": 64,
+    "length": 0,
+    "line": 7,
+    "type": "NOOP",
+  },
+  Object {
+    "index": 65,
+    "length": 8,
+    "line": 8,
+    "name": "name",
+    "ranges": Object {
+      "entryOperator": Array [
+        7,
+        8,
+      ],
+      "escapeBeginOperator": Array [
+        0,
+        1,
+      ],
+      "escapeEndOperator": Array [
+        5,
+        6,
+      ],
+      "name": Array [
+        1,
+        5,
+      ],
+    },
+    "type": "FIELDSET_ENTRY",
+    "value": null,
+  },
+]
+`;
