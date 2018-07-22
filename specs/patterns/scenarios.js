@@ -107,10 +107,29 @@ const SCENARIOS = {
     {
       captures: {
         [matcher.NAME_UNESCAPED_INDEX]: 'Name',
+        [matcher.COPY_OPERATOR_INDEX]: '<',
         [matcher.TEMPLATE_INDEX]: 'Other Name'
       },
       syntax: 'Name < Other Name',
       variants: space('Name', '<', 'Other Name')
+    },
+    {
+      captures: {
+        [matcher.NAME_UNESCAPED_INDEX]: 'Name',
+        [matcher.COPY_OPERATOR_INDEX]: '<',
+        [matcher.TEMPLATE_INDEX]: '<'
+      },
+      syntax: 'Name < <',
+      variants: space('Name', '<', ' ', '<')
+    },
+    {
+      captures: {
+        [matcher.NAME_UNESCAPED_INDEX]: 'Name',
+        [matcher.COPY_OPERATOR_INDEX]: '<<',
+        [matcher.TEMPLATE_INDEX]: '<'
+      },
+      syntax: 'Name << <',
+      variants: space('Name', '<<', '<')
     }
   ],
 

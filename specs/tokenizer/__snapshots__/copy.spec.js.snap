@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Copy tokenization performs to specification 1`] = `
+Array [
+  Object {
+    "index": 0,
+    "length": 15,
+    "line": 0,
+    "name": "name",
+    "ranges": Object {
+      "copyOperator": Array [
+        5,
+        6,
+      ],
+      "name": Array [
+        0,
+        4,
+      ],
+      "template": Array [
+        7,
+        15,
+      ],
+    },
+    "template": "template",
+    "type": "NAME",
+  },
+  Object {
+    "index": 16,
+    "length": 16,
+    "line": 1,
+    "name": "name",
+    "ranges": Object {
+      "copyOperator": Array [
+        5,
+        7,
+      ],
+      "name": Array [
+        0,
+        4,
+      ],
+      "template": Array [
+        8,
+        16,
+      ],
+    },
+    "template": "template",
+    "type": "NAME",
+  },
+  Object {
+    "index": 33,
+    "length": 18,
+    "line": 2,
+    "name": "name",
+    "ranges": Object {
+      "copyOperator": Array [
+        8,
+        9,
+      ],
+      "name": Array [
+        0,
+        4,
+      ],
+      "template": Array [
+        10,
+        18,
+      ],
+    },
+    "template": "template",
+    "type": "NAME",
+  },
+  Object {
+    "index": 52,
+    "length": 19,
+    "line": 3,
+    "name": "name",
+    "ranges": Object {
+      "copyOperator": Array [
+        8,
+        10,
+      ],
+      "name": Array [
+        0,
+        4,
+      ],
+      "template": Array [
+        11,
+        19,
+      ],
+    },
+    "template": "template",
+    "type": "NAME",
+  },
+  Object {
+    "index": 72,
+    "length": 24,
+    "line": 4,
+    "name": "name",
+    "ranges": Object {
+      "copyOperator": Array [
+        14,
+        15,
+      ],
+      "name": Array [
+        5,
+        9,
+      ],
+      "template": Array [
+        16,
+        24,
+      ],
+    },
+    "template": "template",
+    "type": "NAME",
+  },
+  Object {
+    "index": 97,
+    "length": 25,
+    "line": 5,
+    "name": "name",
+    "ranges": Object {
+      "copyOperator": Array [
+        14,
+        16,
+      ],
+      "name": Array [
+        5,
+        9,
+      ],
+      "template": Array [
+        17,
+        25,
+      ],
+    },
+    "template": "template",
+    "type": "NAME",
+  },
+]
+`;
