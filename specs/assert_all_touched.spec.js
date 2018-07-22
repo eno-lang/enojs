@@ -1,6 +1,6 @@
 const eno = require('../eno.js');
 
-describe('EnoFieldset', () => {
+describe('Fieldset', () => {
   describe('assertAllTouched', () => {
 
     let fieldset;
@@ -60,7 +60,7 @@ describe('EnoFieldset', () => {
   });
 });
 
-describe('EnoSection', () => {
+describe('Section', () => {
   describe('assertAllTouched', () => {
 
     let document;

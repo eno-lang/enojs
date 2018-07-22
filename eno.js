@@ -1,6 +1,6 @@
-// const EnoBuilder = require('./lib/builder.js');
-const EnoParser = require('./lib/parser.js');
-const { EnoError, EnoParseError, EnoValidationError } = require('./lib/error_types.js');
+// const Builder = require('./lib/builder.js');
+const Parser = require('./lib/parser.js');
+const { EnoError, ParseError, ValidationError } = require('./lib/error_types.js');
 const messages = require('./lib/messages.js');
 
 const locales = Object.keys(messages);
@@ -14,7 +14,7 @@ const reporters = ['html', 'terminal', 'text']
 //     );
 //   }
 //
-// //   const builder = new EnoDumper(input, locale);
+// //   const builder = new Dumper(input, locale);
 // };
 
 const parse = (input, ...optional) => {
@@ -67,19 +67,19 @@ const parse = (input, ...optional) => {
     throw new RangeError(`The requested reporter '${options.reporter}' does not exist.`);
   }
 
-  const parser = new EnoParser(input, options);
+  const parser = new Parser(input, options);
 
   return parser.run();
 };
 
 module.exports = {
-  EnoFieldset: require('./lib/elements/fieldset.js'),
-  EnoEmpty: require('./lib/elements/empty.js'),
+  Empty: require('./lib/elements/empty.js'),
   EnoError,
-  EnoList: require('./lib/elements/list.js'),
-  EnoParseError,
-  EnoSection: require('./lib/elements/section.js'),
-  EnoValidationError,
-  EnoValue: require('./lib/elements/value.js'),
+  Field: require('./lib/elements/field.js'),
+  Fieldset: require('./lib/elements/fieldset.js'),
+  List: require('./lib/elements/list.js'),
+  ParseError,
+  Section: require('./lib/elements/section.js'),
+  ValidationError,
   parse
 };

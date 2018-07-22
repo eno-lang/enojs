@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`validation.missingFieldsetEntry via EnoFieldset element provides a correct message 1`] = `
+exports[`validation.missingFieldsetEntry via Fieldset element provides a correct message 1`] = `
 "The fieldset entry 'presence' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
    Line | Content
@@ -8,7 +8,7 @@ exports[`validation.missingFieldsetEntry via EnoFieldset element provides a corr
 "
 `;
 
-exports[`validation.missingFieldsetEntry via EnoFieldset element provides correct selection metadata 1`] = `
+exports[`validation.missingFieldsetEntry via Fieldset element provides correct selection metadata 1`] = `
 Array [
   Array [
     0,
@@ -21,7 +21,7 @@ Array [
 ]
 `;
 
-exports[`validation.missingFieldsetEntry via EnoFieldset entry provides a correct message 1`] = `
+exports[`validation.missingFieldsetEntry via Fieldset entry provides a correct message 1`] = `
 "The fieldset entry 'presence' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
    Line | Content
@@ -29,7 +29,7 @@ exports[`validation.missingFieldsetEntry via EnoFieldset entry provides a correc
 "
 `;
 
-exports[`validation.missingFieldsetEntry via EnoFieldset entry provides correct selection metadata 1`] = `
+exports[`validation.missingFieldsetEntry via Fieldset entry provides correct selection metadata 1`] = `
 Array [
   Array [
     0,

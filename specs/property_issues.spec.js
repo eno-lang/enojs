@@ -1,7 +1,7 @@
 const eno = require('../eno.js');
 
 describe('Property issues', () => {
-  describe('EnoSection', () => {
+  describe('Section', () => {
     describe('toString as field name', () => {
       it('does not have any side effects', () => {
         const document = eno.parse('toString: ok');
@@ -110,7 +110,7 @@ describe('Property issues', () => {
 
   });
 
-  describe('EnoFieldset', () => {
+  describe('Fieldset', () => {
 
     describe('asserting toString has been touched', () => {
       it('does not have any side effects', () => {

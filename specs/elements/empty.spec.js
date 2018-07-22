@@ -1,13 +1,13 @@
-const EnoEmpty = require('../../lib/elements/empty.js');
+const Empty = require('../../lib/elements/empty.js');
 
 const fabricate = () => {
   const context = {};
   const instruction = { name: 'language' };
 
-  return new EnoEmpty(context, instruction);
+  return new Empty(context, instruction);
 }
 
-describe('EnoEmpty', () => {
+describe('Empty', () => {
   it('is untouched after initialization', () => {
     const empty = fabricate();
     expect(empty.touched).toBe(false);
@@ -23,14 +23,14 @@ describe('EnoEmpty', () => {
   describe('toString()', () => {
     it('returns a debug abstraction', () => {
       const empty = fabricate();
-      expect(empty.toString()).toEqual('[object EnoEmpty name="language"]');
+      expect(empty.toString()).toEqual('[object Empty name="language"]');
     });
   });
 
   describe('toStringTag symbol', () => {
     it('returns a custom tag', () => {
       const empty = fabricate();
-      expect(Object.prototype.toString.call(empty)).toEqual('[object EnoEmpty]');
+      expect(Object.prototype.toString.call(empty)).toEqual('[object Empty]');
     });
   });
 

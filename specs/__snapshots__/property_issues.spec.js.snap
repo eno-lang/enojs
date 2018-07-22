@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Property issues EnoSection fetching a missing fieldset named toString does not have any side effects 1`] = `
+exports[`Property issues Section fetching a missing fieldset named toString does not have any side effects 1`] = `
 "The fieldset 'toString' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
    Line | Content
@@ -8,7 +8,7 @@ exports[`Property issues EnoSection fetching a missing fieldset named toString d
 "
 `;
 
-exports[`Property issues EnoSection fetching a missing section named toString does not have any side effects 1`] = `
+exports[`Property issues Section fetching a missing section named toString does not have any side effects 1`] = `
 "The section 'toString' is missing - in case it has been specified look for typos and also check for correct capitalization.
 
    Line | Content
@@ -16,7 +16,7 @@ exports[`Property issues EnoSection fetching a missing section named toString do
 "
 `;
 
-exports[`Property issues EnoSection toString as missing template does not have any side effects 1`] = `
+exports[`Property issues Section toString as missing template does not have any side effects 1`] = `
 "In line 1 the element 'toString' should be copied, but it was not found.
 
    Line | Content
@@ -24,7 +24,7 @@ exports[`Property issues EnoSection toString as missing template does not have a
 "
 `;
 
-exports[`Property issues EnoSection toString as name in a complex merge does not have any side effects 1`] = `
+exports[`Property issues Section toString as name in a complex merge does not have any side effects 1`] = `
 Array [
   Object {
     "a": Array [

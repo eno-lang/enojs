@@ -1,11 +1,11 @@
-const { EnoError, EnoParseError, EnoValidationError } = require('../../lib/error_types.js');
+const { EnoError, ParseError, ValidationError } = require('../../lib/error_types.js');
 
 const text = 'My error';
 const snippet = 'My snippet'
 const selection = [[1, 2], [3, 4]]
 const cursor = selection[0];
 
-for(let _class of [EnoError, EnoParseError, EnoValidationError]) {
+for(let _class of [EnoError, ParseError, ValidationError]) {
 
   describe(_class.name, () => {
     const error = new _class(text, snippet, selection);

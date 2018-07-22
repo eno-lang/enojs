@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const { parse, EnoParseError, EnoValidationError } = require('../../eno.js');
+const { parse, ParseError, ValidationError } = require('../../eno.js');
 
 const input = fs.readFileSync(path.join(__dirname, 'du_hast.eno'), 'utf-8');
 

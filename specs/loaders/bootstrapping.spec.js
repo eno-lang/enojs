@@ -1,5 +1,5 @@
 const eno = require('enojs');
-const { EnoValue } = require('enojs');
+const { Field } = require('enojs');
 
 const input = `
 colors:
@@ -25,7 +25,7 @@ describe('Loader bootstrapping', () => {
     document = eno.parse(input);
   });
 
-  describe('EnoFieldset', () => {
+  describe('Fieldset', () => {
     let ratings;
 
     beforeEach(() => {
@@ -40,13 +40,13 @@ describe('Loader bootstrapping', () => {
       it('passes them on', () => {
         const result = ratings.number('excellent', { withElement: true });
 
-        expect(result.element instanceof EnoValue).toBe(true);
+        expect(result.element instanceof Field).toBe(true);
         expect(result.value).toEqual(1);
       });
     });
   });
 
-  describe('EnoList', () => {
+  describe('List', () => {
     let colorList;
 
     beforeEach(() => {
@@ -62,14 +62,14 @@ describe('Loader bootstrapping', () => {
         const items = colorList.colorItems({ withElements: true });
 
         for(let item of items) {
-          expect(item.element instanceof EnoValue).toBe(true);
+          expect(item.element instanceof Field).toBe(true);
           expect(typeof item.value).toEqual('string');
         }
       });
     });
   });
 
-  describe('EnoSection', () => {
+  describe('Section', () => {
     describe('Loaders as field proxy methods', () => {
       it('bootstraps them', () => {
         expect(document.email('email')).toEqual('jane.doe@eno-lang.org');
@@ -79,7 +79,7 @@ describe('Loader bootstrapping', () => {
         it('passes them on', () => {
           const result = document.email('email', { withElement: true });
 
-          expect(result.element instanceof EnoValue).toBe(true);
+          expect(result.element instanceof Field).toBe(true);
           expect(result.value).toEqual('jane.doe@eno-lang.org');
         });
       });
@@ -95,7 +95,7 @@ describe('Loader bootstrapping', () => {
           const items = document.colorList('colors', { withElements: true });
 
           for(let item of items) {
-            expect(item.element instanceof EnoValue).toBe(true);
+            expect(item.element instanceof Field).toBe(true);
             expect(typeof item.value).toEqual('string');
           }
         });
@@ -103,7 +103,7 @@ describe('Loader bootstrapping', () => {
     });
   });
 
-  describe('EnoValue', () => {
+  describe('Field', () => {
     let emailField;
 
     beforeEach(() => {

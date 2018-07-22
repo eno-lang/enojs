@@ -3,7 +3,7 @@ const eno = require('../../../eno.js');
 const input = 'emptyness:';
 
 describe('validation.missingFieldsetEntry', () => {
-  describe('via EnoFieldset element', () => {
+  describe('via Fieldset element', () => {
     const document = eno.parse(input);
 
     let error;
@@ -22,7 +22,7 @@ describe('validation.missingFieldsetEntry', () => {
     });
   });
 
-  describe('via EnoFieldset entry', () => {
+  describe('via Fieldset entry', () => {
     const document = eno.parse(input);
 
     let error;

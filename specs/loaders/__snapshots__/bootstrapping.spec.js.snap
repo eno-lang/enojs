@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Loader bootstrapping EnoValue with optional arguments passes them on 1`] = `
+exports[`Loader bootstrapping Field with optional arguments passes them on 1`] = `
 "The field 'url' must contain a value.
 
    Line | Content

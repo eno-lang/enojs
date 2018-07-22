@@ -1,5 +1,5 @@
 const eno = require('../../eno.js');
-const EnoSection = require('../../lib/elements/section.js');
+const Section = require('../../lib/elements/section.js');
 
 const context = {};
 const instruction = {
@@ -16,11 +16,11 @@ const instruction = {
 };
 const parent = null;
 
-describe('EnoSection', () => {
+describe('Section', () => {
   let section;
 
   beforeEach(() => {
-    section = new EnoSection(context, instruction, parent);
+    section = new Section(context, instruction, parent);
   });
 
   describe('elements()', () => {
@@ -41,13 +41,13 @@ describe('EnoSection', () => {
 
   describe('toString()', () => {
     it('returns a debug abstraction', () => {
-      expect(section.toString()).toEqual('[object EnoSection document elements=0]');
+      expect(section.toString()).toEqual('[object Section document elements=0]');
     });
   });
 
   describe('toStringTag symbol', () => {
     it('returns a custom tag', () => {
-      expect(Object.prototype.toString.call(section)).toEqual('[object EnoSection]');
+      expect(Object.prototype.toString.call(section)).toEqual('[object Section]');
     });
   });
 });

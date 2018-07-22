@@ -1,6 +1,6 @@
 const eno = require('../../eno.js');
-const EnoFieldset = require('../../lib/elements/fieldset.js');
-const EnoValue = require('../../lib/elements/value.js');
+const Field = require('../../lib/elements/field.js');
+const Fieldset = require('../../lib/elements/fieldset.js');
 
 const context = {};
 const instruction = {
@@ -23,11 +23,11 @@ const instruction = {
 };
 const parent = {};
 
-describe('EnoFieldset', () => {
+describe('Fieldset', () => {
   let fieldset;
 
   beforeEach(() => {
-    fieldset = new EnoFieldset(context, instruction, parent);
+    fieldset = new Fieldset(context, instruction, parent);
   });
 
   it('is untouched after initialization', () => {
@@ -51,7 +51,7 @@ describe('EnoFieldset', () => {
       });
 
       it('returns an element', () => {
-        expect(result instanceof EnoValue).toBe(true);
+        expect(result instanceof Field).toBe(true);
       });
 
       it('returns the right element', () => {
@@ -160,7 +160,7 @@ describe('EnoFieldset', () => {
     describe('with { element: true }', () => {
       it('returns the element', () => {
         const result = fieldset.entry('eno', { element: true });
-        expect(result instanceof EnoValue).toBe(true);
+        expect(result instanceof Field).toBe(true);
       });
     });
 
@@ -173,7 +173,7 @@ describe('EnoFieldset', () => {
         });
 
         it('returns the element', () => {
-          expect(result.element instanceof EnoValue).toBe(true);
+          expect(result.element instanceof Field).toBe(true);
         });
 
         it('returns the value', () => {
@@ -213,13 +213,13 @@ describe('EnoFieldset', () => {
 
   describe('toString()', () => {
     it('returns a debug abstraction', () => {
-      expect(fieldset.toString()).toEqual('[object EnoFieldset name="languages" entries=3]');
+      expect(fieldset.toString()).toEqual('[object Fieldset name="languages" entries=3]');
     });
   });
 
   describe('toStringTag symbol', () => {
     it('returns a custom tag', () => {
-      expect(Object.prototype.toString.call(fieldset)).toEqual('[object EnoFieldset]');
+      expect(Object.prototype.toString.call(fieldset)).toEqual('[object Fieldset]');
     });
   });
 

@@ -1,5 +1,5 @@
-const EnoList = require('../../lib/elements/list.js');
-const EnoValue = require('../../lib/elements/value.js');
+const Field = require('../../lib/elements/field.js');
+const List = require('../../lib/elements/list.js');
 
 const context = {};
 const instruction = {
@@ -17,11 +17,11 @@ const instruction = {
 };
 const parent = {};
 
-describe('EnoList', () => {
+describe('List', () => {
   let list;
 
   beforeEach(() => {
-    list = new EnoList(context, instruction, parent);
+    list = new List(context, instruction, parent);
   });
 
   it('is untouched after initialization', () => {
@@ -102,7 +102,7 @@ describe('EnoList', () => {
 
       it('returns the elements', () => {
         for(let item of result) {
-          expect(item.element instanceof EnoValue).toBe(true);
+          expect(item.element instanceof Field).toBe(true);
         }
       });
 
@@ -126,13 +126,13 @@ describe('EnoList', () => {
 
   describe('toString()', () => {
     it('returns a debug abstraction', () => {
-      expect(list.toString()).toEqual('[object EnoList name="languages" items=3]');
+      expect(list.toString()).toEqual('[object List name="languages" items=3]');
     });
   });
 
   describe('toStringTag symbol', () => {
     it('returns a custom tag', () => {
-      expect(Object.prototype.toString.call(list)).toEqual('[object EnoList]');
+      expect(Object.prototype.toString.call(list)).toEqual('[object List]');
     });
   });
 

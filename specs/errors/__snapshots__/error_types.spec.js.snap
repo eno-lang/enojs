@@ -19,13 +19,13 @@ Array [
 ]
 `;
 
-exports[`EnoParseError returns the expected message 1`] = `
+exports[`ParseError returns the expected message 1`] = `
 "My error
 
 My snippet"
 `;
 
-exports[`EnoParseError returns the expected selection range 1`] = `
+exports[`ParseError returns the expected selection range 1`] = `
 Array [
   Array [
     1,
@@ -38,13 +38,13 @@ Array [
 ]
 `;
 
-exports[`EnoValidationError returns the expected message 1`] = `
+exports[`ValidationError returns the expected message 1`] = `
 "My error
 
 My snippet"
 `;
 
-exports[`EnoValidationError returns the expected selection range 1`] = `
+exports[`ValidationError returns the expected selection range 1`] = `
 Array [
   Array [
     1,
