@@ -1,4 +1,4 @@
-const { parse } = require("../../eno.js");
+const { parse } = require('../../eno.js');
 
 const input = `
 languages:
@@ -9,34 +9,11 @@ copy < languages
 eno = eno notation
 `.trim();
 
-describe("Resolution", () => {
-  describe("Copying fieldset into fieldset", () => {
-    it("works", () => {
+describe('Resolution', () => {
+  describe('Copying fieldset into fieldset', () => {
+    it('works', () => {
       const doc = parse(input);
-      expect(doc.raw()).toMatchInlineSnapshot(`
-Array [
-  Object {
-    "languages": Array [
-      Object {
-        "eno": "error notation",
-      },
-      Object {
-        "json": "json object notation",
-      },
-    ],
-  },
-  Object {
-    "copy": Array [
-      Object {
-        "json": "json object notation",
-      },
-      Object {
-        "eno": "eno notation",
-      },
-    ],
-  },
-]
-`);
+      expect(doc.raw()).toMatchSnapshot();
     });
   });
 });

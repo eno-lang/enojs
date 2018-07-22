@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Resolution Copying list with comments works 1`] = `
+Array [
+  Object {
+    "languages": Array [
+      "eno",
+      "json",
+    ],
+  },
+  Object {
+    "copy": Array [
+      "eno",
+      "json",
+      "yaml",
+    ],
+  },
+]
+`;

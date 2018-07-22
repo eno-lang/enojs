@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Resolution Copying fieldset with comments works 1`] = `
+Array [
+  Object {
+    "languages": Array [
+      Object {
+        "eno": "error notation",
+      },
+      Object {
+        "json": "json object notation",
+      },
+    ],
+  },
+  Object {
+    "copy": Array [
+      Object {
+        "eno": "error notation",
+      },
+      Object {
+        "json": "json object notation",
+      },
+      Object {
+        "yaml": "yaml ain't markup language",
+      },
+    ],
+  },
+]
+`;

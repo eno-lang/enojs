@@ -1,4 +1,4 @@
-const tokenize = require('../../lib/parse_steps/tokenize.js');
+const { inspectTokenization } = require('./util.js');
 
 let input = '\n' +
             ' \n' +
@@ -11,10 +11,12 @@ let input = '\n' +
 
 describe('Empty line tokenization', () => {
   it('performs to specification', () => {
-    const context = { input: input };
-
-    tokenize(context);
-
-    expect(context.instructions).toMatchSnapshot();
+    expect(inspectTokenization(input)).toMatchSnapshot();
   });
+
+  describe('Zero-length input', () => {
+    it('performs to specification', () => {
+      expect(inspectTokenization('')).toMatchSnapshot();
+    });
+  })
 });

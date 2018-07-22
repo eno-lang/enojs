@@ -1,4 +1,4 @@
-const tokenize = require('../../lib/parse_steps/tokenize.js');
+const { inspectTokenization } = require('./util.js');
 
 const input = `
 entry = value
@@ -16,10 +16,6 @@ entry = value
 
 describe('Fieldset entry tokenization', () => {
   it('performs to specification', () => {
-    const context = { input: input };
-
-    tokenize(context);
-
-    expect(context.instructions).toMatchSnapshot();
+    expect(inspectTokenization(input)).toMatchSnapshot();
   });
 });

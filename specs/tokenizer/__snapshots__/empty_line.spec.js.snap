@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Empty line tokenization Zero-length input performs to specification 1`] = `
+Array [
+  Object {
+    "index": 0,
+    "length": 0,
+    "line": 0,
+    "type": "NOOP",
+  },
+]
+`;
+
 exports[`Empty line tokenization performs to specification 1`] = `
 Array [
   Object {

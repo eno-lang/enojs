@@ -1,4 +1,4 @@
-const tokenize = require('../../lib/parse_steps/tokenize.js');
+const { inspectTokenization } = require('./util.js');
 
 const input = `
 \`name\` < template
@@ -14,10 +14,6 @@ const input = `
 
 describe('Escaped copy tokenization', () => {
   it('performs to specification', () => {
-    const context = { input: input };
-
-    tokenize(context);
-
-    expect(context.instructions).toMatchSnapshot();
+    expect(inspectTokenization(input)).toMatchSnapshot();
   });
 });

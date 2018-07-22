@@ -1,4 +1,4 @@
-const { parse } = require("../../eno.js");
+const { parse } = require('../../eno.js');
 
 const input = `
 languages:
@@ -12,27 +12,11 @@ copy < languages
 - yaml
 `.trim();
 
-describe("Resolution", () => {
-  describe("Copying list with empty lines", () => {
-    it("works", () => {
+describe('Resolution', () => {
+  describe('Copying list with empty lines', () => {
+    it('works', () => {
       const doc = parse(input);
-      expect(doc.raw()).toMatchInlineSnapshot(`
-Array [
-  Object {
-    "languages": Array [
-      "eno",
-      "json",
-    ],
-  },
-  Object {
-    "copy": Array [
-      "eno",
-      "json",
-      "yaml",
-    ],
-  },
-]
-`);
+      expect(doc.raw()).toMatchSnapshot();
     });
   });
 });

@@ -1,4 +1,4 @@
-const { parse } = require("../../eno.js");
+const { parse } = require('../../eno.js');
 
 const input = `
 languages:
@@ -8,26 +8,11 @@ languages:
 copy < languages
 `.trim();
 
-describe("Resolution", () => {
-  describe("Copying list into name", () => {
-    it("works", () => {
+describe('Resolution', () => {
+  describe('Copying list into name', () => {
+    it('works', () => {
       const doc = parse(input);
-      expect(doc.raw()).toMatchInlineSnapshot(`
-Array [
-  Object {
-    "languages": Array [
-      "eno",
-      "json",
-    ],
-  },
-  Object {
-    "copy": Array [
-      "eno",
-      "json",
-    ],
-  },
-]
-`);
+      expect(doc.raw()).toMatchSnapshot();
     });
   });
 });
