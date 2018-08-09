@@ -4,6 +4,9 @@ const sample = `
 color: cyan
 close:up
 # notes
+-- long
+is
+-- long
 `.trim();
 
 const scenarios = [
@@ -67,6 +70,26 @@ const scenarios = [
     index: [2, 6],
     zone: 'name'
   },
+  {
+    element: 'long', // 'i'
+    index: [37],
+    zone: 'content'
+  },
+  {
+    element: 'long', // 'i'
+    index: [4, 0],
+    zone: 'content'
+  },
+  {
+    element: 'long', // 'n'
+    index: [45],
+    zone: 'name'
+  },
+  {
+    element: 'long', // 'n'
+    index: [5, 5],
+    zone: 'name'
+  }
 ];
 
 describe('Element/Token lookup', () => {
