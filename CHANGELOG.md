@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.16.1 / `2018-08-09`
+
+#### Added
+
+- Early exit optimizations in section accessor structural validation `d6b7bc1`
+
+#### Fixed
+
+- Associate block subinstructions with the related Field element `f45b4cd`
+
 ## 0.16.0 / `2018-07-22`
 
 #### Added
