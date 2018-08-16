@@ -22,7 +22,7 @@ A minimal example to read this file with `enojs`:
 const eno = require('enojs');
 const fs = require('fs');
 
-const input = fs.readFileSync('intro.eno');
+const input = fs.readFileSync('intro.eno', 'utf-8');
 
 const document = eno.parse(input);
 
