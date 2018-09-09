@@ -1,8 +1,8 @@
 const { EnoError, ParseError, ValidationError } = require('../../lib/error_types.js');
 
 const text = 'My error';
-const snippet = 'My snippet'
-const selection = [[1, 2], [3, 4]]
+const snippet = 'My snippet';
+const selection = [[1, 2], [3, 4]];
 const cursor = selection[0];
 
 for(let _class of [EnoError, ParseError, ValidationError]) {
@@ -23,7 +23,7 @@ for(let _class of [EnoError, ParseError, ValidationError]) {
     });
 
     it('returns the expected selection range', () => {
-      expect(error.selection).toMatchSnapshot();
+      expect(error.selection).toEqual(selection);
     });
 
     it('returns the expected cursor location', () => {
