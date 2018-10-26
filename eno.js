@@ -3,7 +3,6 @@ const Parser = require('./lib/parser.js');
 const { EnoError, ParseError, ValidationError } = require('./lib/error_types.js');
 const messages = require('./lib/messages.js');
 
-const locales = Object.keys(messages);
 const reporters = ['html', 'terminal', 'text']
 
 // const build = object => {
@@ -51,7 +50,7 @@ const parse = (input, ...optional) => {
     }
   }
 
-  if(!locales.includes(options.locale)) {
+  if(!messages.hasOwnProperty(options.locale)) {
     throw new RangeError(
       `The requested locale '${options.locale}' is not available. Translation contributions are ` +
       'greatly appreciated, visit https://github.com/eno-lang/eno-locales if you wish to contribute.'
