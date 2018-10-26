@@ -4,7 +4,7 @@ const input = `
 eno = eno notation
 `.trim();
 
-describe('analysis.listItemInField', () => {
+describe('analysis.missingNameForFieldsetEntry', () => {
 
   let error;
 
