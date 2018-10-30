@@ -14,7 +14,7 @@ exports[`resolution.cyclicDependency in scenario A returns the correct message 1
 "
 `;
 
-exports[`resolution.cyclicDependency in scenario A returns the correct message 2`] = `
+exports[`resolution.cyclicDependency in scenario A returns the correct selection 1`] = `
 Array [
   Array [
     4,
@@ -42,7 +42,7 @@ exports[`resolution.cyclicDependency in scenario B returns the correct message 1
 "
 `;
 
-exports[`resolution.cyclicDependency in scenario B returns the correct message 2`] = `
+exports[`resolution.cyclicDependency in scenario B returns the correct selection 1`] = `
 Array [
   Array [
     6,
@@ -67,7 +67,7 @@ exports[`resolution.cyclicDependency in scenario C returns the correct message 1
 "
 `;
 
-exports[`resolution.cyclicDependency in scenario C returns the correct message 2`] = `
+exports[`resolution.cyclicDependency in scenario C returns the correct selection 1`] = `
 Array [
   Array [
     3,
@@ -98,7 +98,7 @@ exports[`resolution.cyclicDependency in scenario D returns the correct message 1
 "
 `;
 
-exports[`resolution.cyclicDependency in scenario D returns the correct message 2`] = `
+exports[`resolution.cyclicDependency in scenario D returns the correct selection 1`] = `
 Array [
   Array [
     9,
@@ -121,7 +121,7 @@ exports[`resolution.cyclicDependency in scenario E returns the correct message 1
 "
 `;
 
-exports[`resolution.cyclicDependency in scenario E returns the correct message 2`] = `
+exports[`resolution.cyclicDependency in scenario E returns the correct selection 1`] = `
 Array [
   Array [
     1,
@@ -144,7 +144,7 @@ exports[`resolution.cyclicDependency in scenario F returns the correct message 1
 "
 `;
 
-exports[`resolution.cyclicDependency in scenario F returns the correct message 2`] = `
+exports[`resolution.cyclicDependency in scenario F returns the correct selection 1`] = `
 Array [
   Array [
     2,

@@ -94,7 +94,7 @@ describe('resolution.cyclicDependency', () => {
         expect(error.message).toMatchSnapshot();
       });
 
-      it(`returns the correct message`, () => {
+      it(`returns the correct selection`, () => {
         expect(error.selection).toMatchSnapshot();
       });
     })
