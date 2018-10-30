@@ -66,7 +66,7 @@ describe('Fieldset', () => {
 
       describe('with { enforceElement: false }', () => {
         it('returns null', () => {
-          expect(fieldset.element('missing', { required: false })).toBeNull();
+          expect(fieldset.element('missing', { enforceElement: false })).toBeNull();
         });
       });
 
