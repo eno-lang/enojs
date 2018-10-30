@@ -1,42 +1,38 @@
 const Empty = require('../../lib/elements/empty.js');
 
-const fabricate = () => {
-  const context = {};
-  const instruction = { name: 'language' };
-
-  return new Empty(context, instruction);
-}
+const CONTEXT = {};
+const INSTRUCTION = { name: 'language' };
+const PARENT = {};
 
 describe('Empty', () => {
+  beforeEach(() => {
+    empty = new Empty(CONTEXT, INSTRUCTION, PARENT);
+  });
+
   it('is untouched after initialization', () => {
-    const empty = fabricate();
     expect(empty.touched).toBe(false);
   });
 
   describe('raw()', () => {
     it('returns a native object representation', () => {
-      const empty = fabricate();
       expect(empty.raw()).toEqual({ language: null });
     });
   });
 
   describe('toString()', () => {
     it('returns a debug abstraction', () => {
-      const empty = fabricate();
       expect(empty.toString()).toEqual('[object Empty name="language"]');
     });
   });
 
   describe('toStringTag symbol', () => {
     it('returns a custom tag', () => {
-      const empty = fabricate();
       expect(Object.prototype.toString.call(empty)).toEqual('[object Empty]');
     });
   });
 
   describe('touch()', () => {
     it('touches the element', () => {
-      const empty = fabricate();
       empty.touch();
       expect(empty.touched).toBe(true);
     });
@@ -44,12 +40,10 @@ describe('Empty', () => {
 
   describe('value()', () => {
     it('returns null', () => {
-      const empty = fabricate();
       expect(empty.value()).toBe(null);
     });
 
     it('touches the element', () => {
-      const empty = fabricate();
       const _ = empty.value();
       expect(empty.touched).toBe(true);
     });
