@@ -28,7 +28,7 @@ describe('validation.missingValue', () => {
   });
 
   describe('missingFieldValue', () => {
-    describe('without empty appendices', () => {
+    describe('without empty line continuations', () => {
       beforeAll(() => {
         const document = eno.parse(`
           required:
@@ -50,7 +50,7 @@ describe('validation.missingValue', () => {
       });
     });
 
-    describe('with empty appendices', () => {
+    describe('with empty line continuations', () => {
       beforeAll(() => {
         const document = eno.parse(`
           required:
