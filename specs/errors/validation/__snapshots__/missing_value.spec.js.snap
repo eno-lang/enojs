@@ -1,5 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`validation.missingValue missingFieldValue with empty line continuations provides a correct message 1`] = `
+"The field 'required' must contain a value.
+
+   Line | Content
+      1 | 
+ >    2 |           required:
+ *    3 |           |
+ *    4 | 
+ *    5 |           |
+      6 |         
+"
+`;
+
+exports[`validation.missingValue missingFieldValue with empty line continuations provides correct selection metadata 1`] = `
+Array [
+  Array [
+    1,
+    19,
+  ],
+  Array [
+    4,
+    11,
+  ],
+]
+`;
+
+exports[`validation.missingValue missingFieldValue without empty line continuations provides a correct message 1`] = `
+"The field 'required' must contain a value.
+
+   Line | Content
+      1 | 
+ >    2 |           required:
+      3 |         
+"
+`;
+
+exports[`validation.missingValue missingFieldValue without empty line continuations provides correct selection metadata 1`] = `
+Array [
+  Array [
+    1,
+    19,
+  ],
+  Array [
+    1,
+    19,
+  ],
+]
+`;
+
 exports[`validation.missingValue missingFieldsetEntryValue provides a correct message 1`] = `
 "The fieldset entry 'required' must contain a value.
 
@@ -20,55 +69,6 @@ Array [
   Array [
     2,
     18,
-  ],
-]
-`;
-
-exports[`validation.missingValue missingFieldValue with empty appendices provides a correct message 1`] = `
-"The field 'required' must contain a value.
-
-   Line | Content
-      1 | 
- >    2 |           required:
- *    3 |           |
- *    4 | 
- *    5 |           |
-      6 |         
-"
-`;
-
-exports[`validation.missingValue missingFieldValue with empty appendices provides correct selection metadata 1`] = `
-Array [
-  Array [
-    1,
-    19,
-  ],
-  Array [
-    4,
-    11,
-  ],
-]
-`;
-
-exports[`validation.missingValue missingFieldValue without empty appendices provides a correct message 1`] = `
-"The field 'required' must contain a value.
-
-   Line | Content
-      1 | 
- >    2 |           required:
-      3 |         
-"
-`;
-
-exports[`validation.missingValue missingFieldValue without empty appendices provides correct selection metadata 1`] = `
-Array [
-  Array [
-    1,
-    19,
-  ],
-  Array [
-    1,
-    19,
   ],
 ]
 `;
