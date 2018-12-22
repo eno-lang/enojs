@@ -1,6 +1,6 @@
 # enojs
 
-JavaScript implementation of the eno library specification
+JavaScript library for parsing, loading and inspecting eno documents
 
 ## Installation
 
