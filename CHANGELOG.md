@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.17.1 / `2018-12-22`
+
+#### Fixed
+
+- Fix critical line boundary crossing in unescaped name regex pattern `ebe1348`
+
 ## 0.17.0 / `2018-12-22`
 
 #### Changed
