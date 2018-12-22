@@ -11,7 +11,7 @@
     "lib/"
   ],
   "name": "enojs",
-  "description": "JavaScript implementation of the eno library specification",
+  "description": "JavaScript library for parsing, loading and inspecting eno documents",
   "homepage": "https://eno-lang.org/javascript/",
   "license": "MIT",
   "main": "eno.js",
@@ -32,5 +32,5 @@
   "scripts": {
     "test": "jest --watch"
   },
-  "version": "0.16.1"
+  "version": "0.17.0"
 }

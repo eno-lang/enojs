@@ -1,5 +1,47 @@
 # Changelog
 
+## 0.17.0 / `2018-12-22`
+
+#### Changed
+
+- **[BREAKING]** Switch to dependency-injection based reporter architecture `8660a5e`
+
+  Necessary changes: Any calls to `eno.parse` that supply a custom reporter, e.g. ...
+  ```js
+  const eno = require('enojs');
+
+  eno.parse(input, { reporter: 'html' })
+  ```
+
+  ... now need to supply the reporter class instead of a string:
+  ```js
+  const eno = require('enojs');
+  const { HtmlReporter } = require('enojs');  // Alternatively: TerminalReporter, TextReporter
+
+  eno.parse(input, { reporter: HtmlReporter })
+  ```
+
+#### Fixed
+
+- Add missing encoding to readFileSync call in README example (Ken Bellows) `c17edb4`
+
+#### Performance
+
+- Optimize reporter line classification `ea42b9f`
+
+#### Maintenance
+
+- Move user-facing document explanation approach out of library `a251ce1`
+- Replace legacy appendices terminology in specs `6977331`
+- Correct fieldset spec implementation not following description `650978d`
+- Refactor empty element spec setup `607cb4f`
+- Correct cyclic dependency spec label for the selection assertions `81031e9`
+- Remove unused dependency in analyzer specs `7057416`
+- Update jest `47acc3d`, `5779527`
+- Simplify locale check in parse entry point `f5e6dbd`
+- Correct mislabeled analysis spec`cfc04a9`
+- Simplify superfluous snapshot tests for error selection ranges `aa8f352`
+
 ## 0.16.1 / `2018-08-09`
 
 #### Added
