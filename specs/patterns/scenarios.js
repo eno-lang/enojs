@@ -298,6 +298,14 @@ const SCENARIOS = {
     {
       syntax: '### `Invalid',
       variants: space('###', '`Invalid')
+    },
+    {
+      syntax: 'Invalid\nValid:',
+      variants: space('Invalid', '\n', 'Valid', ':')
+    },
+    {
+      syntax: 'Invalid\nValid:Valid',
+      variants: space('Invalid', '\n', 'Valid', ':', 'Valid')
     }
   ],
 

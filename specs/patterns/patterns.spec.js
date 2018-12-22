@@ -4,7 +4,7 @@ const scenarios = require('./scenarios.js');
 describe('Unified grammar matcher', () => {
   for(let scenario of scenarios) {
     for(let variant of scenario.variants) {
-      describe(`with "${variant}"`, () => {
+      describe(`with "${variant.replace(/\n/g, '\\n')}"`, () => {
         matcher.GRAMMAR_REGEXP.lastIndex = 0;
         const match = matcher.GRAMMAR_REGEXP.exec(variant);
 
