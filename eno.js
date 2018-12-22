@@ -1,25 +1,20 @@
-// const Builder = require('./lib/builder.js');
-const Parser = require('./lib/parser.js');
+const Empty = require('./lib/elements/empty.js');
 const { EnoError, ParseError, ValidationError } = require('./lib/error_types.js');
+const Field = require('./lib/elements/field.js');
+const Fieldset = require('./lib/elements/fieldset.js');
+const HtmlReporter = require('./lib/reporters/html_reporter.js');
+const List = require('./lib/elements/list.js');
 const messages = require('./lib/messages.js');
+const Parser = require('./lib/parser.js');
+const Section = require('./lib/elements/section.js');
+const TerminalReporter = require('./lib/reporters/terminal_reporter.js');
+const TextReporter = require('./lib/reporters/text_reporter.js');
 
-const reporters = ['html', 'terminal', 'text']
-
-// const build = object => {
-//
-//   if(typeof object !== 'object') {
-//     throw new TypeError(
-//       `The builder accepts only objects as input, input was: ${object}`
-//     );
-//   }
-//
-// //   const builder = new Dumper(input, locale);
-// };
 
 const parse = (input, ...optional) => {
   let options = {
     locale: 'en',
-    reporter: 'text',
+    reporter: TextReporter,
     sourceLabel: null,
     zeroIndexing: false
   };
@@ -62,23 +57,22 @@ const parse = (input, ...optional) => {
 
   options.messages = messages[options.locale];
 
-  if(!reporters.includes(options.reporter)) {
-    throw new RangeError(`The requested reporter '${options.reporter}' does not exist.`);
-  }
-
   const parser = new Parser(input, options);
 
   return parser.run();
 };
 
 module.exports = {
-  Empty: require('./lib/elements/empty.js'),
+  Empty,
   EnoError,
-  Field: require('./lib/elements/field.js'),
-  Fieldset: require('./lib/elements/fieldset.js'),
-  List: require('./lib/elements/list.js'),
+  Field,
+  Fieldset,
+  HtmlReporter,
+  List,
   ParseError,
-  Section: require('./lib/elements/section.js'),
+  Section,
+  TerminalReporter,
+  TextReporter,
   ValidationError,
   parse
 };

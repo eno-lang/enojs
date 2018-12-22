@@ -1,4 +1,5 @@
 const eno = require('../eno.js');
+const { HtmlReporter, TerminalReporter } = require('../eno.js');
 
 describe('Parser options', () => {
   describe('Non-string input', () => {
@@ -25,23 +26,17 @@ describe('Parser options', () => {
     });
   });
 
-  describe('Unsupported reporter', () => {
-    it('throws an error', () => {
-      expect(() => eno.parse('', { reporter: 'television' })).toThrowErrorMatchingSnapshot();
-    });
-  });
-
   describe('sourceLabel', () => {
     it('is printed in text reports if provided', () => {
       expect(() => eno.parse('boom!', { sourceLabel: '/some/dubious-file.eno' })).toThrowErrorMatchingSnapshot();
     });
 
     it('is printed in html reports if provided', () => {
-      expect(() => eno.parse('boom!', { reporter: 'html', sourceLabel: '/some/dubious-file.eno' })).toThrowErrorMatchingSnapshot();
+      expect(() => eno.parse('boom!', { reporter: HtmlReporter, sourceLabel: '/some/dubious-file.eno' })).toThrowErrorMatchingSnapshot();
     });
 
     it('is printed in terminal reports if provided', () => {
-      expect(() => eno.parse('boom!', { reporter: 'terminal', sourceLabel: '/some/dubious-file.eno' })).toThrowErrorMatchingSnapshot();
+      expect(() => eno.parse('boom!', { reporter: TerminalReporter, sourceLabel: '/some/dubious-file.eno' })).toThrowErrorMatchingSnapshot();
     });
   });
 });
