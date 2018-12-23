@@ -300,6 +300,10 @@ const SCENARIOS = {
       variants: space('###', '`Invalid')
     },
     {
+      syntax: '---',
+      variants: space('---')
+    },
+    {
       syntax: 'Invalid\nValid:',
       variants: space('Invalid', '\n', 'Valid', ':')
     },
