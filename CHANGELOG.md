@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.17.2 / `2018-12-23`
+
+#### Fixed
+
+- Fix faulty block syntax edge case behavior, harden escape patterns `b0ca7a8`
+
 ## 0.17.1 / `2018-12-22`
 
 #### Fixed
