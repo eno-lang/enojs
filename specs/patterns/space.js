@@ -11,7 +11,6 @@ const spacingVariants = (tokens) => {
   } else {
     return [tokens[0], `   ${tokens[0]}`];
   }
-  return [tokens.join(' ')];
 };
 
 module.exports = (...tokens) => {
