@@ -16,5 +16,5 @@ const spacingVariants = (tokens) => {
 module.exports = (...tokens) => {
   tokens.push('');
 
-  return spacingVariants(tokens);
+  return spacingVariants(tokens).filter((variant, index, variants) => variants.indexOf(variant) === index);
 }
