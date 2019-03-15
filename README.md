@@ -2,6 +2,13 @@
 
 JavaScript library for parsing, loading and inspecting eno documents
 
+## End of life notice
+
+The eno notation language is en route to its final version and **enojs will reach end of life by 2020.**   
+enojs is superseded by the [enolib](https://www.npmjs.com/package/enolib) (core library) and [enotype](https://www.npmjs.com/package/enotype) (type library) packages.
+
+Please visit https://eno-lang.org to read up on all changes.
+
 ## Installation
 
 ```

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.18.0 / `2019-03-15`
+
+#### End of life Announcement
+
+The eno notation language is en route to its final version and **enojs will reach end of life by 2020.**   
+enojs is superseded by the [enolib](https://www.npmjs.com/package/enolib) (core library) and [enotype](https://www.npmjs.com/package/enotype) (type library) packages.
+
+Please visit https://eno-lang.org to read up on all changes.
+
 ## 0.17.2 / `2018-12-23`
 
 #### Fixed
